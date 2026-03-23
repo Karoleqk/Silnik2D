@@ -12,7 +12,7 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Silnik2D src/main.cpp)
+add_executable(Silnik2D src/main.cpp "src/Engine.cpp" "src/headers/engine.h" "src/Drawer.cpp")
 target_compile_features(Silnik2D PRIVATE cxx_std_17)
 target_link_libraries(Silnik2D PRIVATE
 	SFML::Graphics
