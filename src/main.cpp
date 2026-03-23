@@ -6,5 +6,5 @@
 int main()
 {
     Engine engine;
-    engine.run();
+    engine.run(); // bez parametrów: 60fps, z paremetrem: wybrane fps
 }

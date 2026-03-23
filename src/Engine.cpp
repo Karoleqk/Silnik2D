@@ -3,7 +3,7 @@
 #include "headers/Engine.h"
 #include "headers/Drawer.h"
 
-void Engine::run(int fps = 60) {
+void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
 
