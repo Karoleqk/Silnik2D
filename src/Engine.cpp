@@ -3,8 +3,9 @@
 #include "headers/Engine.h"
 #include "headers/Drawer.h"
 
-void Engine::run() {
+void Engine::run(int fps = 60) {
     isDrawing = false;
+    window.setFramerateLimit(fps);
 
     while (window.isOpen()) {
         handleEvents();

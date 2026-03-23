@@ -11,7 +11,7 @@ private:
 public:
 	Engine() : window(sf::VideoMode({800, 600}), "Silnik2D"), drawer(window) {};
 
-	void run();
+	void run(int fps = 60);
 	void handleEvents();
 	void update();
 };
