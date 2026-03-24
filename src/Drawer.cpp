@@ -2,16 +2,19 @@
 #include "headers/Drawer.h"
 
 void Drawer::setPixel(int x, int y, sf::Color color) {
-	sf::Vector2f pos;
-	pos.x = x;
-	pos.y = y;
+	if (x < 0 || x >= width || y < 0 || y >= height)
+		return;
 
-	sf::Vertex vertex;
-	vertex.position = pos;
-	vertex.color = color;
+	int index = 4 * (y * width + x);
 
-	sf::VertexArray va(sf::PrimitiveType::Points, 1);
-	va[0] = vertex;
+	pixels[index] = color.r;
+	pixels[index + 1] = color.g;
+	pixels[index + 2] = color.b;
+	pixels[index + 3] = color.a;
+}
 
-	window.draw(va);
+
+void Drawer::render() {
+	texture.update(pixels.data());
+	window.draw(sprite);
 }
