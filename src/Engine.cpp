@@ -3,6 +3,7 @@
 #include "headers/Engine.h"
 #include "headers/Drawer.h"
 
+// Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
@@ -17,6 +18,7 @@ void Engine::run(int fps) {
     }
 }
 
+// Funkcja do ogarniania eventów myszki/klawiatury, tutaj nic nie rysujemy, tylko rejestrujemy kliknięcia
 void Engine::handleEvents() {
     while (const std::optional event = window.pollEvent()) {
         if (event->is<sf::Event::Closed>())
@@ -32,9 +34,13 @@ void Engine::handleEvents() {
     }
 }
 
+// Funkcja do aktualizacji okna, najpierw czyścimy kolorem czarnym,
+// potem renderujemy za pomocą klasy Drawer i robimy window.display() zeby wyswietlic
 void Engine::update() {
     window.clear(sf::Color::Black);
 
+
+    // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {
         std::cout << "Wcisnieto LPM\n";
         std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
@@ -48,4 +54,11 @@ void Engine::update() {
     drawer.render();
 
     window.display();
+}
+
+// Funkcje do rysowania udostępniane
+// tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
+
+void Engine::setPixel(int x, int y, sf::Color color) {
+    drawer.setPixel(x, y, color);
 }

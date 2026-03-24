@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "headers/Drawer.h"
 
+// dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
 void Drawer::setPixel(int x, int y, sf::Color color) {
 	if (x < 0 || x >= width || y < 0 || y >= height)
 		return;
@@ -14,6 +15,7 @@ void Drawer::setPixel(int x, int y, sf::Color color) {
 }
 
 
+// Aktualizuje bufor pikseli oraz renderuje je na okno
 void Drawer::render() {
 	texture.update(pixels.data());
 	window.draw(sprite);
