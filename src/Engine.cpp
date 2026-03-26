@@ -8,9 +8,9 @@ void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
 
-    for (int i = 100; i < 200; i++)
-        for (int j = 100; j < 200; j++)
-            drawer.setPixel(i, j, sf::Color::Red);
+    //for (int i = 100; i < 200; i++)
+    //    for (int j = 100; j < 200; j++)
+    //        drawer.setPixel(i, j, sf::Color::Red);
 
     while (window.isOpen()) {
         handleEvents();
@@ -61,4 +61,12 @@ void Engine::update() {
 
 void Engine::setPixel(int x, int y, sf::Color color) {
     drawer.setPixel(x, y, color);
+}
+
+void Engine::drawLine(int x0, int y0, int x1, int y1, sf::Color color) {
+    drawer.drawLine(x0, y0, x1, y1, color);
+}
+
+void Engine::drawRect(int x, int y, int width, int height, sf::Color color, bool fill) {
+    drawer.drawRect(x, y, width, height, color, fill);
 }

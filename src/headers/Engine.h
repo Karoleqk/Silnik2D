@@ -21,4 +21,6 @@ public:
 
 	// funkcje udostępnione do rysowania
 	void setPixel(int x, int y, sf::Color color);
+	void drawLine(int x0, int y0, int x1, int y1, sf::Color color);
+	void drawRect(int x, int y, int width, int height, sf::Color color, bool fill = false);
 };
