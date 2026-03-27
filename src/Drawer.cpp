@@ -15,13 +15,6 @@ void Drawer::setPixel(Point2D pos, sf::Color color) {
 	pixels[index + 3] = color.a;
 }
 
-
-// Aktualizuje bufor pikseli oraz renderuje je na okno
-void Drawer::render() {
-	texture.update(pixels.data());
-	window.draw(sprite);
-}
-
 // Zmiana argumentów z x0 y0 na Point2D start, x1 y1 na Point2D end
 void Drawer::drawLine(Point2D start, Point2D end, sf::Color color) {
 	float dx = end.x - start.x;
@@ -80,4 +73,10 @@ void Drawer::drawRect(Point2D pos, int width, int height, sf::Color color, bool 
 		drawLine({ pos.x, pos.y }, { pos.x, pos.y + height }, color); // lewa
 		drawLine({ pos.x + width, pos.y }, { pos.x + width, pos.y + height }, color); //prawa
 	}
+}
+
+// Aktualizuje bufor pikseli oraz renderuje je na okno
+void Drawer::render() {
+	texture.update(pixels.data());
+	window.draw(sprite);
 }

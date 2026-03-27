@@ -9,6 +9,7 @@ private:
 	unsigned int width;
 	unsigned int height;
 	int currentTool;
+	int currentClick;
 	Point2D start, end;
 
 	sf::RenderWindow window;
@@ -18,11 +19,16 @@ private:
 	sf::Vector2i mouseClickPos;
 public:
 	Engine(unsigned int w = 800, unsigned int h = 600) : 
-		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), drawer(window, width, height), isDrawing(false), currentTool(PIXEL) {};
+		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), drawer(window, width, height),
+		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
 
 	void run(int fps = 60);
 	void handleEvents();
 	void update();
+
+	// funkcja do ustawiania dwoch pozycji
+	void drawShape();
+	void resetStartEnd();
 
 	// funkcje udostępnione do rysowania
 	void setPixel(Point2D pos, sf::Color color);

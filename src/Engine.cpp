@@ -24,24 +24,40 @@ void Engine::handleEvents() {
         if (event->is<sf::Event::Closed>())
             window.close();
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-            auto pos = sf::Mouse::getPosition(window);
-
-            mouseClickPos = pos;
-            isDrawing = true;
+        // Klikniecia myszki
+        if (auto *mousePressed = event->getIf<sf::Event::MouseButtonPressed>()) {
+            if (mousePressed->button == sf::Mouse::Button::Left) {
+                auto pos = sf::Mouse::getPosition(window);
+                mouseClickPos = pos;
+                isDrawing = true;
+            }
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num1))
-            currentTool = PIXEL;
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num2))
-            currentTool = LINE;
+        // Wybór narzędzia
+        if (auto* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
+            switch (keyPressed->code) {
+            case sf::Keyboard::Key::Num1:
+                currentTool = PIXEL;
+                resetStartEnd();
+                break;
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num3))
-            currentTool = RECT;
+            case sf::Keyboard::Key::Num2:
+                currentTool = LINE;
+                resetStartEnd();
+                break;
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num4))
-            currentTool = CIRCLE;
+            case sf::Keyboard::Key::Num3:
+                currentTool = RECT;
+                resetStartEnd();
+                break;
+
+            case sf::Keyboard::Key::Num4:
+                currentTool = CIRCLE;
+                resetStartEnd();
+                break;
+            }
+        }
             
     }
 }
@@ -51,14 +67,17 @@ void Engine::handleEvents() {
 void Engine::update() {
     window.clear(sf::Color::Black);
 
-
     // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {
-        std::cout << "Wcisnieto LPM\n";
-        std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
-        std::cout << window.getSize().x << "\n" << window.getSize().y;
+        //std::cout << "Wcisnieto LPM\n";
+        //std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
+        //std::cout << window.getSize().x << "\n" << window.getSize().y << "\n";
 
-        drawer.setPixel({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Yellow);
+        if (currentTool == PIXEL)
+            setPixel({mouseClickPos.x, mouseClickPos.y}, sf::Color::Yellow);
+
+        if (currentTool != PIXEL && currentTool != CIRCLE)
+            drawShape();
 
         isDrawing = false;
     }
@@ -66,6 +85,48 @@ void Engine::update() {
     drawer.render();
 
     window.display();
+}
+
+// funkcja do wybierania punktow przy rysowaniu myszką
+void Engine::drawShape() {
+    if (currentClick == 0) {
+        start.x = mouseClickPos.x;
+        start.y = mouseClickPos.y;
+    }
+    else if (currentClick == 1) {
+        end.x = mouseClickPos.x;
+        end.y = mouseClickPos.y;
+    }
+
+    std::cout << "\n\nStart X: " << start.x << "\nStart Y: " << start.y;
+    std::cout << "\n\nEnd X: " << end.x << "\nEnd Y: " << end.y;
+    std::cout << "\n\nCurrentClick: " << currentClick;
+
+
+    currentClick++;
+
+    if (currentClick == 2) {
+        if (currentTool == LINE)
+            drawLine(start, end, sf::Color::Yellow);
+
+        if (currentTool == RECT) {
+            if (start.x > end.x || start.y > end.y) {
+                std::swap(start.x, end.x);
+                std::swap(start.y, end.y);
+            }
+
+            int width = end.x - start.x;
+            int height = end.y - start.y;
+
+            drawRect(start, width, height, sf::Color::Yellow);
+        }
+
+        resetStartEnd();
+    }
+}
+
+void Engine::resetStartEnd() {
+    start.x = start.y = end.x = end.y = currentClick = 0;
 }
 
 // Funkcje do rysowania udostępniane
