@@ -3,6 +3,8 @@
 #include "headers/Engine.h"
 #include "headers/PrimitiveRenderer.h"
 #include "headers/Point2D.h"
+#include "headers/LineSegment.h"
+
 
 // Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
@@ -63,9 +65,6 @@ void Engine::handleEvents() {
 // potem renderujemy za pomocą klasy Drawer i robimy window.display() zeby wyswietlic
 void Engine::update() {
     window.clear(sf::Color::Black);
-
-    Point2D p{ 20, 50 };
-    p.draw(primitiveRenderer, sf::Color::White);
 
     // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "PrimitiveRenderer.h"
+#include <SFML/Graphics.hpp>
+class PrimitiveRenderer;
 
 class Point2D {
 public:
