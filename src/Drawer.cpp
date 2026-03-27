@@ -3,11 +3,11 @@
 #include "headers/Drawer.h"
 
 // dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
-void Drawer::setPixel(int x, int y, sf::Color color) {
-	if (x < 0 || x >= width || y < 0 || y >= height)
+void Drawer::setPixel(Point2D pos, sf::Color color) {
+	if (pos.x < 0 || pos.x >= width || pos.y < 0 || pos.y >= height)
 		return;
 
-	int index = 4 * (y * width + x);
+	int index = 4 * (pos.y * width + pos.x);
 
 	pixels[index] = color.r;
 	pixels[index + 1] = color.g;
@@ -22,13 +22,14 @@ void Drawer::render() {
 	window.draw(sprite);
 }
 
-void Drawer::drawLine(int x0, int y0, int x1, int y1, sf::Color color) {
-	float dx = x1 - x0;
-	float dy = y1 - y0;
+// Zmiana argumentów z x0 y0 na Point2D start, x1 y1 na Point2D end
+void Drawer::drawLine(Point2D start, Point2D end, sf::Color color) {
+	float dx = end.x - start.x;
+	float dy = end.y - start.y;
 
 	// przypadek gdy początek i koniec to to samo miejsce
 	if (dx == 0 && dy == 0) {
-		setPixel(x0, y0, color);
+		setPixel(start, color);
 		return;
 	}
 
@@ -36,45 +37,47 @@ void Drawer::drawLine(int x0, int y0, int x1, int y1, sf::Color color) {
 	// pierwszy if dla |m| <= 1, linia bardziej pozioma
 	// drugi dla |m| > 1, bardziej pionowa
 	if (std::abs(dx) >= std::abs(dy)) {
-		if (x0 > x1) {
-			std::swap(x0, x1);
-			std::swap(y0, y1);
+		if (start.x > end.x) {
+			std::swap(start.x, end.x);
+			std::swap(start.y, end.y);
 		}
 
 		float m = dy / dx;
-		float y = y0;
+		float y = start.y;
 
-		for (int x = x0; x <= x1; x++) {
-			setPixel(x, std::round(y), color);
+		for (int x = start.x; x <= end.x; x++) {
+			//setPixel(x, std::round(y), color);
+			setPixel({ x, static_cast<int>(std::round(y)) }, color);
 			y += m;
 		}
 	}
 	else {
-		if (y0 > y1) {
-			std::swap(x0, x1);
-			std::swap(y0, y1);
+		if (start.y > end.y) {
+			std::swap(start.x, end.x);
+			std::swap(start.y, end.y);
 		}
 
 		float m = dx / dy;
-		float x = x0;
+		float x = start.x;
 
-		for (int y = y0; y <= y1; y++) {
-			setPixel(std::round(x), y, color);
+		for (int y = start.y; y <= end.y; y++) {
+			//setPixel(std::round(x), y, color);
+			setPixel({ static_cast<int>(std::round(x)), y }, color);
 			x += m;
 		}
 	}
 }
 
-void Drawer::drawRect(int x, int y, int width, int height, sf::Color color, bool fill) {
+void Drawer::drawRect(Point2D pos, int width, int height, sf::Color color, bool fill) {
 	if (fill) {
 		for (int i = 0; i <= width; i++)
 			for (int j = 0; j <= height; j++)
-				setPixel(x + i, y + j, color);
+				setPixel({ pos.x + i, pos.y + j }, color);
 	}
 	else {
-		drawLine(x, y, x + width, y, color); // góra
-		drawLine(x, y + height, x + width, y + height, color); // dół
-		drawLine(x, y, x, y + height, color); // lewa
-		drawLine(x + width, y, x + width, y + height, color); //prawa
+		drawLine({ pos.x, pos.y }, { pos.x + width, pos.y }, color); // góra
+		drawLine({ pos.x, pos.y + height }, { pos.x + width, pos.y + height }, color); // dół
+		drawLine({ pos.x, pos.y }, { pos.x, pos.y + height }, color); // lewa
+		drawLine({ pos.x + width, pos.y }, { pos.x + width, pos.y + height }, color); //prawa
 	}
 }

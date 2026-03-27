@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Point2D.h"
+
 class Drawer {
 private:
 	unsigned int width;
@@ -14,8 +16,8 @@ public:
 	Drawer(sf::RenderWindow& win, unsigned int w, unsigned int h)
 		: window(win), width(w), height(h), pixels(w * h * 4), texture(sf::Vector2u(width, height)), sprite(texture) {}
 
-	void setPixel(int x, int y, sf::Color color);
+	void setPixel(Point2D pos, sf::Color color);
 	void render();
-	void drawLine(int x0, int y0, int x1, int y1, sf::Color color);
-	void drawRect(int x, int y, int width, int height, sf::Color color, bool fill = false);
+	void drawLine(Point2D start, Point2D end, sf::Color color);
+	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
 };

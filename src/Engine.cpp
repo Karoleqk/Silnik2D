@@ -30,6 +30,18 @@ void Engine::handleEvents() {
             mouseClickPos = pos;
             isDrawing = true;
         }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num1))
+            currentTool = PIXEL;
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num2))
+            currentTool = LINE;
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num3))
+            currentTool = RECT;
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Num4))
+            currentTool = CIRCLE;
             
     }
 }
@@ -46,7 +58,7 @@ void Engine::update() {
         std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
         std::cout << window.getSize().x << "\n" << window.getSize().y;
 
-        drawer.setPixel(mouseClickPos.x, mouseClickPos.y, sf::Color::Yellow);
+        drawer.setPixel({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Yellow);
 
         isDrawing = false;
     }
@@ -59,14 +71,14 @@ void Engine::update() {
 // Funkcje do rysowania udostępniane
 // tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
 
-void Engine::setPixel(int x, int y, sf::Color color) {
-    drawer.setPixel(x, y, color);
+void Engine::setPixel(Point2D pos, sf::Color color) {
+    drawer.setPixel(pos, color);
 }
 
-void Engine::drawLine(int x0, int y0, int x1, int y1, sf::Color color) {
-    drawer.drawLine(x0, y0, x1, y1, color);
+void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
+    drawer.drawLine(start, end, color);
 }
 
-void Engine::drawRect(int x, int y, int width, int height, sf::Color color, bool fill) {
-    drawer.drawRect(x, y, width, height, color, fill);
+void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
+    drawer.drawRect(start, width, height, color, fill);
 }
