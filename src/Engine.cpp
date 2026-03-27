@@ -73,12 +73,20 @@ void Engine::update() {
         //std::cout << window.getSize().x << "\n" << window.getSize().y << "\n";
 
         if (currentTool == PIXEL)
-            setPixel({mouseClickPos.x, mouseClickPos.y}, sf::Color::Yellow);
+            points.emplace_back(mouseClickPos.x, mouseClickPos.y);
 
         if (currentTool != PIXEL && currentTool != CIRCLE)
             drawShape();
 
         isDrawing = false;
+    }
+
+    for (auto line : lines) {
+        line.draw(primitiveRenderer, sf::Color::Cyan);
+    }
+
+    for (auto point : points) {
+        point.draw(primitiveRenderer, sf::Color::Cyan);
     }
 
     primitiveRenderer.render();
@@ -106,7 +114,7 @@ void Engine::drawShape() {
 
     if (currentClick == 2) {
         if (currentTool == LINE)
-            drawLine(start, end, sf::Color::Yellow);
+            lines.emplace_back(start, end);
 
         if (currentTool == RECT) {
             int width = end.x - start.x;

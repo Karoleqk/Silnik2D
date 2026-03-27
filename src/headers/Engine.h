@@ -1,6 +1,7 @@
 #pragma once
 #include "PrimitiveRenderer.h"
 #include "Point2D.h"
+#include "LineSegment.h"
 
 enum tools {PIXEL, LINE, RECT, CIRCLE};
 
@@ -14,6 +15,9 @@ private:
 
 	sf::RenderWindow window;
 	PrimitiveRenderer primitiveRenderer;
+
+	std::vector<LineSegment> lines;
+	std::vector<Point2D> points;
 
 	bool isDrawing;
 	sf::Vector2i mouseClickPos;
