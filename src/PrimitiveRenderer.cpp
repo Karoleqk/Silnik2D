@@ -1,9 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
-#include "headers/Drawer.h"
+#include "headers/PrimitiveRenderer.h"
+#include "headers/Point2D.h"
 
 // dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
-void Drawer::setPixel(Point2D pos, sf::Color color) {
+void PrimitiveRenderer::setPixel(Point2D pos, sf::Color color) {
 	if (pos.x < 0 || pos.x >= width || pos.y < 0 || pos.y >= height)
 		return;
 
@@ -16,7 +17,7 @@ void Drawer::setPixel(Point2D pos, sf::Color color) {
 }
 
 // Zmiana argumentów z x0 y0 na Point2D start, x1 y1 na Point2D end
-void Drawer::drawLine(Point2D start, Point2D end, sf::Color color) {
+void PrimitiveRenderer::drawLine(Point2D start, Point2D end, sf::Color color) {
 	float dx = end.x - start.x;
 	float dy = end.y - start.y;
 
@@ -61,7 +62,7 @@ void Drawer::drawLine(Point2D start, Point2D end, sf::Color color) {
 	}
 }
 
-void Drawer::drawRect(Point2D pos, int width, int height, sf::Color color, bool fill) {
+void PrimitiveRenderer::drawRect(Point2D pos, int width, int height, sf::Color color, bool fill) {
 	if (fill) {
 		for (int i = 0; i <= width; i++)
 			for (int j = 0; j <= height; j++)
@@ -76,7 +77,8 @@ void Drawer::drawRect(Point2D pos, int width, int height, sf::Color color, bool 
 }
 
 // Aktualizuje bufor pikseli oraz renderuje je na okno
-void Drawer::render() {
+void PrimitiveRenderer::render() {
 	texture.update(pixels.data());
+	window.clear();
 	window.draw(sprite);
 }

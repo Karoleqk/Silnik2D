@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Point2D.h"
+class Point2D;
 
-class Drawer {
+class PrimitiveRenderer {
 private:
 	unsigned int width;
 	unsigned int height;
@@ -13,7 +13,7 @@ private:
 	sf::RenderWindow& window; // referencja do istniejacego okna
 
 public:
-	Drawer(sf::RenderWindow& win, unsigned int w, unsigned int h)
+	PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsigned int h)
 		: window(win), width(w), height(h), pixels(w * h * 4), texture(sf::Vector2u(width, height)), sprite(texture) {}
 
 	void setPixel(Point2D pos, sf::Color color);

@@ -1,5 +1,5 @@
 #pragma once
-#include "Drawer.h"
+#include "PrimitiveRenderer.h"
 #include "Point2D.h"
 
 enum tools {PIXEL, LINE, RECT, CIRCLE};
@@ -13,13 +13,13 @@ private:
 	Point2D start, end;
 
 	sf::RenderWindow window;
-	Drawer drawer;
+	PrimitiveRenderer primitiveRenderer;
 
 	bool isDrawing;
 	sf::Vector2i mouseClickPos;
 public:
 	Engine(unsigned int w = 800, unsigned int h = 600) : 
-		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), drawer(window, width, height),
+		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), primitiveRenderer(window, width, height),
 		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
 
 	void run(int fps = 60);

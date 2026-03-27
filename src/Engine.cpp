@@ -1,16 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "headers/Engine.h"
-#include "headers/Drawer.h"
+#include "headers/PrimitiveRenderer.h"
+#include "headers/Point2D.h"
 
 // Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
-
-    //for (int i = 100; i < 200; i++)
-    //    for (int j = 100; j < 200; j++)
-    //        drawer.setPixel(i, j, sf::Color::Red);
 
     while (window.isOpen()) {
         handleEvents();
@@ -67,6 +64,9 @@ void Engine::handleEvents() {
 void Engine::update() {
     window.clear(sf::Color::Black);
 
+    Point2D p{ 20, 50 };
+    p.draw(primitiveRenderer, sf::Color::White);
+
     // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {
         //std::cout << "Wcisnieto LPM\n";
@@ -82,7 +82,7 @@ void Engine::update() {
         isDrawing = false;
     }
 
-    drawer.render();
+    primitiveRenderer.render();
 
     window.display();
 }
@@ -110,11 +110,6 @@ void Engine::drawShape() {
             drawLine(start, end, sf::Color::Yellow);
 
         if (currentTool == RECT) {
-            if (start.x > end.x || start.y > end.y) {
-                std::swap(start.x, end.x);
-                std::swap(start.y, end.y);
-            }
-
             int width = end.x - start.x;
             int height = end.y - start.y;
 
@@ -133,13 +128,13 @@ void Engine::resetStartEnd() {
 // tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
 
 void Engine::setPixel(Point2D pos, sf::Color color) {
-    drawer.setPixel(pos, color);
+    primitiveRenderer.setPixel(pos, color);
 }
 
 void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
-    drawer.drawLine(start, end, color);
+    primitiveRenderer.drawLine(start, end, color);
 }
 
 void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
-    drawer.drawRect(start, width, height, color, fill);
+    primitiveRenderer.drawRect(start, width, height, color, fill);
 }
