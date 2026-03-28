@@ -3,6 +3,9 @@
 #include "headers/PrimitiveRenderer.h"
 #include "headers/Point2D.h"
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 // dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
 void PrimitiveRenderer::setPixel(Point2D pos, sf::Color color) {
 	if (pos.x < 0 || pos.x >= width || pos.y < 0 || pos.y >= height)
@@ -73,6 +76,32 @@ void PrimitiveRenderer::drawRect(Point2D pos, int width, int height, sf::Color c
 		drawLine({ pos.x, pos.y + height }, { pos.x + width, pos.y + height }, color); // dół
 		drawLine({ pos.x, pos.y }, { pos.x, pos.y + height }, color); // lewa
 		drawLine({ pos.x + width, pos.y }, { pos.x + width, pos.y + height }, color); //prawa
+	}
+}
+
+void PrimitiveRenderer::drawCircle(Point2D middle, int R, sf::Color color) {
+	int x = 0, y = R;
+	int d = 3 - 2 * R;
+
+	while (x <= y) {
+		setPixel({middle.x + x, middle.y + y}, color);
+		setPixel({middle.x - x, middle.y - y}, color);
+		setPixel({middle.x - x, middle.y + y}, color);
+		setPixel({middle.x + x, middle.y - y}, color);
+
+		setPixel({middle.x + y, middle.y + x}, color);
+		setPixel({middle.x - y, middle.y - x}, color);
+		setPixel({middle.x + y, middle.y - x}, color);
+		setPixel({middle.x - y, middle.y + x}, color);
+
+		if (d < 0)
+			d = d + 4 * x + 6;
+		else {
+			d = d + 4 * (x - y) + 10;
+			y--;
+		}
+
+		x++;
 	}
 }
 

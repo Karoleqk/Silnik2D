@@ -75,6 +75,9 @@ void Engine::update() {
         if (currentTool == PIXEL)
             points.emplace_back(mouseClickPos.x, mouseClickPos.y);
 
+        if (currentTool == CIRCLE)
+            drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
+
         if (currentTool != PIXEL && currentTool != CIRCLE)
             drawShape();
 
@@ -144,4 +147,8 @@ void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
 
 void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
     primitiveRenderer.drawRect(start, width, height, color, fill);
+}
+
+void Engine::drawCircle(Point2D middle, int R, sf::Color color) {
+    primitiveRenderer.drawCircle(middle, R, color);
 }

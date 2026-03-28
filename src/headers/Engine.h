@@ -38,4 +38,5 @@ public:
 	void setPixel(Point2D pos, sf::Color color);
 	void drawLine(Point2D start, Point2D end, sf::Color color);
 	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
+	void drawCircle(Point2D middle, int R, sf::Color color);
 };
