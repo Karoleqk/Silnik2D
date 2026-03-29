@@ -5,11 +5,19 @@
 #include "headers/Point2D.h"
 #include "headers/LineSegment.h"
 
-
 // Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
+
+
+    std::vector<LineSegment> tmp;
+
+    tmp.emplace_back(std::vector<Point2D>{50, 50}, std::vector<Point2D>{100, 100});
+
+    drawMultiAngle(tmp, sf::Color::Red);
+
+    
 
     while (window.isOpen()) {
         handleEvents();
@@ -151,4 +159,12 @@ void Engine::drawRect(Point2D start, int width, int height, sf::Color color, boo
 
 void Engine::drawCircle(Point2D middle, int R, sf::Color color) {
     primitiveRenderer.drawCircle(middle, R, color);
+}
+
+void Engine::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color) {
+    primitiveRenderer.drawElipse(middle, Rx, Ry, color);
+}
+
+void Engine::drawMultiAngle(std::vector<LineSegment> lines, sf::Color color) {
+    primitiveRenderer.drawMultiAngle(lines, color);
 }

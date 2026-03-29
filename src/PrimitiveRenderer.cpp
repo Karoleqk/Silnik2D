@@ -2,6 +2,7 @@
 #include <cmath>
 #include "headers/PrimitiveRenderer.h"
 #include "headers/Point2D.h"
+#include <iostream>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -42,7 +43,7 @@ void PrimitiveRenderer::drawLine(Point2D start, Point2D end, sf::Color color) {
 		float m = dy / dx;
 		float y = start.y;
 
-		for (int x = start.x; x <= end.x; x++) {
+		for (int x = start.x; x <= end.x; ++x) {
 			//setPixel(x, std::round(y), color);
 			setPixel({ x, static_cast<int>(std::round(y)) }, color);
 			y += m;
@@ -102,6 +103,39 @@ void PrimitiveRenderer::drawCircle(Point2D middle, int R, sf::Color color) {
 		}
 
 		x++;
+	}
+}
+
+void PrimitiveRenderer::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color) {
+	int x, y;
+	float i;
+
+	float step = Rx > Ry ? 1.0 / Rx : 1.0 / Ry;
+
+	
+
+	for (i = 0; i < M_PI * 2; i += step) {
+		x = middle.x + Rx * cos(i);
+		y = middle.y + Ry * sin(i);
+		
+		setPixel({ x, y }, color);
+	}
+}
+
+void PrimitiveRenderer::drawMultiAngle(std::vector<LineSegment> lines, sf::Color color) {
+	
+	for (auto line : lines) {
+		std::cout << line.getStart().getX() << " ";
+		std::cout << line.getStart().getY();
+
+		std::cout << "\n";
+
+		std::cout << line.getEnd().getX() << " ";
+		std::cout << line.getEnd().getY();
+
+		std::cout << "\n";
+
+		drawLine(line.getStart(), line.getEnd(), color);
 	}
 }
 

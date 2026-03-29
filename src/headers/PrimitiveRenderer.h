@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "LineSegment.h"
 
 class Point2D;
 
@@ -23,4 +24,6 @@ public:
 	void drawLine(Point2D start, Point2D end, sf::Color color);
 	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
 	void drawCircle(Point2D middle, int R, sf::Color color);
+	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color);
+	void drawMultiAngle(std::vector<LineSegment> lines, sf::Color color);
 };
