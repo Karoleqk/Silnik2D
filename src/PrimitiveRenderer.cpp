@@ -16,7 +16,12 @@ PrimitiveRenderer::PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsi
 	texture(sf::Vector2u(width, height)),
 	sprite(texture) {
 	for (int i = 0; i < width * height; i++) {
-		pixels[i * 4 + 3] = 255;
+		// żeby zmienić kolor tła, trzeba tutaj zrobić np.:
+		// pixels[i * 4] = 120 -> ciemny czerwony kolor tła
+		// analogicznie z innymi atrybutami:
+		// pixels[i * 4], pixels[i * 4 + 1], pixels[i * 4 + 2]
+		//		R					G				B
+		pixels[i * 4 + 3] = 255; // A
 	}
 }
 
@@ -204,6 +209,6 @@ void PrimitiveRenderer::floodFill(Point2D pos, sf::Color fillColor, sf::Color bg
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {
 	texture.update(pixels.data());
-	window.clear();
 	window.draw(sprite);
+	window.display();
 }

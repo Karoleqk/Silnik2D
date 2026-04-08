@@ -73,8 +73,6 @@ void Engine::handleEvents() {
 // Funkcja do aktualizacji okna, najpierw czyścimy kolorem czarnym,
 // potem renderujemy za pomocą klasy Drawer i robimy window.display() zeby wyswietlic
 void Engine::update() {
-    window.clear(sf::Color::Black);
-
     // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {
         //std::cout << "Wcisnieto LPM\n";
@@ -91,7 +89,7 @@ void Engine::update() {
             drawShape();
 
         if (currentTool == FILL) {
-            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Black);
+            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Red, sf::Color::Black);
         }
 
         isDrawing = false;
@@ -106,8 +104,6 @@ void Engine::update() {
     }
 
     primitiveRenderer.render();
-
-    window.display();
 }
 
 // funkcja do wybierania punktow przy rysowaniu myszką
