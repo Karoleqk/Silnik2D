@@ -16,14 +16,17 @@ private:
 	sf::RenderWindow& window; // referencja do istniejacego okna
 
 public:
-	PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsigned int h)
-		: window(win), width(w), height(h), pixels(w * h * 4), texture(sf::Vector2u(width, height)), sprite(texture) {}
+	PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsigned int h);
 
 	void render();
+	sf::Color getPixel(Point2D pos);
+
 	void setPixel(Point2D pos, sf::Color color);
 	void drawLine(Point2D start, Point2D end, sf::Color color);
 	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
 	void drawCircle(Point2D middle, int R, sf::Color color);
 	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color);
 	void drawMultiAngle(std::vector<LineSegment> lines, sf::Color color);
+
+	void floodFill(Point2D pos, sf::Color fillColor, sf::Color bgColor);
 };

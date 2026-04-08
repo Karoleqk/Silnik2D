@@ -3,7 +3,7 @@
 #include "Point2D.h"
 #include "LineSegment.h"
 
-enum tools {PIXEL, LINE, RECT, CIRCLE};
+enum tools {PIXEL, LINE, RECT, CIRCLE, FILL};
 
 class Engine {
 private:

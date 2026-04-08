@@ -3,9 +3,22 @@
 #include "headers/PrimitiveRenderer.h"
 #include "headers/Point2D.h"
 #include <iostream>
+#include <stack>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
+
+PrimitiveRenderer::PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsigned int h) :
+	window(win),
+	width(w),
+	height(h),
+	pixels(w* h * 4),
+	texture(sf::Vector2u(width, height)),
+	sprite(texture) {
+	for (int i = 0; i < width * height; i++) {
+		pixels[i * 4 + 3] = 255;
+	}
+}
 
 // dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
 void PrimitiveRenderer::setPixel(Point2D pos, sf::Color color) {
@@ -19,6 +32,24 @@ void PrimitiveRenderer::setPixel(Point2D pos, sf::Color color) {
 	pixels[index + 2] = color.b;
 	pixels[index + 3] = color.a;
 }
+
+sf::Color PrimitiveRenderer::getPixel(Point2D pos) {
+	if (pos.x < 0 || pos.x >= width || pos.y < 0 || pos.y >= height)
+		return sf::Color::White;
+
+	int index = 4 * (pos.y * width + pos.x);
+
+	return sf::Color(
+		pixels[index],
+		pixels[index + 1],
+		pixels[index + 2],
+		pixels[index + 3]
+	);
+}
+
+// |******************************|
+// Funkcje do rysowania prymitywów
+// |******************************|
 
 // Zmiana argumentów z x0 y0 na Point2D start, x1 y1 na Point2D end
 void PrimitiveRenderer::drawLine(Point2D start, Point2D end, sf::Color color) {
@@ -138,6 +169,37 @@ void PrimitiveRenderer::drawMultiAngle(std::vector<LineSegment> lines, sf::Color
 		drawLine(line.getStart(), line.getEnd(), color);
 	}
 }
+
+// |******************************|
+
+// Funkcja do wypełniania kolorem
+void PrimitiveRenderer::floodFill(Point2D pos, sf::Color fillColor, sf::Color bgColor) {
+	std::stack<Point2D> stack;
+	stack.push(pos);
+
+	while (!stack.empty()) {
+		Point2D point = stack.top();
+		stack.pop();
+
+		sf::Color current = getPixel(point);
+
+		if (current != bgColor) continue;
+		if (current == fillColor) continue;
+		
+		if (current == bgColor) {
+			setPixel(point, fillColor);
+
+			stack.push({ point.x + 1, point.y });
+			stack.push({ point.x - 1, point.y });
+			stack.push({ point.x, point.y + 1 });
+			stack.push({ point.x, point.y - 1 });
+		}
+	}
+}
+
+
+// |******************************|
+
 
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {

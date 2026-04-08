@@ -10,12 +10,11 @@ void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
 
+    // Do ogarniecia pozniej linie krzywe itd.
 
-    std::vector<LineSegment> tmp;
-
-    tmp.emplace_back(std::vector<Point2D>{50, 50}, std::vector<Point2D>{100, 100});
-
-    drawMultiAngle(tmp, sf::Color::Red);
+    //std::vector<LineSegment> tmp;
+    //tmp.emplace_back(std::vector<Point2D>{50, 50}, std::vector<Point2D>{100, 100});
+    //drawMultiAngle(tmp, sf::Color::Red);
 
     
 
@@ -46,24 +45,26 @@ void Engine::handleEvents() {
             switch (keyPressed->code) {
             case sf::Keyboard::Key::Num1:
                 currentTool = PIXEL;
-                resetStartEnd();
                 break;
 
             case sf::Keyboard::Key::Num2:
                 currentTool = LINE;
-                resetStartEnd();
                 break;
 
             case sf::Keyboard::Key::Num3:
                 currentTool = RECT;
-                resetStartEnd();
                 break;
 
             case sf::Keyboard::Key::Num4:
                 currentTool = CIRCLE;
-                resetStartEnd();
+                break;
+
+            case sf::Keyboard::Key::Num5:
+                currentTool = FILL;
                 break;
             }
+
+            resetStartEnd();
         }
             
     }
@@ -80,14 +81,18 @@ void Engine::update() {
         //std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
         //std::cout << window.getSize().x << "\n" << window.getSize().y << "\n";
 
-        if (currentTool == PIXEL)
+        if (currentTool == PIXEL) 
             points.emplace_back(mouseClickPos.x, mouseClickPos.y);
-
+        
         if (currentTool == CIRCLE)
             drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
 
-        if (currentTool != PIXEL && currentTool != CIRCLE)
+        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FILL)
             drawShape();
+
+        if (currentTool == FILL) {
+            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Black);
+        }
 
         isDrawing = false;
     }
