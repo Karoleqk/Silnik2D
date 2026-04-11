@@ -29,4 +29,5 @@ public:
 	void drawPolygon(std::vector<Point2D> points, sf::Color color);
 
 	void floodFill(Point2D pos, sf::Color fillColor, sf::Color bgColor);
+	void boundaryFill(Point2D pos, sf::Color fillColor, sf::Color boundaryColor);
 };

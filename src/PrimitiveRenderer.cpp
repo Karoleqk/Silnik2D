@@ -225,6 +225,35 @@ void PrimitiveRenderer::floodFill(Point2D pos, sf::Color fillColor, sf::Color bg
 	}
 }
 
+// Funkcja do wypełniania obszaru z kontrolą koloru granicy
+void PrimitiveRenderer::boundaryFill(Point2D pos, sf::Color fillColor, sf::Color boundaryColor) {
+	std::stack<Point2D> stack;
+	stack.push(pos);
+
+	while (!stack.empty()) {
+		Point2D point = stack.top();
+		stack.pop();
+
+		// Dodatkowe zabezpieczenie, by nie wyjść pętlą poza pamięć ekranu
+		if (point.x < 0 || point.x >= width || point.y < 0 || point.y >= height)
+			continue;
+
+		sf::Color current = getPixel(point);
+
+		// Zgodnie z algorytmem: jeśli piksel ma kolor wypełnienia lub krawędzi, pomijamy go
+		if (current == fillColor || current == boundaryColor) continue;
+
+		// W przeciwnym razie zmieniamy kolor na docelowy
+		setPixel(point, fillColor);
+
+		// Odkładamy na stos sąsiedztwo von Neumanna (N, S, W, E)
+		stack.push({ point.x + 1, point.y });
+		stack.push({ point.x - 1, point.y });
+		stack.push({ point.x, point.y + 1 });
+		stack.push({ point.x, point.y - 1 });
+	}
+}
+
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {
 	texture.update(pixels.data());

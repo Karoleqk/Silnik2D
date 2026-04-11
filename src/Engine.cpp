@@ -14,9 +14,9 @@ void Engine::run(int fps) {
         Point2D(400, 300),
         Point2D(500, 400),
         Point2D(400, 500),
-        Point2D(300, 400)
+        Point2D(600, 400)
     };
-    drawPolygon(quad, sf::Color::Blue);
+    drawPolygon(quad, sf::Color::Yellow);
 
     while (window.isOpen()) {
         handleEvents();
@@ -60,7 +60,11 @@ void Engine::handleEvents() {
                 break;
 
             case sf::Keyboard::Key::Num5:
-                currentTool = FILL;
+                currentTool = FLOOD_FILL;
+                break;
+
+            case sf::Keyboard::Key::Num6:
+                currentTool = BOUNDARY_FILL;
                 break;
             }
 
@@ -85,11 +89,15 @@ void Engine::update() {
         if (currentTool == CIRCLE)
             drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
 
-        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FILL)
+        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FLOOD_FILL && currentTool != BOUNDARY_FILL)
             drawShape();
 
-        if (currentTool == FILL) {
+        if (currentTool == FLOOD_FILL) {
             primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Red, sf::Color::Black);
+        }
+
+        if (currentTool == BOUNDARY_FILL) {
+            primitiveRenderer.boundaryFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Yellow);
         }
 
         isDrawing = false;
