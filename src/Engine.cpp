@@ -10,13 +10,13 @@ void Engine::run(int fps) {
     isDrawing = false;
     window.setFramerateLimit(fps);
 
-    // Do ogarniecia pozniej linie krzywe itd.
-
-    //std::vector<LineSegment> tmp;
-    //tmp.emplace_back(std::vector<Point2D>{50, 50}, std::vector<Point2D>{100, 100});
-    //drawMultiAngle(tmp, sf::Color::Red);
-
-    
+    std::vector<Point2D> quad = {
+        Point2D(400, 300),
+        Point2D(500, 400),
+        Point2D(400, 500),
+        Point2D(300, 400)
+    };
+    drawPolygon(quad, sf::Color::Blue);
 
     while (window.isOpen()) {
         handleEvents();
@@ -166,6 +166,6 @@ void Engine::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color) {
     primitiveRenderer.drawElipse(middle, Rx, Ry, color);
 }
 
-void Engine::drawMultiAngle(std::vector<LineSegment> lines, sf::Color color) {
-    primitiveRenderer.drawMultiAngle(lines, color);
+void Engine::drawPolygon(std::vector<Point2D> points, sf::Color color) {
+    primitiveRenderer.drawPolygon(points, color);
 }

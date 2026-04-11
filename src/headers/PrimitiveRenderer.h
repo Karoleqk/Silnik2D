@@ -26,7 +26,7 @@ public:
 	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
 	void drawCircle(Point2D middle, int R, sf::Color color);
 	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color);
-	void drawMultiAngle(std::vector<LineSegment> lines, sf::Color color);
+	void drawPolygon(std::vector<Point2D> points, sf::Color color);
 
 	void floodFill(Point2D pos, sf::Color fillColor, sf::Color bgColor);
 };

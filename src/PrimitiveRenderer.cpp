@@ -158,24 +158,47 @@ void PrimitiveRenderer::drawElipse(Point2D middle, int Rx, int Ry, sf::Color col
 	}
 }
 
-void PrimitiveRenderer::drawMultiAngle(std::vector<LineSegment> lines, sf::Color color) {
-	
-	for (auto line : lines) {
-		std::cout << line.getStart().getX() << " ";
-		std::cout << line.getStart().getY();
+void PrimitiveRenderer::drawPolygon(std::vector<Point2D> points, sf::Color color) {
+	int n = points.size();
+	if (n < 3) return; // Wielokąt musi mieć przynajmniej 3 wierzchołki
 
-		std::cout << "\n";
 
-		std::cout << line.getEnd().getX() << " ";
-		std::cout << line.getEnd().getY();
+	auto orientation = [](Point2D p, Point2D q, Point2D r) {
+		int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+		if (val == 0) return 0;
+		return (val > 0) ? 1 : 2;
+		};
 
-		std::cout << "\n";
+	auto doIntersect = [&](Point2D p1, Point2D q1, Point2D p2, Point2D q2) {
+		int o1 = orientation(p1, q1, p2);
+		int o2 = orientation(p1, q1, q2);
+		int o3 = orientation(p2, q2, p1);
+		int o4 = orientation(p2, q2, q1);
 
-		drawLine(line.getStart(), line.getEnd(), color);
+		if (o1 != o2 && o3 != o4) return true;
+		return false;
+		};
+
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 2; j < n; j++) {
+			if (i == 0 && j == n - 1) continue;
+
+			Point2D p1 = points[i];
+			Point2D q1 = points[(i + 1) % n];
+			Point2D p2 = points[j];
+			Point2D q2 = points[(j + 1) % n];
+
+			if (doIntersect(p1, q1, p2, q2)) {
+				std::cout << "Odcinki figury sie przecinaja" << std::endl;
+				return;
+			}
+		}
+	}
+
+	for (int i = 0; i < n; i++) {
+		drawLine(points[i], points[(i + 1) % n], color);
 	}
 }
-
-// |******************************|
 
 // Funkcja do wypełniania kolorem
 void PrimitiveRenderer::floodFill(Point2D pos, sf::Color fillColor, sf::Color bgColor) {
@@ -201,10 +224,6 @@ void PrimitiveRenderer::floodFill(Point2D pos, sf::Color fillColor, sf::Color bg
 		}
 	}
 }
-
-
-// |******************************|
-
 
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {
