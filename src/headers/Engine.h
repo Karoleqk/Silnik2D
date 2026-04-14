@@ -3,6 +3,7 @@
 #include "Point2D.h"
 #include "LineSegment.h"
 #include "Player.h"
+#include "headers/BitmapHandler.h"
 
 enum tools {PIXEL, LINE, RECT, CIRCLE, FLOOD_FILL, BOUNDARY_FILL};
 

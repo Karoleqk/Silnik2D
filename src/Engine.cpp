@@ -5,17 +5,23 @@
 #include "headers/Point2D.h"
 #include "headers/LineSegment.h"
 
-// Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
     window.setFramerateLimit(fps);
 
-    std::vector<Point2D> quad = {
-        Point2D(400, 300),
-        Point2D(500, 400),
-        Point2D(400, 500),
-        Point2D(600, 400)
-    };
+    //std::vector<Point2D> quad = {
+    //    Point2D(400, 300),
+    //    Point2D(500, 400),
+    //    Point2D(400, 500),
+    //    Point2D(600, 400)
+    //};
     //drawPolygon(quad, sf::Color::Yellow);
+
+    BitmapHandler testBmp;
+    testBmp.create(200, 200, sf::Color::Green); 
+
+    if (testBmp.saveToFile("test_output.bmp")) {
+        std::cout << "test bitmap saved to disk" << std::endl;
+    }
 
     while (window.isOpen()) {
         handleEvents();
