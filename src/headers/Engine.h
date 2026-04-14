@@ -2,6 +2,7 @@
 #include "PrimitiveRenderer.h"
 #include "Point2D.h"
 #include "LineSegment.h"
+#include "Player.h"
 
 enum tools {PIXEL, LINE, RECT, CIRCLE, FLOOD_FILL, BOUNDARY_FILL};
 
@@ -12,6 +13,7 @@ private:
 	int currentTool;
 	int currentClick;
 	Point2D start, end;
+	Player player;
 
 	sf::RenderWindow window;
 	PrimitiveRenderer primitiveRenderer;
@@ -26,7 +28,7 @@ public:
 
 	Engine(unsigned int w = 800, unsigned int h = 600) : 
 		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), primitiveRenderer(window, width, height),
-		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
+		isDrawing(false), currentTool(PIXEL), currentClick(0), player(400,300) {};
 
 	PrimitiveRenderer getRenderer();
 

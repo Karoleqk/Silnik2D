@@ -21,5 +21,5 @@ int main()
     //engine.drawRect({ 500, 50 }, 100, 50, sf::Color::Yellow);
     //engine.drawRect({ 500, 200 }, 80, 80, sf::Color::Blue, true); // wypełniony
 
-    engine.run(1000); // bez parametrów: 60fps, z paremetrem: wybrane fps
+    engine.run(240); // bez parametrów: 60fps, z paremetrem: wybrane fps
 }

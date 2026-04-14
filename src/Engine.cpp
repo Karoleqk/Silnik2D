@@ -76,6 +76,8 @@ void Engine::handleEvents() {
 
 // Metoda do aktualizowania zmiennych
 void Engine::update() {
+    player.update();
+
     Point2D middle(400, 300);
     points.push_back(middle);
 
@@ -104,14 +106,14 @@ void Engine::update() {
 
     // ROTACJA
 
-    LineSegment base({ 450, 300 }, { 450, 350 });
-    angle += 0.5f;
-    lines.clear();
-    for (float i = 0; i <= 360; i += 30) {
-        LineSegment l = base;
-        l.rotate(i + angle, middle);
-        lines.push_back(l);
-    }
+    //LineSegment base({ 450, 300 }, { 450, 350 });
+    //angle += 0.5f;
+    //lines.clear();
+    //for (float i = 0; i <= 360; i += 30) {
+    //    LineSegment l = base;
+    //    l.rotate(i + angle, middle);
+    //    lines.push_back(l);
+    //}
 
     
 
@@ -153,6 +155,8 @@ void Engine::update() {
 // Metoda do aktualizacji okna
 // renderujemy za pomocą klasy PrimitiveRenderer
 void Engine::render() {
+    player.draw(primitiveRenderer, sf::Color::Green);
+
     for (auto& line : lines) {
         line.draw(primitiveRenderer, sf::Color::Cyan);
     }
