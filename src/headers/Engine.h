@@ -22,13 +22,18 @@ private:
 	bool isDrawing;
 	sf::Vector2i mouseClickPos;
 public:
+	float angle = 1.0f;
+
 	Engine(unsigned int w = 800, unsigned int h = 600) : 
 		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), primitiveRenderer(window, width, height),
 		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
 
+	PrimitiveRenderer getRenderer();
+
 	void run(int fps = 60);
 	void handleEvents();
 	void update();
+	void render();
 
 	// funkcja do ustawiania dwoch pozycji
 	void drawShape();

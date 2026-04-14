@@ -18,6 +18,7 @@ private:
 public:
 	PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsigned int h);
 
+	void clear();
 	void render();
 	sf::Color getPixel(Point2D pos);
 

@@ -1,9 +1,10 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "ShapeObject.h"
 class PrimitiveRenderer;
 
-class Point2D {
+class Point2D : ShapeObject {
 public:
 	int x;
 	int y;
@@ -18,6 +19,9 @@ public:
 	void setX(int x);
 	void setY(int y);
 
-	// Metoda rysująca punkt
-	void draw(PrimitiveRenderer& renderer, sf::Color color);
+	// Metody abstrakcyjne
+	virtual void draw(PrimitiveRenderer& renderer, sf::Color color) override;
+	virtual void translate(float dx, float dy) override;
+	virtual void rotate(float angle = 0.0f, Point2D point = {0, 0}) override;
+	virtual void scale(float k = 1, Point2D point = {0, 0}) override;
 };

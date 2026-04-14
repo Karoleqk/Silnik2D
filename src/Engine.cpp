@@ -7,7 +7,6 @@
 
 // Inicjalizacja okna (testowo narysowałem czerwony kwadrat)
 void Engine::run(int fps) {
-    isDrawing = false;
     window.setFramerateLimit(fps);
 
     std::vector<Point2D> quad = {
@@ -16,11 +15,12 @@ void Engine::run(int fps) {
         Point2D(400, 500),
         Point2D(600, 400)
     };
-    drawPolygon(quad, sf::Color::Yellow);
+    //drawPolygon(quad, sf::Color::Yellow);
 
     while (window.isOpen()) {
         handleEvents();
         update();
+        render();
     }
 }
 
@@ -74,18 +74,64 @@ void Engine::handleEvents() {
     }
 }
 
-// Funkcja do aktualizacji okna, najpierw czyścimy kolorem czarnym,
-// potem renderujemy za pomocą klasy Drawer i robimy window.display() zeby wyswietlic
+// Metoda do aktualizowania zmiennych
 void Engine::update() {
+    Point2D middle(400, 300);
+    points.push_back(middle);
+
+    // TRANSLACJA
+
+    //LineSegment line2({ 300, 300 }, { 400, 400 });
+    //lines.push_back(line2);
+    //line2.translate(300, 200);
+    //lines.push_back(line2);
+
+
+    // ----------------------------------------
+    // Przykład działania rotate() na punkcie
+
+    //Point2D base(420, 320);
+    //for (float i = 0; i <= 360; i += 15) {
+    //    Point2D point = base;
+    //    point.rotate(i, middle);
+    //    points.push_back(point);
+    //}
+
+    // ----------------------------------------
+
+
+    // Przykład działania rotate() z animacją kręcenia się
+
+    // ROTACJA
+
+    LineSegment base({ 450, 300 }, { 450, 350 });
+    angle += 0.5f;
+    lines.clear();
+    for (float i = 0; i <= 360; i += 30) {
+        LineSegment l = base;
+        l.rotate(i + angle, middle);
+        lines.push_back(l);
+    }
+
+    
+
+    // SKALOWANIE
+
+    //LineSegment base1({ 500, 275 }, { 500, 325 });
+    //lines.push_back(base1);
+    //for (float i = 2; i >= -2; i -= 0.5) {
+    //    LineSegment line = base1;
+    //    line.scale(i, middle);
+    //    lines.push_back(line);
+    //}
+    
+
+
     // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
     if (isDrawing) {
-        //std::cout << "Wcisnieto LPM\n";
-        //std::cout << "X: " << mouseClickPos.x << "\nY: " << mouseClickPos.y << std::endl;
-        //std::cout << window.getSize().x << "\n" << window.getSize().y << "\n";
-
-        if (currentTool == PIXEL) 
+        if (currentTool == PIXEL)
             points.emplace_back(mouseClickPos.x, mouseClickPos.y);
-        
+
         if (currentTool == CIRCLE)
             drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
 
@@ -102,12 +148,16 @@ void Engine::update() {
 
         isDrawing = false;
     }
+}
 
-    for (auto line : lines) {
+// Metoda do aktualizacji okna
+// renderujemy za pomocą klasy PrimitiveRenderer
+void Engine::render() {
+    for (auto& line : lines) {
         line.draw(primitiveRenderer, sf::Color::Cyan);
     }
 
-    for (auto point : points) {
+    for (auto& point : points) {
         point.draw(primitiveRenderer, sf::Color::Cyan);
     }
 
@@ -149,6 +199,11 @@ void Engine::drawShape() {
 
 void Engine::resetStartEnd() {
     start.x = start.y = end.x = end.y = currentClick = 0;
+}
+
+// Gettery
+PrimitiveRenderer Engine::getRenderer() {
+    return this->primitiveRenderer;
 }
 
 // Funkcje do rysowania udostępniane

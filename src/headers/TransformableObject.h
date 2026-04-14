@@ -1,0 +1,9 @@
+#pragma once
+//#include <math.h>
+class Point2D;
+
+class TransformableObject {
+	virtual void translate(float dx, float dy) = 0; // Przesunięcie
+	virtual void rotate(float angle, Point2D point) = 0; // Obrót
+	virtual void scale(float k, Point2D point) = 0; // Skalowanie
+};

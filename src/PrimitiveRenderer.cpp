@@ -15,14 +15,7 @@ PrimitiveRenderer::PrimitiveRenderer(sf::RenderWindow& win, unsigned int w, unsi
 	pixels(w* h * 4),
 	texture(sf::Vector2u(width, height)),
 	sprite(texture) {
-	for (int i = 0; i < width * height; i++) {
-		// żeby zmienić kolor tła, trzeba tutaj zrobić np.:
-		// pixels[i * 4] = 120 -> ciemny czerwony kolor tła
-		// analogicznie z innymi atrybutami:
-		// pixels[i * 4], pixels[i * 4 + 1], pixels[i * 4 + 2]
-		//		R					G				B
-		pixels[i * 4 + 3] = 255; // A
-	}
+	clear();
 }
 
 // dodaje do bufora pikseli zmieniony kolor konkretnego pixela o wspolrzednych x,y
@@ -254,9 +247,27 @@ void PrimitiveRenderer::boundaryFill(Point2D pos, sf::Color fillColor, sf::Color
 	}
 }
 
+
+// Resetowanie bufora pikseli
+void PrimitiveRenderer::clear() {
+	for (int i = 0; i < width * height; i++) {
+		// żeby zmienić kolor tła, trzeba tutaj zrobić np.:
+		// pixels[i * 4] = 120 -> ciemny czerwony kolor tła
+		// analogicznie z innymi atrybutami:
+		// pixels[i * 4], pixels[i * 4 + 1], pixels[i * 4 + 2]
+		//		R					G				B
+		pixels[i * 4] = 0;
+		pixels[i * 4 + 1] = 0;
+		pixels[i * 4 + 2] = 0;
+		pixels[i * 4 + 3] = 255; // A
+	}
+}
+
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {
 	texture.update(pixels.data());
 	window.draw(sprite);
 	window.display();
+	// czyszczenie bufora co klatke
+	clear();
 }
