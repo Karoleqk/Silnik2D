@@ -30,7 +30,7 @@ public:
 
 	Engine(unsigned int w = 800, unsigned int h = 600) : 
 		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), primitiveRenderer(window, width, height),
-		isDrawing(false), currentTool(PIXEL), currentClick(0), player(400,300) {};
+		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
 
 	PrimitiveRenderer getRenderer();
 

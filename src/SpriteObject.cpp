@@ -33,3 +33,22 @@ void SpriteObject::draw(PrimitiveRenderer& renderer, sf::Color color) {
         }
     }
 }
+
+void SpriteObject::animate(float dt) {
+    timer += dt;
+
+    int maxFrames = (state == RUN) ? frameCountRun : frameCountIdle;
+
+    if (timer >= frameTime) {
+        timer = 0.f;
+
+        frameX++;
+
+        if (frameX >= maxFrames)
+            frameX = 0;
+    }
+}
+
+void SpriteObject::setPosition(Point2D pos) {
+    this->position = pos;
+}

@@ -2,24 +2,19 @@
 #include "headers/PrimitiveRenderer.h"
 #include <iostream>
 
-Player::Player(int startX, int startY) : speed(2.0f) {}
+Player::Player() : speed(2.0f) {}
 
 void Player::update() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) {
-        //translate(0, speed);
         position.y -= speed;
-        frameY = 2;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
-        //translate(0, -speed);
         position.y += speed;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
-        //translate(-speed, 0);
         position.x -= speed;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
-        //translate(speed, 0);
         position.x += speed;
     }
 }
@@ -39,6 +34,10 @@ void Player::rotate(float angle, Point2D point) {
 
 void Player::scale(float k, Point2D point) {
     position.scale(k, point);
+}
+
+void Player::animate(float dt) {
+    SpriteObject::animate(dt);
 }
 
 // Ustawianie

@@ -78,6 +78,7 @@ void Engine::handleEvents() {
 // Metoda do aktualizowania zmiennych
 void Engine::update() {
     player.update();
+    player.animate(0.005f);
 
     // TRANSLACJA
 

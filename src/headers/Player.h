@@ -11,7 +11,7 @@ private:
     BitmapHandler sheet;
 
 public:
-    Player(int startX, int startY);
+    Player();
 
     void update() override;
 
@@ -19,6 +19,8 @@ public:
     void translate(float dx, float dy) override;
     void rotate(float angle, Point2D point) override;
     void scale(float k, Point2D point) override;
+
+    virtual void animate(float dt) override;
 
     // Metoda do ustawienia płótna
     void setPosition(Point2D pos);
