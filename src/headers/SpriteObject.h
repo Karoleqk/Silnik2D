@@ -22,7 +22,7 @@ protected:
 	int frameHeight = 32;
 
 	float timer = 0;
-	float frameTime = 0.1f;
+	float frameTime = .1f;
 
 	int frameCountIdle = 4;
 	int frameCountRun = 16;

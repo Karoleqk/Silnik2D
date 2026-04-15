@@ -5,9 +5,20 @@
 Player::Player() : speed(2.0f) {}
 
 void Player::update() {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) {
-        position.y -= speed;
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && isJumping) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) && !isJumping)) {
+        velocityY += jumpStrength;
+        isJumping = true;
     }
+
+    velocityY -= gravity;
+    translate(0, velocityY);
+
+    if (position.y >= 500) {
+        position.y = 500;
+        velocityY = 0;
+        isJumping = false;
+    }
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
         position.y += speed;
     }

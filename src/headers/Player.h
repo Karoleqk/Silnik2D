@@ -8,7 +8,11 @@
 class Player : public UpdatableObject, public ShapeObject, public SpriteObject {
 private:
     float speed;
-    BitmapHandler sheet;
+
+    float velocityY = 0.0f;
+    float gravity = 0.3f;
+    float jumpStrength = 10.0f;
+    bool isJumping = false;
 
 public:
     Player();
