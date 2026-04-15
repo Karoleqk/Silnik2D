@@ -4,7 +4,7 @@
 
 class PrimitiveRenderer;
 
-class DrawableObject : virtual public GameObject {
+class DrawableObject : public GameObject {
 public:
 	virtual void draw(PrimitiveRenderer& renderer, sf::Color color) = 0;
 };

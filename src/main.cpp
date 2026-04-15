@@ -10,6 +10,13 @@ int main()
     PrimitiveRenderer renderer = engine.getRenderer();
     Point2D point(50, 50);
 
+    BitmapHandler bmp;
+    bmp.loadFromFile("C:/Dev/Grafika Komputerowa/repos/Silnik2D/assets/brackeys_platformer_assets/sprites/knight.png");
+    Player player(400, 300);
+    player.setSheet(bmp);
+    engine.setPlayer(player);
+
+
     //engine.setPixel(20, 20, sf::Color::White); // funkcja rysowania musi być wywołana przed engine.run();
     //engine.setPixel({ 50, 20 }, sf::Color::White);
     //

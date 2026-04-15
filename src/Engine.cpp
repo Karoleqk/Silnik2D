@@ -16,12 +16,7 @@ void Engine::run(int fps) {
     //};
     //drawPolygon(quad, sf::Color::Yellow);
 
-    BitmapHandler testBmp;
-    testBmp.create(200, 200, sf::Color::Green); 
-
-    if (testBmp.saveToFile("test_output.bmp")) {
-        std::cout << "test bitmap saved to disk" << std::endl;
-    }
+    // Obsluga playera z main.cpp
 
     while (window.isOpen()) {
         handleEvents();
@@ -83,9 +78,6 @@ void Engine::handleEvents() {
 // Metoda do aktualizowania zmiennych
 void Engine::update() {
     player.update();
-
-    Point2D middle(400, 300);
-    points.push_back(middle);
 
     // TRANSLACJA
 
@@ -161,7 +153,7 @@ void Engine::update() {
 // Metoda do aktualizacji okna
 // renderujemy za pomocą klasy PrimitiveRenderer
 void Engine::render() {
-    player.draw(primitiveRenderer, sf::Color::Green);
+    player.draw(primitiveRenderer);
 
     for (auto& line : lines) {
         line.draw(primitiveRenderer, sf::Color::Cyan);

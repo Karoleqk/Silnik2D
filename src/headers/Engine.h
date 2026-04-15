@@ -4,6 +4,7 @@
 #include "LineSegment.h"
 #include "Player.h"
 #include "headers/BitmapHandler.h"
+#include "headers/BitmapObject.h"
 
 enum tools {PIXEL, LINE, RECT, CIRCLE, FLOOD_FILL, BOUNDARY_FILL};
 
@@ -49,4 +50,7 @@ public:
 	void drawCircle(Point2D middle, int R, sf::Color color);
 	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color);
 	void drawPolygon(std::vector<Point2D> points, sf::Color color);
+
+	// Funkcje do obslugi zewnetrznej
+	void setPlayer(Player& p) { this->player = p; };
 };

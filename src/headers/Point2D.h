@@ -4,7 +4,7 @@
 #include "ShapeObject.h"
 class PrimitiveRenderer;
 
-class Point2D : ShapeObject {
+class Point2D : public ShapeObject {
 public:
 	int x;
 	int y;
