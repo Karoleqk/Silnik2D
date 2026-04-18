@@ -41,7 +41,7 @@ int main()
 
     engine.setBackground(background);
 
-    //engine.drawLine({ 0, 0 }, player.getPosition(), sf::Color::Blue);
+    engine.drawLine({ 0, 500 }, {600, 500}, sf::Color::Blue);
 
     engine.run(240); // bez parametrów: 60fps, z paremetrem: wybrane fps
 }

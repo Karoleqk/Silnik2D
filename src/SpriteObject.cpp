@@ -59,11 +59,14 @@ void SpriteObject::drawFrame(PrimitiveRenderer& renderer) {
 
             if (c.a == 0) continue;
 
+            int offsetX = frameWidth * objectScale / 2;
+            int offsetY = frameHeight * objectScale / 2 + frameHeight;
+
             for (int sy = 0; sy < (int)objectScale; sy++) {
                 for (int sx = 0; sx < (int)objectScale; sx++) {
                     renderer.setPixel({
-                        (int)position.x + (x * (int)objectScale + sx),
-                        (int)position.y + (y * (int)objectScale + sy)
+                        (int)position.x + (x * (int)objectScale + sx) - offsetX,
+                        (int)position.y + (y * (int)objectScale + sy - offsetY)
                         }, c);
                 }
             }

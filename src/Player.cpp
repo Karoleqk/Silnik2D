@@ -5,10 +5,8 @@
 Player::Player() : speed(2.0f) {}
 
 void Player::update() {
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && isJumping) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) && !isJumping)) {
-        velocityY += jumpStrength;
-        isJumping = true;
-    }
+    handleInput();
+    handleCollision();
 
     velocityY -= gravity;
     translate(0, velocityY);
@@ -19,8 +17,13 @@ void Player::update() {
         isJumping = false;
     }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)) {
-        position.y += speed;
+
+}
+
+void Player::handleInput() {
+    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && isJumping) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) && !isJumping)) {
+        velocityY += jumpStrength;
+        isJumping = true;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
         position.x -= speed;
@@ -28,6 +31,10 @@ void Player::update() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
         position.x += speed;
     }
+}
+
+void Player::handleCollision() {
+
 }
 
 void Player::draw(PrimitiveRenderer& renderer, sf::Color color) {

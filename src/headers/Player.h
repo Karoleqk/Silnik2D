@@ -28,4 +28,8 @@ public:
 
     // Metoda do ustawienia płótna
     void setPosition(Point2D pos);
+
+    // poruszanie sie
+    void handleInput();
+    void handleCollision();
 };

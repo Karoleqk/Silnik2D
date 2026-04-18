@@ -7,6 +7,7 @@
 
 void Engine::run(int fps) {
     window.setFramerateLimit(fps);
+    player.setPosition({ 30, 400 });
 
     //std::vector<Point2D> quad = {
     //    Point2D(400, 300),
@@ -158,6 +159,8 @@ void Engine::update() {
 void Engine::render() {
     background.draw(primitiveRenderer);
     player.draw(primitiveRenderer);
+    lines.clear();
+    drawLine(player.position, { 400, 300 }, sf::Color::Blue);
 
     for (auto& line : lines) {
         line.draw(primitiveRenderer, sf::Color::Cyan);
