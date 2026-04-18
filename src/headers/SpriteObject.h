@@ -1,19 +1,17 @@
 #pragma once
 
 #include "BitmapObject.h"
-#include "AnimatedObject.h"
 #include "Point2D.h"
 
-enum AnimState {IDLE, RUN};
+enum drawMode {SINGLE, BACKGROUND};
 
 class PrimitiveRenderer;
 
-class SpriteObject : public BitmapObject, public AnimatedObject {
+class SpriteObject : public BitmapObject {
 protected:
-	AnimState state = IDLE;
+	std::vector<std::vector<int>> map;
 
-	Point2D position;
-	float scale = 3.0f;
+	float objectScale = 3.0f;
 
 	int frameX = 0;
 	int frameY = 0;
@@ -21,15 +19,20 @@ protected:
 	int frameWidth = 32;
 	int frameHeight = 32;
 
-	float timer = 0;
-	float frameTime = .1f;
-
-	int frameCountIdle = 4;
-	int frameCountRun = 16;
-
 public:
+	Point2D position;
+	drawMode mode = SINGLE;
+
 	void draw(PrimitiveRenderer& renderer, sf::Color color = sf::Color::Transparent) override;
-	virtual void animate(float dt) override;
+
+	void drawMap(PrimitiveRenderer& renderer);
+	void drawPlayer(PrimitiveRenderer& renderer);
+	void drawFrame(PrimitiveRenderer& renderer);
 
 	void setPosition(Point2D pos);
+	void setMap(std::vector<std::vector<int>> map) {
+		this->map = map;
+		this->mode = BACKGROUND;
+		this->frameWidth = this->frameHeight = 16;
+	}
 };

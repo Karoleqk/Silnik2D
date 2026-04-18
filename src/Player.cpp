@@ -48,7 +48,18 @@ void Player::scale(float k, Point2D point) {
 }
 
 void Player::animate(float dt) {
-    SpriteObject::animate(dt);
+    timer += dt;
+
+    int maxFrames = (state == RUN) ? frameCountRun : frameCountIdle;
+
+    if (timer >= frameTime) {
+        timer = 0.f;
+
+        frameX++;
+
+        if (frameX >= maxFrames)
+            frameX = 0;
+    }
 }
 
 // Ustawianie

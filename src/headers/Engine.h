@@ -16,6 +16,7 @@ private:
 	int currentClick;
 	Point2D start, end;
 	Player player;
+	SpriteObject background;
 
 	sf::RenderWindow window;
 	PrimitiveRenderer primitiveRenderer;
@@ -52,5 +53,6 @@ public:
 	void drawPolygon(std::vector<Point2D> points, sf::Color color);
 
 	// Funkcje do obslugi zewnetrznej
-	void setPlayer(Player& p) { this->player = p; };
+	void setPlayer(Player& p) { this->player = p; }
+	void setBackground(SpriteObject& b) { this->background = b; }
 };

@@ -1,11 +1,11 @@
 #pragma once
 #include "UpdatableObject.h"
 #include "ShapeObject.h"
-#include "SpriteObject.h"
+#include "AnimatedObject.h"
 #include "Point2D.h"
 #include <SFML/Window/Keyboard.hpp>
 
-class Player : public UpdatableObject, public ShapeObject, public SpriteObject {
+class Player : public UpdatableObject, public ShapeObject, public AnimatedObject {
 private:
     float speed;
 

@@ -79,6 +79,8 @@ void Engine::handleEvents() {
 void Engine::update() {
     player.update();
     player.animate(0.005f);
+    std::cout << player.position.x << std::endl;
+    std::cout << player.position.y << std::endl;
 
     // TRANSLACJA
 
@@ -154,6 +156,7 @@ void Engine::update() {
 // Metoda do aktualizacji okna
 // renderujemy za pomocą klasy PrimitiveRenderer
 void Engine::render() {
+    background.draw(primitiveRenderer);
     player.draw(primitiveRenderer);
 
     for (auto& line : lines) {
@@ -213,11 +216,16 @@ PrimitiveRenderer Engine::getRenderer() {
 // tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
 
 void Engine::setPixel(Point2D pos, sf::Color color) {
-    primitiveRenderer.setPixel(pos, color);
+    //primitiveRenderer.setPixel(pos, color);
+    Point2D newPoint(pos);
+    points.push_back(newPoint);
 }
 
 void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
-    primitiveRenderer.drawLine(start, end, color);
+    //primitiveRenderer.drawLine(start, end, color);
+    LineSegment newLine(start, end);
+    lines.push_back(newLine);
+
 }
 
 void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
