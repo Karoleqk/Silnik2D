@@ -14,34 +14,18 @@ int main()
     knight.loadFromFile("C:/Dev/Grafika Komputerowa/repos/Silnik2D/assets/brackeys_platformer_assets/sprites/knight.png");
     Player player;
     player.setSheet(knight);
+    player.setMap(engine.getMap());
+    player.setPosition({ 0, 0 });
+
     engine.setPlayer(player);
 
     BitmapHandler bg;
     bg.loadFromFile("C:/Dev/Grafika Komputerowa/repos/Silnik2D/assets/brackeys_platformer_assets/sprites/world_tileset.png");
     SpriteObject background;
     background.setSheet(bg);
-
-    std::vector<std::vector<int>> map;
-    map = {
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0},
-        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-    };
-    background.setMap(map);
+    background.setMap(engine.getMap());
 
     engine.setBackground(background);
 
-    engine.drawLine({ 0, 500 }, {600, 500}, sf::Color::Blue);
-
-    engine.run(240); // bez parametrów: 60fps, z paremetrem: wybrane fps
+    engine.run(60); // bez parametrów: 60fps, z paremetrem: wybrane fps
 }

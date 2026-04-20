@@ -2,6 +2,7 @@
 #include "PrimitiveRenderer.h"
 #include "Point2D.h"
 #include "LineSegment.h"
+#include "Rect.h"
 #include "Player.h"
 #include "headers/BitmapHandler.h"
 #include "headers/BitmapObject.h"
@@ -23,15 +24,16 @@ private:
 
 	std::vector<LineSegment> lines;
 	std::vector<Point2D> points;
+	std::vector<Rect> rectangles;
+
+	std::vector<std::vector<int>> map;
 
 	bool isDrawing;
 	sf::Vector2i mouseClickPos;
 public:
 	float angle = 1.0f;
 
-	Engine(unsigned int w = 800, unsigned int h = 600) : 
-		width(w), height(h), window(sf::VideoMode({w, h}), "Silnik2D"), primitiveRenderer(window, width, height),
-		isDrawing(false), currentTool(PIXEL), currentClick(0) {};
+	Engine(unsigned int w = 800, unsigned int h = 600);
 
 	PrimitiveRenderer getRenderer();
 
@@ -55,4 +57,7 @@ public:
 	// Funkcje do obslugi zewnetrznej
 	void setPlayer(Player& p) { this->player = p; }
 	void setBackground(SpriteObject& b) { this->background = b; }
+
+	// getter
+	std::vector<std::vector<int>> getMap() { return this->map; };
 };

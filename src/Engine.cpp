@@ -5,6 +5,27 @@
 #include "headers/Point2D.h"
 #include "headers/LineSegment.h"
 
+Engine::Engine(unsigned int w, unsigned int h) :
+    width(w), height(h), window(sf::VideoMode({ w, h }), "Silnik2D"), primitiveRenderer(window, width, height),
+    isDrawing(false), currentTool(PIXEL), currentClick(0) {
+        this->map = {
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        };
+};
+
 void Engine::run(int fps) {
     window.setFramerateLimit(fps);
     player.setPosition({ 30, 400 });
@@ -80,8 +101,8 @@ void Engine::handleEvents() {
 void Engine::update() {
     player.update();
     player.animate(0.005f);
-    std::cout << player.position.x << std::endl;
-    std::cout << player.position.y << std::endl;
+    //std::cout << "X: " << player.position.x << std::endl;
+    //std::cout << "Y: " << player.position.y << std::endl;
 
     // TRANSLACJA
 
@@ -159,8 +180,11 @@ void Engine::update() {
 void Engine::render() {
     background.draw(primitiveRenderer);
     player.draw(primitiveRenderer);
-    lines.clear();
-    drawLine(player.position, { 400, 300 }, sf::Color::Blue);
+
+    rectangles.clear();
+    Rect playerRect = player.getRect();
+    drawRect(playerRect.getStart(), playerRect.width, playerRect.height, sf::Color::Blue);
+
 
     for (auto& line : lines) {
         line.draw(primitiveRenderer, sf::Color::Cyan);
@@ -168,6 +192,10 @@ void Engine::render() {
 
     for (auto& point : points) {
         point.draw(primitiveRenderer, sf::Color::Cyan);
+    }
+
+    for (auto& rect : rectangles) {
+        rect.draw(primitiveRenderer, sf::Color::Cyan);
     }
 
     primitiveRenderer.render();
@@ -232,7 +260,8 @@ void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
 }
 
 void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
-    primitiveRenderer.drawRect(start, width, height, color, fill);
+    Rect newRect(start, width, height);
+    rectangles.push_back(newRect);
 }
 
 void Engine::drawCircle(Point2D middle, int R, sf::Color color) {
