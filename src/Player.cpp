@@ -2,78 +2,78 @@
 #include "headers/PrimitiveRenderer.h"
 #include <iostream>
 
-Player::Player() : speed(2.0f) {}
+Player::Player() : speed(2.0f) {
+    if (!jumpBuffer.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sounds/jump.wav")) {
+        std::cout << "Blad wczytywania dzwieku jump.wav\n";
+    }
+    else {
+        jumpSound.emplace(jumpBuffer);
+        jumpSound->setVolume(50.f);
+    }
+}
 
 void Player::update() {
     handleInput();
-
     velocityY -= gravity;
 
-    int nextX = position.x + velocityX;
-    int nextY = position.y - velocityY;
+    float nextY = position.y - velocityY;
 
-    // x
-    if (!checkCollision(map, nextX, position.y)) {
-        position.x = nextX;
-    }
-
-    // y
-    if (!checkCollision(map, position.x, nextY)) {
-        position.y = nextY;
+    if (checkCollision(map, position.x, (int)nextY)) {
+        if (velocityY < 0) {
+            isJumping = false;
+            int tileSize = 48;
+            position.y = (int(nextY / tileSize)) * tileSize;
+        }
+        velocityY = 0;
     }
     else {
-        velocityY = 0.0f;
-        isJumping = false;
+        position.y = nextY;
     }
-
-    velocityX = 0.0f;
-
-    int worldHeight = 600;
-    int worldWidth = 800;
-
-    // dół mapy
-    if (position.y > worldHeight) {
-        position.y = worldHeight;
-        velocityY = 0;
-        isJumping = false;
-    }
-
-    // lewa/prawa granica
-    if (position.x < 0) position.x = 0;
-    if (position.x > worldWidth) position.x = worldWidth;
 }
 
 void Player::handleInput() {
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && isJumping) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) && !isJumping)) {
-        velocityY += jumpStrength;
+    bool jumpKeyHeld = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) ||
+        sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) ||
+        sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space);
+
+    if (jumpKeyHeld && !isJumping) {
+        velocityY = jumpStrength;
         isJumping = true;
+
+        if (jumpSound) jumpSound->play();
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
-        velocityX -= speed;
+
+    if (!jumpKeyHeld && isJumping && velocityY > 0.0f) {
+        velocityY *= 0.4f;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
-        velocityX += speed;
-    }
+
+    //if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W) && isJumping) || (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) && !isJumping)) {
+    //    velocityY += jumpStrength;
+    //    isJumping = true;
+    //}
+    //if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
+    //    velocityX -= speed;
+    //}
+    //if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
+    //    velocityX += speed;
+    //}
 }
 
 bool Player::checkCollision(std::vector<std::vector<int>>& map, int nextX, int nextY) {
     Rect playerRect = getRect(nextX, nextY);
-    int tileSize = 16;
+    int tileSize = 48;
 
-    int left = playerRect.start.x / tileSize;
-    int right = (playerRect.start.x + playerRect.width) / tileSize;
+    int left = (playerRect.start.x + mapOffsetX) / tileSize;
+    int right = (playerRect.start.x + playerRect.width + mapOffsetX) / tileSize;
     int top = playerRect.start.y / tileSize;
     int bottom = (playerRect.start.y + playerRect.height) / tileSize;
-
-    std::cout << "map height: " << map.size() << std::endl;
-    std::cout << "player tile Y: " << top << std::endl;
 
     for (int y = top; y <= bottom; y++) {
         for (int x = left; x <= right; x++) {
             if (y < 0 || y >= map.size() || x < 0 || x >= map[0].size())
                 continue;
 
-            if (map[y][x] == 1)
+            if (map[y][x] == 1 || map[y][x] == 2)
                 return true;
         }
     }
