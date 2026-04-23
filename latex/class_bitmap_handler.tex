@@ -1,0 +1,97 @@
+\doxysection{Bitmap\+Handler Class Reference}
+\hypertarget{class_bitmap_handler}{}\label{class_bitmap_handler}\index{BitmapHandler@{BitmapHandler}}
+
+
+{\ttfamily \+\#include $<$Bitmap\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e}{Bitmap\+Handler}} ()=default
+\item 
+\doxymbox{\hyperlink{class_bitmap_handler_a4faecf4970ed29914f4a9a5fd9409a3c}{\texorpdfstring{$\sim$}{\string~}\+Bitmap\+Handler}} ()=default
+\item 
+void \doxymbox{\hyperlink{class_bitmap_handler_a901316a3eb8d5d0dfca041ccf275de40}{create}} (unsigned int width, unsigned int height, sf::\+\+Color color=sf::\+\+Color::\+\+Transparent)
+\item 
+void \doxymbox{\hyperlink{class_bitmap_handler_a7c99ef4012428f251bfe881fb4550435}{destroy}} ()
+\item 
+bool \doxymbox{\hyperlink{class_bitmap_handler_a4e3114fec5fcff7d28170b99aee5dd21}{load\+From\+File}} (const std::\+string \&filename)
+\item 
+bool \doxymbox{\hyperlink{class_bitmap_handler_abe085ef3324bdbb2de0c7d78fb70a62c}{save\+To\+File}} (const std::\+string \&filename) const
+\item 
+void \doxymbox{\hyperlink{class_bitmap_handler_a7e449e31efd36bda091dcb9a7d8fcacc}{copy\+From}} (const \doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \&source, unsigned int destX, unsigned int destY, unsigned int sourceX=0, unsigned int sourceY=0, unsigned int source\+Width=0, unsigned int source\+Height=0)
+\item 
+sf::\+\+Color \doxymbox{\hyperlink{class_bitmap_handler_aac6d40f9f91475a463b293d8611a178f}{get\+Pixel}} (unsigned int x, unsigned int y) const
+\item 
+sf::\+\+Vector2u \doxymbox{\hyperlink{class_bitmap_handler_a523114b94c5213c591d2280adbb1047b}{get\+Size}} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_bitmap_handler_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e}\index{BitmapHandler@{BitmapHandler}!BitmapHandler@{BitmapHandler}}
+\index{BitmapHandler@{BitmapHandler}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{BitmapHandler()}{BitmapHandler()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e} 
+Bitmap\+Handler::\+\+Bitmap\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_bitmap_handler_a4faecf4970ed29914f4a9a5fd9409a3c}\index{BitmapHandler@{BitmapHandler}!````~BitmapHandler@{\texorpdfstring{$\sim$}{\string~}BitmapHandler}}
+\index{````~BitmapHandler@{\texorpdfstring{$\sim$}{\string~}BitmapHandler}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BitmapHandler()}{\string~BitmapHandler()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a4faecf4970ed29914f4a9a5fd9409a3c} 
+Bitmap\+Handler::\+\texorpdfstring{$\sim$}{\string~}\+Bitmap\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_bitmap_handler_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bitmap_handler_a7e449e31efd36bda091dcb9a7d8fcacc}\index{BitmapHandler@{BitmapHandler}!copyFrom@{copyFrom}}
+\index{copyFrom@{copyFrom}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{copyFrom()}{copyFrom()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a7e449e31efd36bda091dcb9a7d8fcacc} 
+void Bitmap\+Handler::\+copy\+From (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \&}]{source}{, }\item[{unsigned int}]{destX}{, }\item[{unsigned int}]{destY}{, }\item[{unsigned int}]{sourceX}{ = {\ttfamily 0}, }\item[{unsigned int}]{sourceY}{ = {\ttfamily 0}, }\item[{unsigned int}]{source\+Width}{ = {\ttfamily 0}, }\item[{unsigned int}]{source\+Height}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_handler_a901316a3eb8d5d0dfca041ccf275de40}\index{BitmapHandler@{BitmapHandler}!create@{create}}
+\index{create@{create}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a901316a3eb8d5d0dfca041ccf275de40} 
+void Bitmap\+Handler::\+create (\begin{DoxyParamCaption}\item[{unsigned int}]{width}{, }\item[{unsigned int}]{height}{, }\item[{sf::\+\+Color}]{color}{ = {\ttfamily sf:\+:\+Color:\+:\+Transparent}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_handler_a7c99ef4012428f251bfe881fb4550435}\index{BitmapHandler@{BitmapHandler}!destroy@{destroy}}
+\index{destroy@{destroy}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a7c99ef4012428f251bfe881fb4550435} 
+void Bitmap\+Handler::\+destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_handler_aac6d40f9f91475a463b293d8611a178f}\index{BitmapHandler@{BitmapHandler}!getPixel@{getPixel}}
+\index{getPixel@{getPixel}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{getPixel()}{getPixel()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_aac6d40f9f91475a463b293d8611a178f} 
+sf::\+\+Color Bitmap\+Handler::\+get\+Pixel (\begin{DoxyParamCaption}\item[{unsigned int}]{x}{, }\item[{unsigned int}]{y}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bitmap_handler_a523114b94c5213c591d2280adbb1047b}\index{BitmapHandler@{BitmapHandler}!getSize@{getSize}}
+\index{getSize@{getSize}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a523114b94c5213c591d2280adbb1047b} 
+sf::\+\+Vector2u Bitmap\+Handler::\+get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bitmap_handler_a4e3114fec5fcff7d28170b99aee5dd21}\index{BitmapHandler@{BitmapHandler}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_a4e3114fec5fcff7d28170b99aee5dd21} 
+bool Bitmap\+Handler::\+load\+From\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_handler_abe085ef3324bdbb2de0c7d78fb70a62c}\index{BitmapHandler@{BitmapHandler}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{class_bitmap_handler_abe085ef3324bdbb2de0c7d78fb70a62c} 
+bool Bitmap\+Handler::\+save\+To\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_bitmap_handler_8h}{Bitmap\+Handler.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_bitmap_handler_8cpp}{Bitmap\+Handler.\+cpp}}\end{DoxyCompactItemize}
