@@ -1,0 +1,33 @@
+\doxysection{Bitmap\+Handler.\+h}
+\hypertarget{_bitmap_handler_8h_source}{}\label{_bitmap_handler_8h_source}\index{src/headers/BitmapHandler.h@{src/headers/BitmapHandler.h}}
+\doxymbox{\hyperlink{_bitmap_handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Image.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e}{BitmapHandler}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ sf::Image\ image;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e}{BitmapHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00011\ \ \ \ \ \doxymbox{\hyperlink{class_bitmap_handler_a4faecf4970ed29914f4a9a5fd9409a3c}{\string~BitmapHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bitmap_handler_a901316a3eb8d5d0dfca041ccf275de40}{create}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height,\ sf::Color\ color\ =\ sf::Color::Transparent);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bitmap_handler_a7c99ef4012428f251bfe881fb4550435}{destroy}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_bitmap_handler_a4e3114fec5fcff7d28170b99aee5dd21}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_bitmap_handler_abe085ef3324bdbb2de0c7d78fb70a62c}{saveToFile}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bitmap_handler_a7e449e31efd36bda091dcb9a7d8fcacc}{copyFrom}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_bitmap_handler_ad9e69e212e4dcb1b628e297e9943144e}{BitmapHandler}}\&\ source,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ destX,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ destY,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ sourceX\ =\ 0,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ sourceY\ =\ 0,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ sourceWidth\ =\ 0,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ sourceHeight\ =\ 0);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_bitmap_handler_aac6d40f9f91475a463b293d8611a178f}{getPixel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ sf::Vector2u\ \doxymbox{\hyperlink{class_bitmap_handler_a523114b94c5213c591d2280adbb1047b}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

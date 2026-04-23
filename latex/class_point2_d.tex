@@ -1,0 +1,148 @@
+\doxysection{Point2D Class Reference}
+\hypertarget{class_point2_d}{}\label{class_point2_d}\index{Point2D@{Point2D}}
+
+
+{\ttfamily \+\#include $<$Point2\+D.\+h$>$}
+
+Inheritance diagram for Point2D:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_point2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_point2_d_a10bc6b9fcbc3b0a1cd13ab0614458b4e}{Point2D}} (int \doxymbox{\hyperlink{class_point2_d_a02041472ec3f1ec4d92a926bad5fe2c2}{x}}=0, int \doxymbox{\hyperlink{class_point2_d_adbb040f0e224303093e783dfcccd4886}{y}}=0)
+\item 
+int \doxymbox{\hyperlink{class_point2_d_a558f484d3feb2432350e3d3149e72e8c}{getX}} ()
+\item 
+int \doxymbox{\hyperlink{class_point2_d_a86630685042226ef670949d164ced5ca}{getY}} ()
+\item 
+void \doxymbox{\hyperlink{class_point2_d_a395eb9297c64bfaa739c5a3069bc69a5}{setX}} (int \doxymbox{\hyperlink{class_point2_d_a02041472ec3f1ec4d92a926bad5fe2c2}{x}})
+\item 
+void \doxymbox{\hyperlink{class_point2_d_a13ce4acc6522790b131e3c07f9bb97f4}{setY}} (int \doxymbox{\hyperlink{class_point2_d_adbb040f0e224303093e783dfcccd4886}{y}})
+\item 
+virtual void \doxymbox{\hyperlink{class_point2_d_a9264d0f4486f7d8c53c02aec79eeeb0e}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color color) override
+\item 
+virtual void \doxymbox{\hyperlink{class_point2_d_aee3485b3b0ff467c90be2fc683ae8744}{translate}} (float dx, float dy) override
+\item 
+virtual void \doxymbox{\hyperlink{class_point2_d_a8f0e89a21d309326bcb703697f98a6cd}{rotate}} (float angle=0.\+0f, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{0, 0\}) override
+\item 
+virtual void \doxymbox{\hyperlink{class_point2_d_aebbf568582cc10dd19009a898fe86a78}{scale}} (float k=1, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{0, 0\}) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_point2_d_a02041472ec3f1ec4d92a926bad5fe2c2}{x}}
+\item 
+int \doxymbox{\hyperlink{class_point2_d_adbb040f0e224303093e783dfcccd4886}{y}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_point2_d_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_point2_d_a10bc6b9fcbc3b0a1cd13ab0614458b4e}\index{Point2D@{Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}}
+{\footnotesize\ttfamily \label{class_point2_d_a10bc6b9fcbc3b0a1cd13ab0614458b4e} 
+Point2\+D::\+\+Point2D (\begin{DoxyParamCaption}\item[{int}]{x}{ = {\ttfamily 0}, }\item[{int}]{y}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_point2_d_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_point2_d_a9264d0f4486f7d8c53c02aec79eeeb0e}\index{Point2D@{Point2D}!draw@{draw}}
+\index{draw@{draw}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_point2_d_a9264d0f4486f7d8c53c02aec79eeeb0e} 
+void Point2\+D::\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&}]{renderer}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_drawable_object_a9ac3f5a81fa711aa2cbb8d0f6413b696}{Drawable\+Object}}.
+
+\Hypertarget{class_point2_d_a558f484d3feb2432350e3d3149e72e8c}\index{Point2D@{Point2D}!getX@{getX}}
+\index{getX@{getX}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_point2_d_a558f484d3feb2432350e3d3149e72e8c} 
+int Point2\+D::\+getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_a86630685042226ef670949d164ced5ca}\index{Point2D@{Point2D}!getY@{getY}}
+\index{getY@{getY}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_point2_d_a86630685042226ef670949d164ced5ca} 
+int Point2\+D::\+getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_a8f0e89a21d309326bcb703697f98a6cd}\index{Point2D@{Point2D}!rotate@{rotate}}
+\index{rotate@{rotate}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_point2_d_a8f0e89a21d309326bcb703697f98a6cd} 
+void Point2\+D::\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle}{ = {\ttfamily 0.0f}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{0,~0\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+\Hypertarget{class_point2_d_aebbf568582cc10dd19009a898fe86a78}\index{Point2D@{Point2D}!scale@{scale}}
+\index{scale@{scale}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{class_point2_d_aebbf568582cc10dd19009a898fe86a78} 
+void Point2\+D::\+scale (\begin{DoxyParamCaption}\item[{float}]{k}{ = {\ttfamily 1}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{0,~0\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+\Hypertarget{class_point2_d_a395eb9297c64bfaa739c5a3069bc69a5}\index{Point2D@{Point2D}!setX@{setX}}
+\index{setX@{setX}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily \label{class_point2_d_a395eb9297c64bfaa739c5a3069bc69a5} 
+void Point2\+D::\+setX (\begin{DoxyParamCaption}\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_a13ce4acc6522790b131e3c07f9bb97f4}\index{Point2D@{Point2D}!setY@{setY}}
+\index{setY@{setY}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily \label{class_point2_d_a13ce4acc6522790b131e3c07f9bb97f4} 
+void Point2\+D::\+setY (\begin{DoxyParamCaption}\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_aee3485b3b0ff467c90be2fc683ae8744}\index{Point2D@{Point2D}!translate@{translate}}
+\index{translate@{translate}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_point2_d_aee3485b3b0ff467c90be2fc683ae8744} 
+void Point2\+D::\+translate (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_point2_d_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_point2_d_a02041472ec3f1ec4d92a926bad5fe2c2}\index{Point2D@{Point2D}!x@{x}}
+\index{x@{x}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{class_point2_d_a02041472ec3f1ec4d92a926bad5fe2c2} 
+int Point2\+D::\+x}
+
+\Hypertarget{class_point2_d_adbb040f0e224303093e783dfcccd4886}\index{Point2D@{Point2D}!y@{y}}
+\index{y@{y}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{class_point2_d_adbb040f0e224303093e783dfcccd4886} 
+int Point2\+D::\+y}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_point2_d_8h}{Point2\+D.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_point2_d_8cpp}{Point2\+D.\+cpp}}\end{DoxyCompactItemize}

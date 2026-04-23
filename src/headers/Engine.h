@@ -3,6 +3,8 @@
 #include "Point2D.h"
 #include "LineSegment.h"
 #include "Rect.h"
+#include "Circle.h"
+#include "Elipse.h"
 #include "Player.h"
 #include "headers/BitmapHandler.h"
 #include "headers/BitmapObject.h"
@@ -35,6 +37,8 @@ private:
 	std::vector<LineSegment> lines;
 	std::vector<Point2D> points;
 	std::vector<Rect> rectangles;
+	std::vector<Circle> circles;
+	std::vector<Elipse> elipses;
 
 	std::vector<std::vector<int>> map;
 
@@ -76,8 +80,8 @@ public:
 	void setPixel(Point2D pos, sf::Color color);
 	void drawLine(Point2D start, Point2D end, sf::Color color);
 	void drawRect(Point2D start, int width, int height, sf::Color color, bool fill = false);
-	void drawCircle(Point2D middle, int R, sf::Color color);
-	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color);
+	void drawCircle(Point2D middle, int R, sf::Color color, bool fill = false);
+	void drawElipse(Point2D middle, int Rx, int Ry, sf::Color color, bool fill = false);
 	void drawPolygon(std::vector<Point2D> points, sf::Color color);
 
 	// Funkcje do obslugi zewnetrznej
@@ -85,5 +89,8 @@ public:
 	void setBackground(SpriteObject& b) { this->background = b; }
 
 	// getter
-	std::vector<std::vector<int>> getMap() { return this->map; };
+	std::vector<std::vector<int>> getMap() { return this->map; }
+
+	// setter
+	void setMap(std::vector<std::vector<int>> m) { this->map = m; }
 };

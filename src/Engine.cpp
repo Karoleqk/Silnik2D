@@ -332,7 +332,7 @@ void Engine::update() {
     
 
     // SKALOWANIE
-
+    //Point2D middle(400, 300);
     //LineSegment base1({ 500, 275 }, { 500, 325 });
     //lines.push_back(base1);
     //for (float i = 2; i >= -2; i -= 0.5) {
@@ -340,6 +340,32 @@ void Engine::update() {
     //    line.scale(i, middle);
     //    lines.push_back(line);
     //}
+    
+
+
+    // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
+    if (isDrawing) {
+        if (currentTool == PIXEL)
+            points.emplace_back(mouseClickPos.x, mouseClickPos.y);
+
+        if (currentTool == CIRCLE) {
+            Circle newCircle({ mouseClickPos.x, mouseClickPos.y }, 20);
+            circles.push_back(newCircle);
+        }
+
+        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FLOOD_FILL && currentTool != BOUNDARY_FILL)
+            drawShape();
+
+        if (currentTool == FLOOD_FILL) {
+            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Red, sf::Color::Black);
+        }
+
+        if (currentTool == BOUNDARY_FILL) {
+            primitiveRenderer.boundaryFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Yellow);
+        }
+
+        isDrawing = false;
+    }
 }
 
 // Metoda do aktualizacji okna
@@ -352,11 +378,14 @@ void Engine::render() {
     }
 
     player.draw(primitiveRenderer);
+    //Rect playerRect = player.getRect();
 
     //rectangles.clear();
     //Rect playerRect = player.getRect();
     //drawRect(playerRect.getStart(), playerRect.width, playerRect.height, sf::Color::Blue);
 
+    //drawRect(playerRect.getStart(), playerRect.width, playerRect.height, sf::Color::Blue);
+    //drawRect({ 200, 200 }, 100, 50, sf::Color::Blue);
 
     //for (auto& line : lines) {
     //    line.draw(primitiveRenderer, sf::Color::Cyan);
@@ -392,14 +421,17 @@ void Engine::drawShape() {
     currentClick++;
 
     if (currentClick == 2) {
-        if (currentTool == LINE)
-            lines.emplace_back(start, end);
+        if (currentTool == LINE) {
+            LineSegment newLine(start, end);
+            lines.push_back(newLine);
+        }
 
         if (currentTool == RECT) {
             int width = end.x - start.x;
             int height = end.y - start.y;
 
-            drawRect(start, width, height, sf::Color::Yellow);
+            Rect newRect(start, width, height);
+            rectangles.push_back(newRect);
         }
 
         resetStartEnd();
@@ -419,29 +451,29 @@ PrimitiveRenderer Engine::getRenderer() {
 // tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
 
 void Engine::setPixel(Point2D pos, sf::Color color) {
-    //primitiveRenderer.setPixel(pos, color);
     Point2D newPoint(pos);
     points.push_back(newPoint);
 }
 
 void Engine::drawLine(Point2D start, Point2D end, sf::Color color) {
-    //primitiveRenderer.drawLine(start, end, color);
-    LineSegment newLine(start, end);
+    LineSegment newLine(start, end, color);
     lines.push_back(newLine);
 
 }
 
 void Engine::drawRect(Point2D start, int width, int height, sf::Color color, bool fill) {
-    Rect newRect(start, width, height);
+    Rect newRect(start, width, height, color, fill);
     rectangles.push_back(newRect);
 }
 
-void Engine::drawCircle(Point2D middle, int R, sf::Color color) {
-    primitiveRenderer.drawCircle(middle, R, color);
+void Engine::drawCircle(Point2D middle, int R, sf::Color color, bool fill) {
+    Circle newCircle(middle, R, color, fill);
+    circles.push_back(newCircle);
 }
 
-void Engine::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color) {
-    primitiveRenderer.drawElipse(middle, Rx, Ry, color);
+void Engine::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color, bool fill) {
+    Elipse newElipse(middle, Rx, Ry, color, fill);
+    elipses.push_back(newElipse);
 }
 
 void Engine::drawPolygon(std::vector<Point2D> points, sf::Color color) {

@@ -1,0 +1,185 @@
+\doxysection{Engine Class Reference}
+\hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \+\#include $<$Engine.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}} (unsigned int w=800, unsigned int h=600)
+\item 
+\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \doxymbox{\hyperlink{class_engine_ae0c734092f488fa1f406a533274935ae}{get\+Renderer}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_a36e4ec9971c75e79b7f5875a719c9394}{run}} (int fps=60)
+\item 
+void \doxymbox{\hyperlink{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}{handle\+Events}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}{update}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_a7960743aefd62e846e7f3cd92c18bc73}{render}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}{draw\+Shape}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_abb6d73fa833daf3ad4def45d2793cfad}{reset\+Start\+End}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_a855451901bacd4d9d01b7a36690f7429}{set\+Pixel}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} pos, sf::\+\+Color color)
+\item 
+void \doxymbox{\hyperlink{class_engine_a19bc486757abc00690d0cc0f0a1feb60}{draw\+Line}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} start, \doxymbox{\hyperlink{class_point2_d}{Point2D}} end, sf::\+\+Color color)
+\item 
+void \doxymbox{\hyperlink{class_engine_af224ca5805b4d3fffa94280f5464f37b}{draw\+Rect}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} start, int width, int height, sf::\+\+Color color, bool fill=false)
+\item 
+void \doxymbox{\hyperlink{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef}{draw\+Circle}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} middle, int R, sf::\+\+Color color, bool fill=false)
+\item 
+void \doxymbox{\hyperlink{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}{draw\+Elipse}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} middle, int Rx, int Ry, sf::\+\+Color color, bool fill=false)
+\item 
+void \doxymbox{\hyperlink{class_engine_a1f699898feb373abacbe84f4a421ba16}{draw\+Polygon}} (std::\+vector$<$ \doxymbox{\hyperlink{class_point2_d}{Point2D}} $>$ points, sf::\+\+Color color)
+\item 
+void \doxymbox{\hyperlink{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}{set\+Player}} (\doxymbox{\hyperlink{class_player}{Player}} \&p)
+\item 
+void \doxymbox{\hyperlink{class_engine_a5f71c81d0457f5e10274a78272ba3061}{set\+Background}} (\doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}} \&b)
+\item 
+std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}{get\+Map}} ()
+\item 
+void \doxymbox{\hyperlink{class_engine_ad147063e223c222fe4e136493314633f}{set\+Map}} (std::\+vector$<$ std::\+vector$<$ int $>$ $>$ m)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_engine_aba7e018d171f058bc9375883063fbd9a}{angle}} = 1.\+0f
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_a73806e57b45ee0be3f5d37c8d4321154}\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily \label{class_engine_a73806e57b45ee0be3f5d37c8d4321154} 
+Engine::\+\+Engine (\begin{DoxyParamCaption}\item[{unsigned int}]{w}{ = {\ttfamily 800}, }\item[{unsigned int}]{h}{ = {\ttfamily 600}}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef}\index{Engine@{Engine}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily \label{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef} 
+void Engine::\+draw\+Circle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{middle}{, }\item[{int}]{R}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}\index{Engine@{Engine}!drawElipse@{drawElipse}}
+\index{drawElipse@{drawElipse}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawElipse()}{drawElipse()}}
+{\footnotesize\ttfamily \label{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66} 
+void Engine::\+draw\+Elipse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{middle}{, }\item[{int}]{Rx}{, }\item[{int}]{Ry}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a19bc486757abc00690d0cc0f0a1feb60}\index{Engine@{Engine}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily \label{class_engine_a19bc486757abc00690d0cc0f0a1feb60} 
+void Engine::\+draw\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{start}{, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{end}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a1f699898feb373abacbe84f4a421ba16}\index{Engine@{Engine}!drawPolygon@{drawPolygon}}
+\index{drawPolygon@{drawPolygon}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
+{\footnotesize\ttfamily \label{class_engine_a1f699898feb373abacbe84f4a421ba16} 
+void Engine::\+draw\+Polygon (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_point2_d}{Point2D}} $>$}]{points}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_af224ca5805b4d3fffa94280f5464f37b}\index{Engine@{Engine}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
+{\footnotesize\ttfamily \label{class_engine_af224ca5805b4d3fffa94280f5464f37b} 
+void Engine::\+draw\+Rect (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{start}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}\index{Engine@{Engine}!drawShape@{drawShape}}
+\index{drawShape@{drawShape}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{drawShape()}{drawShape()}}
+{\footnotesize\ttfamily \label{class_engine_a9b2df56febecac7ae82fa55551cdd7fe} 
+void Engine::\+draw\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}\index{Engine@{Engine}!getMap@{getMap}}
+\index{getMap@{getMap}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getMap()}{getMap()}}
+{\footnotesize\ttfamily \label{class_engine_ae9a8d8f6fff46aed67ef312589b3a844} 
+std::\+vector$<$ std::\+vector$<$ int $>$ $>$ Engine::\+get\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_ae0c734092f488fa1f406a533274935ae}\index{Engine@{Engine}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily \label{class_engine_ae0c734092f488fa1f406a533274935ae} 
+\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} Engine::\+get\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}\index{Engine@{Engine}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily \label{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c} 
+void Engine::\+handle\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a7960743aefd62e846e7f3cd92c18bc73}\index{Engine@{Engine}!render@{render}}
+\index{render@{render}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_engine_a7960743aefd62e846e7f3cd92c18bc73} 
+void Engine::\+render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_abb6d73fa833daf3ad4def45d2793cfad}\index{Engine@{Engine}!resetStartEnd@{resetStartEnd}}
+\index{resetStartEnd@{resetStartEnd}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{resetStartEnd()}{resetStartEnd()}}
+{\footnotesize\ttfamily \label{class_engine_abb6d73fa833daf3ad4def45d2793cfad} 
+void Engine::\+reset\+Start\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a36e4ec9971c75e79b7f5875a719c9394}\index{Engine@{Engine}!run@{run}}
+\index{run@{run}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_engine_a36e4ec9971c75e79b7f5875a719c9394} 
+void Engine::\+run (\begin{DoxyParamCaption}\item[{int}]{fps}{ = {\ttfamily 60}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_a5f71c81d0457f5e10274a78272ba3061}\index{Engine@{Engine}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}}
+{\footnotesize\ttfamily \label{class_engine_a5f71c81d0457f5e10274a78272ba3061} 
+void Engine::\+set\+Background (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}} \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_ad147063e223c222fe4e136493314633f}\index{Engine@{Engine}!setMap@{setMap}}
+\index{setMap@{setMap}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
+{\footnotesize\ttfamily \label{class_engine_ad147063e223c222fe4e136493314633f} 
+void Engine::\+set\+Map (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+vector$<$ int $>$ $>$}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_a855451901bacd4d9d01b7a36690f7429}\index{Engine@{Engine}!setPixel@{setPixel}}
+\index{setPixel@{setPixel}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setPixel()}{setPixel()}}
+{\footnotesize\ttfamily \label{class_engine_a855451901bacd4d9d01b7a36690f7429} 
+void Engine::\+set\+Pixel (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{pos}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}\index{Engine@{Engine}!setPlayer@{setPlayer}}
+\index{setPlayer@{setPlayer}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setPlayer()}{setPlayer()}}
+{\footnotesize\ttfamily \label{class_engine_ac7e3f89cf1066ac2581b80e883082dc9} 
+void Engine::\+set\+Player (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}} \&}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}\index{Engine@{Engine}!update@{update}}
+\index{update@{update}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_engine_ad2ff110d5a86c1cd60b541d65915ac48} 
+void Engine::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_engine_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_aba7e018d171f058bc9375883063fbd9a}\index{Engine@{Engine}!angle@{angle}}
+\index{angle@{angle}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily \label{class_engine_aba7e018d171f058bc9375883063fbd9a} 
+float Engine::\+angle = 1.\+0f}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_engine_8h}{Engine.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_engine_8cpp}{Engine.\+cpp}}\end{DoxyCompactItemize}

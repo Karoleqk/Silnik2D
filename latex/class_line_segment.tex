@@ -1,0 +1,132 @@
+\doxysection{Line\+Segment Class Reference}
+\hypertarget{class_line_segment}{}\label{class_line_segment}\index{LineSegment@{LineSegment}}
+
+
+{\ttfamily \+\#include $<$Line\+Segment.\+h$>$}
+
+Inheritance diagram for Line\+Segment:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_line_segment}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_line_segment_a21189de3b2075ecd3760827b3f09d932}{Line\+Segment}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} s, \doxymbox{\hyperlink{class_point2_d}{Point2D}} e, sf::\+\+Color c=sf::\+\+Color::\+\+Cyan)
+\item 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_line_segment_ad8c9aa13a787650e09b130206cbd27b0}{get\+Start}} ()
+\item 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_line_segment_a7baf1c455d1b4ef21ce1182ae3cb150d}{get\+End}} ()
+\item 
+sf::\+\+Color \doxymbox{\hyperlink{class_line_segment_a326190418e3e01eccd8f6f8fb0dd74b3}{get\+Color}} ()
+\item 
+void \doxymbox{\hyperlink{class_line_segment_adbd9543476b0ea5441c75ad4bcda5d05}{set\+Start}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} s)
+\item 
+void \doxymbox{\hyperlink{class_line_segment_aa9168c80ed8c4ed8c12b99a8dd80681f}{set\+End}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} e)
+\item 
+virtual void \doxymbox{\hyperlink{class_line_segment_a751fca83f7c17a8bb1d0b097010b7161}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color color) override
+\item 
+virtual void \doxymbox{\hyperlink{class_line_segment_ae9262be0eef49d4bccc8701009c82c81}{translate}} (float dx, float dy) override
+\item 
+virtual void \doxymbox{\hyperlink{class_line_segment_ad3be47da4fc7c46035cf24e474bae371}{rotate}} (float angle=0.\+0f, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{0, 0\}) override
+\item 
+virtual void \doxymbox{\hyperlink{class_line_segment_a24cc94605f3af666d644022d4c6641ab}{scale}} (float k=1, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{ 0, 0 \}) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()=default
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_line_segment_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_line_segment_a21189de3b2075ecd3760827b3f09d932}\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{LineSegment()}{LineSegment()}}
+{\footnotesize\ttfamily \label{class_line_segment_a21189de3b2075ecd3760827b3f09d932} 
+Line\+Segment::\+\+Line\+Segment (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{s}{, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{e}{, }\item[{sf::\+\+Color}]{c}{ = {\ttfamily sf:\+:\+Color:\+:\+Cyan}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_line_segment_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_line_segment_a751fca83f7c17a8bb1d0b097010b7161}\index{LineSegment@{LineSegment}!draw@{draw}}
+\index{draw@{draw}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_line_segment_a751fca83f7c17a8bb1d0b097010b7161} 
+void Line\+Segment::\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&}]{renderer}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_drawable_object_a9ac3f5a81fa711aa2cbb8d0f6413b696}{Drawable\+Object}}.
+
+\Hypertarget{class_line_segment_a326190418e3e01eccd8f6f8fb0dd74b3}\index{LineSegment@{LineSegment}!getColor@{getColor}}
+\index{getColor@{getColor}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_line_segment_a326190418e3e01eccd8f6f8fb0dd74b3} 
+sf::\+\+Color Line\+Segment::\+get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_line_segment_a7baf1c455d1b4ef21ce1182ae3cb150d}\index{LineSegment@{LineSegment}!getEnd@{getEnd}}
+\index{getEnd@{getEnd}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{getEnd()}{getEnd()}}
+{\footnotesize\ttfamily \label{class_line_segment_a7baf1c455d1b4ef21ce1182ae3cb150d} 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} Line\+Segment::\+get\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_line_segment_ad8c9aa13a787650e09b130206cbd27b0}\index{LineSegment@{LineSegment}!getStart@{getStart}}
+\index{getStart@{getStart}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{getStart()}{getStart()}}
+{\footnotesize\ttfamily \label{class_line_segment_ad8c9aa13a787650e09b130206cbd27b0} 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} Line\+Segment::\+get\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_line_segment_ad3be47da4fc7c46035cf24e474bae371}\index{LineSegment@{LineSegment}!rotate@{rotate}}
+\index{rotate@{rotate}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_line_segment_ad3be47da4fc7c46035cf24e474bae371} 
+void Line\+Segment::\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle}{ = {\ttfamily 0.0f}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{0,~0\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+\Hypertarget{class_line_segment_a24cc94605f3af666d644022d4c6641ab}\index{LineSegment@{LineSegment}!scale@{scale}}
+\index{scale@{scale}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{class_line_segment_a24cc94605f3af666d644022d4c6641ab} 
+void Line\+Segment::\+scale (\begin{DoxyParamCaption}\item[{float}]{k}{ = {\ttfamily 1}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{~0,~0~\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+\Hypertarget{class_line_segment_aa9168c80ed8c4ed8c12b99a8dd80681f}\index{LineSegment@{LineSegment}!setEnd@{setEnd}}
+\index{setEnd@{setEnd}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{setEnd()}{setEnd()}}
+{\footnotesize\ttfamily \label{class_line_segment_aa9168c80ed8c4ed8c12b99a8dd80681f} 
+void Line\+Segment::\+set\+End (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{e}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_line_segment_adbd9543476b0ea5441c75ad4bcda5d05}\index{LineSegment@{LineSegment}!setStart@{setStart}}
+\index{setStart@{setStart}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{setStart()}{setStart()}}
+{\footnotesize\ttfamily \label{class_line_segment_adbd9543476b0ea5441c75ad4bcda5d05} 
+void Line\+Segment::\+set\+Start (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_line_segment_ae9262be0eef49d4bccc8701009c82c81}\index{LineSegment@{LineSegment}!translate@{translate}}
+\index{translate@{translate}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_line_segment_ae9262be0eef49d4bccc8701009c82c81} 
+void Line\+Segment::\+translate (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_line_segment_8h}{Line\+Segment.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_line_segment_8cpp}{Line\+Segment.\+cpp}}\end{DoxyCompactItemize}
