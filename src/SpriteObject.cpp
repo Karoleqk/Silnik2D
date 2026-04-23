@@ -24,24 +24,19 @@ void SpriteObject::drawPlayer(PrimitiveRenderer& renderer) {
 }
 
 void SpriteObject::drawMap(PrimitiveRenderer& renderer) {
+    int scaledW = frameWidth * objectScale;
+    int scaledH = frameHeight * objectScale;
+
     for (int y = 0; y < map.size(); y++) {
         for (int x = 0; x < map[y].size(); x++) {
             int id = map[y][x];
 
-            switch (id) {
-            case 0:
-                continue;
-                break;
-            case 1:
-                frameX = 0;
-                break;
-            case 2:
-                frameX = 1;
-                break;
-            }
+            if (id == 0) continue;
+            else if (id == 1) frameX = 0;
+            else if (id == 2) frameX = 1;
 
-            position.x = x * frameWidth * objectScale;
-            position.y = y * frameHeight * objectScale;
+            position.x = x * scaledW - mapOffsetX + (scaledW / 2);
+            position.y = (y + 1) * scaledH;
 
             drawFrame(renderer);
         }

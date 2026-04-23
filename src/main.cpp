@@ -32,16 +32,20 @@ int main()
     
     Player player;
     player.setSheet(knight);
-    player.setMap(map);
-    player.setPosition({ 0, 0 });
+    player.setMap(engine.getMap());
+    player.setPosition({ 150, 240 });
+
     engine.setPlayer(player);
 
     BitmapHandler bg;
     bg.loadFromFile("../../../../assets/brackeys_platformer_assets/sprites/world_tileset.png");
+    
     SpriteObject background;
     background.setSheet(bg);
     background.setMap(map);
     engine.setBackground(background);
 
-    engine.run();
+    engine.run(60); // bez parametrów: 60fps, z paremetrem: wybrane fps
+
+    return 0;
 }

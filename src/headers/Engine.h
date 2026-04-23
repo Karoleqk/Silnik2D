@@ -11,6 +11,16 @@
 
 enum tools {PIXEL, LINE, RECT, CIRCLE, FLOOD_FILL, BOUNDARY_FILL};
 
+struct GameEntity {
+	SpriteObject sprite;
+	Point2D position;
+	int type; // 0 = moneta, 1 = slime
+	bool active = true;
+	int frameTimer = 0;
+	int currentFrame = 0;
+	int maxFrames = 1;
+};
+
 class Engine {
 private:
 	unsigned int width;
@@ -34,8 +44,22 @@ private:
 
 	bool isDrawing;
 	sf::Vector2i mouseClickPos;
+
+	sf::SoundBuffer coinBuffer;
+	std::optional<sf::Sound> coinSound;
+
+	sf::SoundBuffer hurtBuffer;
+	std::optional<sf::Sound> hurtSound;
 public:
 	float angle = 1.0f;
+	float globalSpeed = 3.5f;
+	float distanceTraveled = 0.0f;
+	int coinsCollected = 0;
+	int mapOffsetX = 0;
+	int score = 0;
+	bool gameOver = false;
+	std::vector<GameEntity> entities;
+	BitmapHandler coinBmp, slimeBmp;
 
 	Engine(unsigned int w = 800, unsigned int h = 600);
 
@@ -45,6 +69,8 @@ public:
 	void handleEvents();
 	void update();
 	void render();
+	void resetGame();
+	void spawnEntity(int type, int x, int y);
 
 	// funkcja do ustawiania dwoch pozycji
 	void drawShape();

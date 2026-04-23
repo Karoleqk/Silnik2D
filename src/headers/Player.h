@@ -4,7 +4,9 @@
 #include "AnimatedObject.h"
 #include "Point2D.h"
 #include "Rect.h"
+#include <optional>
 #include <SFML/Window/Keyboard.hpp>
+#include <SFML/Audio.hpp>
 
 class Player : public UpdatableObject, public ShapeObject, public AnimatedObject {
 private:
@@ -19,7 +21,12 @@ private:
     float jumpStrength = 10.0f;
     bool isJumping = false;
 
+    sf::SoundBuffer jumpBuffer;
+    std::optional<sf::Sound> jumpSound;
+
 public:
+    int mapOffsetX = 0;
+
     Player();
 
     void update() override;
@@ -54,5 +61,4 @@ public:
 
     // poruszanie sie
     void handleInput();
-    void handleCollision();
 };
