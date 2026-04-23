@@ -2,7 +2,7 @@
 #include "headers/PrimitiveRenderer.h"
 
 void Rect::draw(PrimitiveRenderer& renderer, sf::Color color) {
-	renderer.drawRect(start, width, height, color);
+	renderer.drawRect(start, width, height, color, isFill);
 }
 
 void Rect::translate(float dx, float dy) {

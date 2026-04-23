@@ -65,9 +65,6 @@ bool Player::checkCollision(std::vector<std::vector<int>>& map, int nextX, int n
     int top = playerRect.start.y / tileSize;
     int bottom = (playerRect.start.y + playerRect.height) / tileSize;
 
-    std::cout << "map height: " << map.size() << std::endl;
-    std::cout << "player tile Y: " << top << std::endl;
-
     for (int y = top; y <= bottom; y++) {
         for (int x = left; x <= right; x++) {
             if (y < 0 || y >= map.size() || x < 0 || x >= map[0].size())

@@ -109,7 +109,7 @@ void PrimitiveRenderer::drawRect(Point2D pos, int width, int height, sf::Color c
 	}
 }
 
-void PrimitiveRenderer::drawCircle(Point2D middle, int R, sf::Color color) {
+void PrimitiveRenderer::drawCircle(Point2D middle, int R, sf::Color color, bool fill) {
 	int x = 0, y = R;
 	int d = 3 - 2 * R;
 
@@ -133,9 +133,12 @@ void PrimitiveRenderer::drawCircle(Point2D middle, int R, sf::Color color) {
 
 		x++;
 	}
+
+	if (fill)
+		floodFill(middle, color, sf::Color::Black);
 }
 
-void PrimitiveRenderer::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color) {
+void PrimitiveRenderer::drawElipse(Point2D middle, int Rx, int Ry, sf::Color color, bool fill) {
 	int x, y;
 	float i;
 
@@ -149,6 +152,9 @@ void PrimitiveRenderer::drawElipse(Point2D middle, int Rx, int Ry, sf::Color col
 		
 		setPixel({ x, y }, color);
 	}
+
+	if (fill)
+		floodFill(middle, color, sf::Color::Black);
 }
 
 void PrimitiveRenderer::drawPolygon(std::vector<Point2D> points, sf::Color color) {
@@ -266,6 +272,7 @@ void PrimitiveRenderer::clear() {
 // Aktualizuje bufor pikseli oraz renderuje je na okno
 void PrimitiveRenderer::render() {
 	texture.update(pixels.data());
+	sprite.setTexture(texture);
 	window.draw(sprite);
 	window.display();
 	// czyszczenie bufora co klatke
