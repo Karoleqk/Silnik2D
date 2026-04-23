@@ -16,15 +16,15 @@ Engine::Engine(unsigned int w, unsigned int h) :
         map[13][x] = 1;
     }
 
-    coinBmp.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sprites/coin.png");
-    slimeBmp.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sprites/slime_green.png");
+    coinBmp.loadFromFile("../../../../assets/brackeys_platformer_assets/sprites/coin.png");
+    slimeBmp.loadFromFile("../../../../assets/brackeys_platformer_assets/sprites/slime_green.png");
 
-    if (coinBuffer.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sounds/coin.wav")) {
+    if (coinBuffer.loadFromFile("../../../../assets/brackeys_platformer_assets/sounds/coin.wav")) {
         coinSound.emplace(coinBuffer);
         coinSound->setVolume(70.f);
     }
 
-    if (hurtBuffer.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sounds/hurt.wav")) {
+    if (hurtBuffer.loadFromFile("../../../../assets/brackeys_platformer_assets/sounds/hurt.wav")) {
         hurtSound.emplace(hurtBuffer);
         hurtSound->setVolume(70.f);
     }
@@ -148,6 +148,31 @@ void Engine::spawnEntity(int type, int x, int y) {
 
 // Metoda do aktualizowania zmiennych
 void Engine::update() {
+    // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
+    if (isDrawing) {
+        if (currentTool == PIXEL)
+            points.emplace_back(mouseClickPos.x, mouseClickPos.y);
+
+        if (currentTool == CIRCLE)
+            drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
+
+        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FLOOD_FILL && currentTool != BOUNDARY_FILL)
+            drawShape();
+
+        if (currentTool == FLOOD_FILL) {
+            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Red, sf::Color::Black);
+        }
+
+        if (currentTool == BOUNDARY_FILL) {
+            primitiveRenderer.boundaryFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Yellow);
+        }
+
+        isDrawing = false;
+    }
+
+    //return; // return, zeby przerwac gre, a miec painta
+
+
     if (gameOver) return;
 
     globalSpeed += 0.002f;
@@ -315,30 +340,6 @@ void Engine::update() {
     //    line.scale(i, middle);
     //    lines.push_back(line);
     //}
-    
-
-
-    // jesli isDrawing = true, to rysujemy piksel tam, gdzie kliknelismy myszka
-    if (isDrawing) {
-        if (currentTool == PIXEL)
-            points.emplace_back(mouseClickPos.x, mouseClickPos.y);
-
-        if (currentTool == CIRCLE)
-            drawCircle({ mouseClickPos.x, mouseClickPos.y }, 50, sf::Color::Yellow);
-
-        if (currentTool != PIXEL && currentTool != CIRCLE && currentTool != FLOOD_FILL && currentTool != BOUNDARY_FILL)
-            drawShape();
-
-        if (currentTool == FLOOD_FILL) {
-            primitiveRenderer.floodFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Red, sf::Color::Black);
-        }
-
-        if (currentTool == BOUNDARY_FILL) {
-            primitiveRenderer.boundaryFill({ mouseClickPos.x, mouseClickPos.y }, sf::Color::Magenta, sf::Color::Yellow);
-        }
-
-        isDrawing = false;
-    }
 }
 
 // Metoda do aktualizacji okna

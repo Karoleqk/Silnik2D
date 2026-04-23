@@ -3,7 +3,7 @@
 #include <iostream>
 
 Player::Player() : speed(2.0f) {
-    if (!jumpBuffer.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sounds/jump.wav")) {
+    if (!jumpBuffer.loadFromFile("../../../../assets/brackeys_platformer_assets/sounds/jump.wav")) {
         std::cout << "Blad wczytywania dzwieku jump.wav\n";
     }
     else {

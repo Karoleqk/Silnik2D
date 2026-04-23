@@ -10,7 +10,7 @@ int main()
     PrimitiveRenderer renderer = engine.getRenderer();
 
     BitmapHandler knight;
-    knight.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sprites/knight.png");
+    knight.loadFromFile("../../../../assets/brackeys_platformer_assets/sprites/knight.png");
     
     Player player;
     player.setSheet(knight);
@@ -20,7 +20,7 @@ int main()
     engine.setPlayer(player);
 
     BitmapHandler bg;
-    bg.loadFromFile("C:/Users/kalcz/Documents/Projects/Silnik2D/assets/brackeys_platformer_assets/sprites/world_tileset.png");
+    bg.loadFromFile("../../../../assets/brackeys_platformer_assets/sprites/world_tileset.png");
     
     SpriteObject background;
     background.setSheet(bg);
