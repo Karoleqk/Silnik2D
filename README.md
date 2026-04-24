@@ -1,5 +1,6 @@
-## Uruchomienie programu
-1. Przejdź do folderu:
-   out/build/x64-Debug/bin/
-2. Uruchom plik:
-   Silnik2D.exe
+## Pobranie programu
+Gotową wersję programu można pobrać tutaj:
+https://github.com/Karoleqk/Silnik2D/releases/tag/silnik
+
+Należy pobrać archiwum .zip
+Plik wykonywalny znajduje się pod nazwą Silnik2D.exe
