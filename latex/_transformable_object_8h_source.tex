@@ -1,0 +1,20 @@
+\doxysection{Transformable\+Object.\+h}
+\hypertarget{_transformable_object_8h_source}{}\label{_transformable_object_8h_source}\index{src/headers/TransformableObject.h@{src/headers/TransformableObject.h}}
+\doxymbox{\hyperlink{_transformable_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ <math.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_point2_d}{Point2D}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_transformable_object}{TransformableObject}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_game_object}{GameObject}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ =\ 0;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541}{rotate}}(\textcolor{keywordtype}{float}\ angle,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point)\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_transformable_object_aef366f0c99b5789d1fa187008ce99652}{scale}}(\textcolor{keywordtype}{float}\ k,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point)\ =\ 0;\ \textcolor{comment}{//\ Skalowanie}}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

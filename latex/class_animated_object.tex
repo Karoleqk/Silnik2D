@@ -1,0 +1,164 @@
+\doxysection{Animated\+Object Class Reference}
+\hypertarget{class_animated_object}{}\label{class_animated_object}\index{AnimatedObject@{AnimatedObject}}
+
+
+{\ttfamily \+\#include $<$Animated\+Object.\+h$>$}
+
+Inheritance diagram for Animated\+Object:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_animated_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_animated_object_a5e5b3d81dc876a7e66adea7626fe985b}{animate}} (float dt)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_sprite_object_ae70909c335cc2e2a433e3712d36f38b1}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color color=sf::\+\+Color::\+\+Transparent) override
+\begin{DoxyCompactList}\small\item\em Metoda potrzebna do rysowania obiektów. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_ae2fc6e81a3255688ff178fbce2157688}{draw\+Map}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer)
+\begin{DoxyCompactList}\small\item\em Metoda rysująca mapę \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_a744990fa52df2a98aef55f409d287acb}{draw\+Player}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer)
+\begin{DoxyCompactList}\small\item\em Metoda rysująca gracza. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_a352409b523af827c4aaa785fb19e9fed}{draw\+Frame}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer)
+\begin{DoxyCompactList}\small\item\em Metoda rysująca pojedynczą klatkę \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_a111ece133acefc7985aba24e3578ce91}{set\+Position}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} pos)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nową pozycję sprite. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_a1ca477c915a8a2863ea02df8868e2811}{set\+Map}} (std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}})
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca mapę. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_a5d48c4d641085742cb68e1eb67c80b16}{set\+Frame}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca aktualną klatkę sprite. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_sprite_object_ab9b8ec9059774f2a517bfd2e2889fdee}{set\+Frame\+Size}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca szerokość oraz wysokość pojedynczej klatki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_bitmap_object_aac5123127181f645a3de58b16af3839d}{set\+Sheet}} (\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \&b)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nowe płótno obiektu bitmapy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075}{Anim\+State}} \doxymbox{\hyperlink{class_animated_object_ac6f0ee4b1b4be748cb3d2adf89ec5d70}{state}} = \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075afd6a0e4343048b10646dd2976cc5ad18}{IDLE}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca tryb poruszania się (IDLE = 0, RUN = 1). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_animated_object_ad771531a3b8811a4c38369d1c029f4be}{timer}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna czasu, potrzebna przy animacji obiektu. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_animated_object_a69f1690f167dae34bc0da373541add52}{frame\+Time}} = .\+1f
+\begin{DoxyCompactList}\small\item\em Zmienna określająca czas pojedynczej klatki animacji. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_animated_object_ac22877cff756b49512cb5d322b246b7b}{frame\+Count\+Idle}} = 4
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca ilość klatek animacji IDLE. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_animated_object_a11a5c8cd9a78ea3c97c5ba98483b9fd9}{frame\+Count\+Run}} = 16
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca ilość klatek animacji RUN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca wektor mapy. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_sprite_object_a0d2b1d8de97e81929eba32816b0a05fc}{object\+Scale}} = 3.\+0f
+\begin{DoxyCompactList}\small\item\em Skala obektu, domyślnie ustawione na 3. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sprite_object_a1c85883015cfa66c690cd44c3f48679a}{frameX}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca aktualną klatkę animacji X. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sprite_object_afed302d07f28f90a76f4c1ccb0dd8cc5}{frameY}} = 0
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca aktualną klatkę animacji Y. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sprite_object_a9ebba2751556f0971243ca5ac29a6692}{frame\+Width}} = 32
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca szerokość pojedynczej klatki. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sprite_object_a77e9063c802ac72d8d49b31826935d03}{frame\+Height}} = 32
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca wysokość pojedynczej klatki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \doxymbox{\hyperlink{class_bitmap_object_a8db08927cab596906cf35f68a386de53}{sheet}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca płótno bitmapy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_sprite_object_ad45914f608a1664343186c2854753baf}{position}}
+\begin{DoxyCompactList}\small\item\em Zmienna typu \doxylink{class_point2_d}{Point2D} przechowująca aktualną pozycję sprite. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375}{draw\+Mode}} \doxymbox{\hyperlink{class_sprite_object_a004a40767121ec150286567973b2429c}{mode}} = \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375a3388f7110f6f25a54e215eb75d5d7516}{SINGLE}}
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca obecny tryb rysowanie, domyślnie ustawiony na SINGLE. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_sprite_object_a873fa9a1d7332abe49123d2286c10b75}{map\+OffsetX}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_animated_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animated_object_a5e5b3d81dc876a7e66adea7626fe985b}\index{AnimatedObject@{AnimatedObject}!animate@{animate}}
+\index{animate@{animate}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily \label{class_animated_object_a5e5b3d81dc876a7e66adea7626fe985b} 
+virtual void Animated\+Object::\+animate (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \doxymbox{\hyperlink{class_player_ad59341e017611d31b208853b1b54e42b}{Player}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_animated_object_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_animated_object_ac22877cff756b49512cb5d322b246b7b}\index{AnimatedObject@{AnimatedObject}!frameCountIdle@{frameCountIdle}}
+\index{frameCountIdle@{frameCountIdle}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{frameCountIdle}{frameCountIdle}}
+{\footnotesize\ttfamily \label{class_animated_object_ac22877cff756b49512cb5d322b246b7b} 
+int Animated\+Object::\+frame\+Count\+Idle = 4\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zmienna przechowująca ilość klatek animacji IDLE. 
+
+\Hypertarget{class_animated_object_a11a5c8cd9a78ea3c97c5ba98483b9fd9}\index{AnimatedObject@{AnimatedObject}!frameCountRun@{frameCountRun}}
+\index{frameCountRun@{frameCountRun}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{frameCountRun}{frameCountRun}}
+{\footnotesize\ttfamily \label{class_animated_object_a11a5c8cd9a78ea3c97c5ba98483b9fd9} 
+int Animated\+Object::\+frame\+Count\+Run = 16\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zmienna przechowująca ilość klatek animacji RUN. 
+
+\Hypertarget{class_animated_object_a69f1690f167dae34bc0da373541add52}\index{AnimatedObject@{AnimatedObject}!frameTime@{frameTime}}
+\index{frameTime@{frameTime}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{frameTime}{frameTime}}
+{\footnotesize\ttfamily \label{class_animated_object_a69f1690f167dae34bc0da373541add52} 
+float Animated\+Object::\+frame\+Time = .\+1f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zmienna określająca czas pojedynczej klatki animacji. 
+
+\Hypertarget{class_animated_object_ac6f0ee4b1b4be748cb3d2adf89ec5d70}\index{AnimatedObject@{AnimatedObject}!state@{state}}
+\index{state@{state}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{class_animated_object_ac6f0ee4b1b4be748cb3d2adf89ec5d70} 
+\doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075}{Anim\+State}} Animated\+Object::\+state = \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075afd6a0e4343048b10646dd2976cc5ad18}{IDLE}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zmienna przechowująca tryb poruszania się (IDLE = 0, RUN = 1). 
+
+\Hypertarget{class_animated_object_ad771531a3b8811a4c38369d1c029f4be}\index{AnimatedObject@{AnimatedObject}!timer@{timer}}
+\index{timer@{timer}!AnimatedObject@{AnimatedObject}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \label{class_animated_object_ad771531a3b8811a4c38369d1c029f4be} 
+float Animated\+Object::\+timer = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zmienna czasu, potrzebna przy animacji obiektu. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_animated_object_8h}{Animated\+Object.\+h}}\end{DoxyCompactItemize}

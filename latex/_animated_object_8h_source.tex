@@ -1,0 +1,27 @@
+\doxysection{Animated\+Object.\+h}
+\hypertarget{_animated_object_8h_source}{}\label{_animated_object_8h_source}\index{src/headers/AnimatedObject.h@{src/headers/AnimatedObject.h}}
+\doxymbox{\hyperlink{_animated_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_sprite_object_8h}{SpriteObject.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075}{AnimState}}\ \{\ \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075afd6a0e4343048b10646dd2976cc5ad18}{IDLE}},\ \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075a439c688a4e9ed31638d5922a50680a8e}{RUN}}\ \};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_animated_object}{AnimatedObject}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075}{AnimState}}\ \doxymbox{\hyperlink{class_animated_object_ac6f0ee4b1b4be748cb3d2adf89ec5d70}{state}}\ =\ \doxymbox{\hyperlink{_animated_object_8h_ae14d5cd4a1a6c41237f81f3ae6e8a075afd6a0e4343048b10646dd2976cc5ad18}{IDLE}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_animated_object_ad771531a3b8811a4c38369d1c029f4be}{timer}}\ =\ 0;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_animated_object_a69f1690f167dae34bc0da373541add52}{frameTime}}\ =\ .1f;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_animated_object_ac22877cff756b49512cb5d322b246b7b}{frameCountIdle}}\ =\ 4;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_animated_object_a11a5c8cd9a78ea3c97c5ba98483b9fd9}{frameCountRun}}\ =\ 16;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_animated_object_a5e5b3d81dc876a7e66adea7626fe985b}{animate}}(\textcolor{keywordtype}{float}\ dt)\ =\ 0;}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

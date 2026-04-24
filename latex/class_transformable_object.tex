@@ -1,0 +1,113 @@
+\doxysection{Transformable\+Object Class Reference}
+\hypertarget{class_transformable_object}{}\label{class_transformable_object}\index{TransformableObject@{TransformableObject}}
+
+
+Klasa abstrakcyjna definiująca metody do przekształceń geometrycznych.  
+
+
+
+
+{\ttfamily \+\#include $<$Transformable\+Object.\+h$>$}
+
+Inheritance diagram for Transformable\+Object:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.705314cm]{class_transformable_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d}{translate}} (float dx, float dy)=0
+\begin{DoxyCompactList}\small\item\em Metoda translacji. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541}{rotate}} (float angle, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point)=0
+\begin{DoxyCompactList}\small\item\em Metoda rotacji. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_transformable_object_aef366f0c99b5789d1fa187008ce99652}{scale}} (float k, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point)=0
+\begin{DoxyCompactList}\small\item\em Metoda skalowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa abstrakcyjna definiująca metody do przekształceń geometrycznych. 
+
+\label{doc-func-members}
+\Hypertarget{class_transformable_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541}\index{TransformableObject@{TransformableObject}!rotate@{rotate}}
+\index{rotate@{rotate}!TransformableObject@{TransformableObject}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541} 
+virtual void Transformable\+Object::\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle}{, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda rotacji. 
+
+Obraca obiekt względem podanego punktu oraz o podany kąt
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & -\/ kąt obrotu \\
+\hline
+{\em point} & -\/ punkt względem którego obracamy obiekt \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_circle_afa50ac24ef878c1b106a47e3696fc2ca}{Circle}}, \doxymbox{\hyperlink{class_elipse_a5badf6ad72aace0386396794ece4d21c}{Elipse}}, \doxymbox{\hyperlink{class_line_segment_ad3be47da4fc7c46035cf24e474bae371}{Line\+Segment}}, \doxymbox{\hyperlink{class_player_a204d35fa6754479028dbcc8e9405dcb9}{Player}}, \doxymbox{\hyperlink{class_point2_d_a8f0e89a21d309326bcb703697f98a6cd}{Point2D}}, and \doxymbox{\hyperlink{class_rect_a75238a3be3ca486a0c319210204b3b12}{Rect}}.
+
+\Hypertarget{class_transformable_object_aef366f0c99b5789d1fa187008ce99652}\index{TransformableObject@{TransformableObject}!scale@{scale}}
+\index{scale@{scale}!TransformableObject@{TransformableObject}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{class_transformable_object_aef366f0c99b5789d1fa187008ce99652} 
+virtual void Transformable\+Object::\+scale (\begin{DoxyParamCaption}\item[{float}]{k}{, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda skalowanie. 
+
+Skaluje obiekt o podaną wartość k względem podanego punktu
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ współczynnik skalowania \\
+\hline
+{\em point} & -\/ punkt względem którego skalujemy \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_circle_ae74a3e8460dfac0dd0533c89e8e5f2cb}{Circle}}, \doxymbox{\hyperlink{class_elipse_adbf05947fded371e9e24604000190399}{Elipse}}, \doxymbox{\hyperlink{class_line_segment_a24cc94605f3af666d644022d4c6641ab}{Line\+Segment}}, \doxymbox{\hyperlink{class_player_a8d6996fe66c7317e3bf145abed5363b6}{Player}}, \doxymbox{\hyperlink{class_point2_d_aebbf568582cc10dd19009a898fe86a78}{Point2D}}, and \doxymbox{\hyperlink{class_rect_a93178475a17555739d86cf98ef00a608}{Rect}}.
+
+\Hypertarget{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d}\index{TransformableObject@{TransformableObject}!translate@{translate}}
+\index{translate@{translate}!TransformableObject@{TransformableObject}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d} 
+virtual void Transformable\+Object::\+translate (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda translacji. 
+
+Przesuwa obiekt o zadane wartości x oraz y
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ przesunięcie osi X \\
+\hline
+{\em dy} & -\/ przesunięcie osi Y \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_circle_ae6e1c726c2adba8831cbae34974d1c40}{Circle}}, \doxymbox{\hyperlink{class_elipse_acef9a1cfb29f5139d42691118b9417ba}{Elipse}}, \doxymbox{\hyperlink{class_line_segment_ae9262be0eef49d4bccc8701009c82c81}{Line\+Segment}}, \doxymbox{\hyperlink{class_player_a640068d36cf71305a356e1f4acc51c38}{Player}}, \doxymbox{\hyperlink{class_point2_d_aee3485b3b0ff467c90be2fc683ae8744}{Point2D}}, and \doxymbox{\hyperlink{class_rect_aa96eb866b18ad0d7bb0e3d6a29f23ee9}{Rect}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_transformable_object_8h}{Transformable\+Object.\+h}}\end{DoxyCompactItemize}

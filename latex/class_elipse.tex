@@ -1,0 +1,278 @@
+\doxysection{Elipse Class Reference}
+\hypertarget{class_elipse}{}\label{class_elipse}\index{Elipse@{Elipse}}
+
+
+Klasa reprezentująca elipsę  
+
+
+
+
+{\ttfamily \+\#include $<$Elipse.\+h$>$}
+
+Inheritance diagram for Elipse:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_elipse}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}{Elipse}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} m, int rX, int rY, sf::\+\+Color c=sf::\+\+Color::\+\+Cyan, bool fill=false)
+\begin{DoxyCompactList}\small\item\em Tworzy obiekt elipsy. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_elipse_ae342881fbe3b6a477ddd325f241e520d}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca środek elipsy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_elipse_a26c708bc706ebf7326b7e83cd4b119a7}{get\+RadiusX}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca promień elipsy osi X. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_elipse_a5d3365949dad0e30e2134622b90730ae}{get\+RadiusY}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca promień elipsy Y. \end{DoxyCompactList}\item 
+sf::\+\+Color \doxymbox{\hyperlink{class_elipse_ad99124f591dfabff03308328ae3d1609}{get\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca kolor elipsy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_elipse_a95ce0bf50f4debaf6e54aa6f296f4a86}{set\+Position}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} pos)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nowy środek elipsy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_elipse_a6a8b31652d02fbb8ac0dd2ec253a4056}{set\+RadiusX}} (int rX)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nowy promień X. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_elipse_adeec781ee8a2393e1867b47330d6cfaf}{set\+RadiusY}} (int rY)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nowy promień Y. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_elipse_abf9d9382d9479df4059b7a964c7d2206}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color color) override
+\begin{DoxyCompactList}\small\item\em Metoda potrzebna do rysowania obiektów. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_elipse_acef9a1cfb29f5139d42691118b9417ba}{translate}} (float dx, float dy) override
+\begin{DoxyCompactList}\small\item\em Metoda translacji. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_elipse_a5badf6ad72aace0386396794ece4d21c}{rotate}} (float angle=0.\+0f, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{ 0, 0 \}) override
+\begin{DoxyCompactList}\small\item\em Metoda rotacji. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_elipse_adbf05947fded371e9e24604000190399}{scale}} (float k=1, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{ 0, 0 \}) override
+\begin{DoxyCompactList}\small\item\em Metoda skalowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca elipsę 
+
+\label{doc-constructors}
+\Hypertarget{class_elipse_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}\index{Elipse@{Elipse}!Elipse@{Elipse}}
+\index{Elipse@{Elipse}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{Elipse()}{Elipse()}}
+{\footnotesize\ttfamily \label{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c} 
+Elipse::\+\+Elipse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{m}{, }\item[{int}]{rX}{, }\item[{int}]{rY}{, }\item[{sf::\+\+Color}]{c}{ = {\ttfamily sf:\+:\+Color:\+:\+Cyan}, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy obiekt elipsy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ środek elipsy \\
+\hline
+{\em rX} & -\/ promień po osi X \\
+\hline
+{\em rY} & -\/ promień po osi Y \\
+\hline
+{\em c} & -\/ kolor elipsy (domyślnie Cyan) \\
+\hline
+{\em fill} & -\/ definiuje czy obiekt ma byc wypełniony kolorem (domyślnie false) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_elipse_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_elipse_abf9d9382d9479df4059b7a964c7d2206}\index{Elipse@{Elipse}!draw@{draw}}
+\index{draw@{draw}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_elipse_abf9d9382d9479df4059b7a964c7d2206} 
+void Elipse::\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&}]{renderer}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda potrzebna do rysowania obiektów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & -\/ referencja na obiekt renderowania \\
+\hline
+{\em color} & -\/ kolor, którym rysujemy nasz obiekt \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_drawable_object_a9ac3f5a81fa711aa2cbb8d0f6413b696}{Drawable\+Object}}.
+
+\Hypertarget{class_elipse_ad99124f591dfabff03308328ae3d1609}\index{Elipse@{Elipse}!getColor@{getColor}}
+\index{getColor@{getColor}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_elipse_ad99124f591dfabff03308328ae3d1609} 
+sf::\+\+Color Elipse::\+get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda zwracająca kolor elipsy. 
+
+\begin{DoxyReturn}{Returns}
+Kolor elipsy 
+\end{DoxyReturn}
+\Hypertarget{class_elipse_ae342881fbe3b6a477ddd325f241e520d}\index{Elipse@{Elipse}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_elipse_ae342881fbe3b6a477ddd325f241e520d} 
+\doxymbox{\hyperlink{class_point2_d}{Point2D}} Elipse::\+get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda zwracająca środek elipsy. 
+
+\begin{DoxyReturn}{Returns}
+Środek elipsy 
+\end{DoxyReturn}
+\Hypertarget{class_elipse_a26c708bc706ebf7326b7e83cd4b119a7}\index{Elipse@{Elipse}!getRadiusX@{getRadiusX}}
+\index{getRadiusX@{getRadiusX}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{getRadiusX()}{getRadiusX()}}
+{\footnotesize\ttfamily \label{class_elipse_a26c708bc706ebf7326b7e83cd4b119a7} 
+int Elipse::\+get\+RadiusX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda zwracająca promień elipsy osi X. 
+
+\begin{DoxyReturn}{Returns}
+Promień osi X 
+\end{DoxyReturn}
+\Hypertarget{class_elipse_a5d3365949dad0e30e2134622b90730ae}\index{Elipse@{Elipse}!getRadiusY@{getRadiusY}}
+\index{getRadiusY@{getRadiusY}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{getRadiusY()}{getRadiusY()}}
+{\footnotesize\ttfamily \label{class_elipse_a5d3365949dad0e30e2134622b90730ae} 
+int Elipse::\+get\+RadiusY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda zwracająca promień elipsy Y. 
+
+\begin{DoxyReturn}{Returns}
+Promień osi Y 
+\end{DoxyReturn}
+\Hypertarget{class_elipse_a5badf6ad72aace0386396794ece4d21c}\index{Elipse@{Elipse}!rotate@{rotate}}
+\index{rotate@{rotate}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_elipse_a5badf6ad72aace0386396794ece4d21c} 
+void Elipse::\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle}{ = {\ttfamily 0.0f}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{~0,~0~\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda rotacji. 
+
+Obraca obiekt względem podanego punktu oraz o podany kąt
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & -\/ kąt obrotu \\
+\hline
+{\em point} & -\/ punkt względem którego obracamy obiekt \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541}{Transformable\+Object}}.
+
+\Hypertarget{class_elipse_adbf05947fded371e9e24604000190399}\index{Elipse@{Elipse}!scale@{scale}}
+\index{scale@{scale}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{class_elipse_adbf05947fded371e9e24604000190399} 
+void Elipse::\+scale (\begin{DoxyParamCaption}\item[{float}]{k}{ = {\ttfamily 1}, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{point}{ = {\ttfamily \{~0,~0~\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda skalowanie. 
+
+Skaluje obiekt o podaną wartość k względem podanego punktu
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ współczynnik skalowania \\
+\hline
+{\em point} & -\/ punkt względem którego skalujemy \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_aef366f0c99b5789d1fa187008ce99652}{Transformable\+Object}}.
+
+\Hypertarget{class_elipse_a95ce0bf50f4debaf6e54aa6f296f4a86}\index{Elipse@{Elipse}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_elipse_a95ce0bf50f4debaf6e54aa6f296f4a86} 
+void Elipse::\+set\+Position (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda ustawiająca nowy środek elipsy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ Nowy środek elipsy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_elipse_a6a8b31652d02fbb8ac0dd2ec253a4056}\index{Elipse@{Elipse}!setRadiusX@{setRadiusX}}
+\index{setRadiusX@{setRadiusX}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{setRadiusX()}{setRadiusX()}}
+{\footnotesize\ttfamily \label{class_elipse_a6a8b31652d02fbb8ac0dd2ec253a4056} 
+void Elipse::\+set\+RadiusX (\begin{DoxyParamCaption}\item[{int}]{rX}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda ustawiająca nowy promień X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rX} & -\/ nowy promień osi X \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_elipse_adeec781ee8a2393e1867b47330d6cfaf}\index{Elipse@{Elipse}!setRadiusY@{setRadiusY}}
+\index{setRadiusY@{setRadiusY}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{setRadiusY()}{setRadiusY()}}
+{\footnotesize\ttfamily \label{class_elipse_adeec781ee8a2393e1867b47330d6cfaf} 
+void Elipse::\+set\+RadiusY (\begin{DoxyParamCaption}\item[{int}]{rY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda ustawiająca nowy promień Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rY} & -\/ nowy promień osi Y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_elipse_acef9a1cfb29f5139d42691118b9417ba}\index{Elipse@{Elipse}!translate@{translate}}
+\index{translate@{translate}!Elipse@{Elipse}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_elipse_acef9a1cfb29f5139d42691118b9417ba} 
+void Elipse::\+translate (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda translacji. 
+
+Przesuwa obiekt o zadane wartości x oraz y
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ przesunięcie osi X \\
+\hline
+{\em dy} & -\/ przesunięcie osi Y \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d}{Transformable\+Object}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+headers/\+\doxymbox{\hyperlink{_elipse_8h}{Elipse.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_elipse_8cpp}{Elipse.\+cpp}}\end{DoxyCompactItemize}

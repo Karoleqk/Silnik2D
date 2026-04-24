@@ -1,0 +1,23 @@
+\doxysection{Bitmap\+Object.\+h}
+\hypertarget{_bitmap_object_8h_source}{}\label{_bitmap_object_8h_source}\index{src/headers/BitmapObject.h@{src/headers/BitmapObject.h}}
+\doxymbox{\hyperlink{_bitmap_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_transformable_object_8h}{TransformableObject.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_bitmap_handler_8h}{BitmapHandler.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_bitmap_object}{BitmapObject}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_drawable_object}{DrawableObject}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{class_bitmap_handler}{BitmapHandler}}\ \doxymbox{\hyperlink{class_bitmap_object_a8db08927cab596906cf35f68a386de53}{sheet}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bitmap_object_a4e65602adabd2731f2b2a46030fe18cb}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color\ =\ sf::Color::Transparent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_bitmap_object_aac5123127181f645a3de58b16af3839d}{setSheet}}(\doxymbox{\hyperlink{class_bitmap_handler}{BitmapHandler}}\&\ b);}
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}
