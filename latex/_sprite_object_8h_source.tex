@@ -27,18 +27,22 @@
 \DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_sprite_object_ad45914f608a1664343186c2854753baf}{position}};}
 \DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375}{drawMode}}\ \doxymbox{\hyperlink{class_sprite_object_a004a40767121ec150286567973b2429c}{mode}}\ =\ \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375a3388f7110f6f25a54e215eb75d5d7516}{SINGLE}};}
 \DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_ae70909c335cc2e2a433e3712d36f38b1}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color\ =\ sf::Color::Transparent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_sprite_object_a873fa9a1d7332abe49123d2286c10b75}{mapOffsetX}}\ =\ 0;}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_ae2fc6e81a3255688ff178fbce2157688}{drawMap}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a744990fa52df2a98aef55f409d287acb}{drawPlayer}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a352409b523af827c4aaa785fb19e9fed}{drawFrame}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a111ece133acefc7985aba24e3578ce91}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos);}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a1ca477c915a8a2863ea02df8868e2811}{setMap}}(std::vector<std::vector<int>>\ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}})\ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ this-\/>map\ =\ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}};}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ this-\/>mode\ =\ \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375aa44b734476c2f3d073ee7aca08660a0e}{BACKGROUND}};}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ this-\/>frameWidth\ =\ this-\/>frameHeight\ =\ 16;}
-\DoxyCodeLine{00037\ \ \ \ \ \}}
-\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_ae70909c335cc2e2a433e3712d36f38b1}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color\ =\ sf::Color::Transparent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_ae2fc6e81a3255688ff178fbce2157688}{drawMap}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a744990fa52df2a98aef55f409d287acb}{drawPlayer}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a352409b523af827c4aaa785fb19e9fed}{drawFrame}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a111ece133acefc7985aba24e3578ce91}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a1ca477c915a8a2863ea02df8868e2811}{setMap}}(std::vector<std::vector<int>>\ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}})\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ this-\/>map\ =\ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ this-\/>mode\ =\ \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375aa44b734476c2f3d073ee7aca08660a0e}{BACKGROUND}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ this-\/>frameWidth\ =\ this-\/>frameHeight\ =\ 16;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_a5d48c4d641085742cb68e1eb67c80b16}{setFrame}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \{\ \doxymbox{\hyperlink{class_sprite_object_a1c85883015cfa66c690cd44c3f48679a}{frameX}}\ =\ x;\ \doxymbox{\hyperlink{class_sprite_object_afed302d07f28f90a76f4c1ccb0dd8cc5}{frameY}}\ =\ y;\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sprite_object_ab9b8ec9059774f2a517bfd2e2889fdee}{setFrameSize}}(\textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h)\ \{\ \doxymbox{\hyperlink{class_sprite_object_a9ebba2751556f0971243ca5ac29a6692}{frameWidth}}\ =\ w;\ \doxymbox{\hyperlink{class_sprite_object_a77e9063c802ac72d8d49b31826935d03}{frameHeight}}\ =\ h;\ \}}
+\DoxyCodeLine{00042\ \};}
 
 \end{DoxyCode}

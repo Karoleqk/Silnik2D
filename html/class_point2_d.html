@@ -92,6 +92,9 @@ $(function(){initNavTree('class_point2_d.html','','class_point2_d-members'); });
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa reprezentująca pojedynczy piksel.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_point2_d_8h_source.html">Point2D.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Point2D:</div>
@@ -99,9 +102,9 @@ Inheritance diagram for Point2D:</div>
  <div class="center">
   <img src="class_point2_d.png" usemap="#Point2D_map" alt=""/>
   <map id="Point2D_map" name="Point2D_map">
-<area href="class_shape_object.html" alt="ShapeObject" shape="rect" coords="70,112,200,136"/>
-<area href="class_drawable_object.html" alt="DrawableObject" shape="rect" coords="0,56,130,80"/>
-<area href="class_transformable_object.html" alt="TransformableObject" shape="rect" coords="140,56,270,80"/>
+<area href="class_shape_object.html" title="Klasa wykorzystywana do tworzenia prymitywów." alt="ShapeObject" shape="rect" coords="70,112,200,136"/>
+<area href="class_drawable_object.html" title="Klasa abstrakcyjna wykorzystywana do rysowania obiektów." alt="DrawableObject" shape="rect" coords="0,56,130,80"/>
+<area href="class_transformable_object.html" title="Klasa abstrakcyjna definiująca metody do przekształceń geometrycznych." alt="TransformableObject" shape="rect" coords="140,56,270,80"/>
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="0,0,130,24"/>
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="140,0,270,24"/>
   </map>
@@ -110,23 +113,36 @@ Inheritance diagram for Point2D:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a10bc6b9fcbc3b0a1cd13ab0614458b4e" id="r_a10bc6b9fcbc3b0a1cd13ab0614458b4e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a10bc6b9fcbc3b0a1cd13ab0614458b4e">Point2D</a> (int <a class="el" href="#a02041472ec3f1ec4d92a926bad5fe2c2">x</a>=0, int <a class="el" href="#adbb040f0e224303093e783dfcccd4886">y</a>=0)</td></tr>
+<tr class="memdesc:a10bc6b9fcbc3b0a1cd13ab0614458b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy obiekt reprezentujący pojedynczy piksel na ekranie.  <br /></td></tr>
 <tr class="memitem:a558f484d3feb2432350e3d3149e72e8c" id="r_a558f484d3feb2432350e3d3149e72e8c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a558f484d3feb2432350e3d3149e72e8c">getX</a> ()</td></tr>
+<tr class="memdesc:a558f484d3feb2432350e3d3149e72e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca pozycję X punktu.  <br /></td></tr>
 <tr class="memitem:a86630685042226ef670949d164ced5ca" id="r_a86630685042226ef670949d164ced5ca"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a86630685042226ef670949d164ced5ca">getY</a> ()</td></tr>
+<tr class="memdesc:a86630685042226ef670949d164ced5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca pozycję Y punktu.  <br /></td></tr>
 <tr class="memitem:a395eb9297c64bfaa739c5a3069bc69a5" id="r_a395eb9297c64bfaa739c5a3069bc69a5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a395eb9297c64bfaa739c5a3069bc69a5">setX</a> (int <a class="el" href="#a02041472ec3f1ec4d92a926bad5fe2c2">x</a>)</td></tr>
+<tr class="memdesc:a395eb9297c64bfaa739c5a3069bc69a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ustawiająca nową pozycję na osi X.  <br /></td></tr>
 <tr class="memitem:a13ce4acc6522790b131e3c07f9bb97f4" id="r_a13ce4acc6522790b131e3c07f9bb97f4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a13ce4acc6522790b131e3c07f9bb97f4">setY</a> (int <a class="el" href="#adbb040f0e224303093e783dfcccd4886">y</a>)</td></tr>
+<tr class="memdesc:a13ce4acc6522790b131e3c07f9bb97f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ustawiająca nową pozycję na osi Y.  <br /></td></tr>
 <tr class="memitem:a9264d0f4486f7d8c53c02aec79eeeb0e" id="r_a9264d0f4486f7d8c53c02aec79eeeb0e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9264d0f4486f7d8c53c02aec79eeeb0e">draw</a> (<a class="el" href="class_primitive_renderer.html">PrimitiveRenderer</a> &amp;renderer, sf::Color color) override</td></tr>
+<tr class="memdesc:a9264d0f4486f7d8c53c02aec79eeeb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda potrzebna do rysowania obiektów.  <br /></td></tr>
 <tr class="memitem:aee3485b3b0ff467c90be2fc683ae8744" id="r_aee3485b3b0ff467c90be2fc683ae8744"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aee3485b3b0ff467c90be2fc683ae8744">translate</a> (float dx, float dy) override</td></tr>
+<tr class="memdesc:aee3485b3b0ff467c90be2fc683ae8744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda translacji.  <br /></td></tr>
 <tr class="memitem:a8f0e89a21d309326bcb703697f98a6cd" id="r_a8f0e89a21d309326bcb703697f98a6cd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8f0e89a21d309326bcb703697f98a6cd">rotate</a> (float angle=0.0f, <a class="el" href="class_point2_d.html">Point2D</a> point={0, 0}) override</td></tr>
+<tr class="memdesc:a8f0e89a21d309326bcb703697f98a6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda rotacji.  <br /></td></tr>
 <tr class="memitem:aebbf568582cc10dd19009a898fe86a78" id="r_aebbf568582cc10dd19009a898fe86a78"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aebbf568582cc10dd19009a898fe86a78">scale</a> (float k=1, <a class="el" href="class_point2_d.html">Point2D</a> point={0, 0}) override</td></tr>
+<tr class="memdesc:aebbf568582cc10dd19009a898fe86a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda skalowanie.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_object.html">GameObject</a></td></tr>
 <tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a02041472ec3f1ec4d92a926bad5fe2c2" id="r_a02041472ec3f1ec4d92a926bad5fe2c2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a02041472ec3f1ec4d92a926bad5fe2c2">x</a></td></tr>
+<tr class="memdesc:a02041472ec3f1ec4d92a926bad5fe2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienna przechowująca współrzędną X punktu  <br /></td></tr>
 <tr class="memitem:adbb040f0e224303093e783dfcccd4886" id="r_adbb040f0e224303093e783dfcccd4886"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adbb040f0e224303093e783dfcccd4886">y</a></td></tr>
+<tr class="memdesc:adbb040f0e224303093e783dfcccd4886"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienna przechowująca współrzędną Y punktu  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Klasa reprezentująca pojedynczy piksel. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a10bc6b9fcbc3b0a1cd13ab0614458b4e" name="a10bc6b9fcbc3b0a1cd13ab0614458b4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10bc6b9fcbc3b0a1cd13ab0614458b4e">&#9670;&#160;</a></span>Point2D()</h2>
 
@@ -153,6 +169,15 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Tworzy obiekt reprezentujący pojedynczy piksel na ekranie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a02041472ec3f1ec4d92a926bad5fe2c2" title="zmienna przechowująca współrzędną X punktu">x</a></td><td>- współrzędna X </td></tr>
+    <tr><td class="paramname"><a class="el" href="#adbb040f0e224303093e783dfcccd4886" title="zmienna przechowująca współrzędną Y punktu">y</a></td><td>- współrzędna Y </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -184,6 +209,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Metoda potrzebna do rysowania obiektów. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>- referencja na obiekt renderowania </td></tr>
+    <tr><td class="paramname">color</td><td>- kolor, którym rysujemy nasz obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_drawable_object.html#a9ac3f5a81fa711aa2cbb8d0f6413b696">DrawableObject</a>.</p>
 
 </div>
@@ -203,6 +237,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Metoda zwracająca pozycję X punktu. </p>
+<dl class="section return"><dt>Returns</dt><dd>Współrzędna X </dd></dl>
+
 </div>
 </div>
 <a id="a86630685042226ef670949d164ced5ca" name="a86630685042226ef670949d164ced5ca"></a>
@@ -219,6 +256,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda zwracająca pozycję Y punktu. </p>
+<dl class="section return"><dt>Returns</dt><dd>Współrzędna Y </dd></dl>
 
 </div>
 </div>
@@ -249,7 +289,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda rotacji. </p>
+<p>Obraca obiekt względem podanego punktu oraz o podany kąt</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>- kąt obrotu </td></tr>
+    <tr><td class="paramname">point</td><td>- punkt względem którego obracamy obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#add37fb78c0aabf53a9a8d550b09d0541">TransformableObject</a>.</p>
 
 </div>
 </div>
@@ -280,7 +330,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda skalowanie. </p>
+<p>Skaluje obiekt o podaną wartość k względem podanego punktu</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>- współczynnik skalowania </td></tr>
+    <tr><td class="paramname">point</td><td>- punkt względem którego skalujemy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#aef366f0c99b5789d1fa187008ce99652">TransformableObject</a>.</p>
 
 </div>
 </div>
@@ -299,6 +359,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Metoda ustawiająca nową pozycję na osi X. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#a02041472ec3f1ec4d92a926bad5fe2c2" title="zmienna przechowująca współrzędną X punktu">x</a></td><td>- nowa współrzędna X </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a13ce4acc6522790b131e3c07f9bb97f4" name="a13ce4acc6522790b131e3c07f9bb97f4"></a>
@@ -315,6 +383,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda ustawiająca nową pozycję na osi Y. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="#adbb040f0e224303093e783dfcccd4886" title="zmienna przechowująca współrzędną Y punktu">y</a></td><td>- nowa współrzędna Y </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -345,7 +421,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda translacji. </p>
+<p>Przesuwa obiekt o zadane wartości x oraz y</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>- przesunięcie osi X </td></tr>
+    <tr><td class="paramname">dy</td><td>- przesunięcie osi Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#afe79e7266af3a1b444acb9de26ae8e1d">TransformableObject</a>.</p>
 
 </div>
 </div>
@@ -362,6 +448,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>zmienna przechowująca współrzędną X punktu </p>
+
 </div>
 </div>
 <a id="adbb040f0e224303093e783dfcccd4886" name="adbb040f0e224303093e783dfcccd4886"></a>
@@ -375,6 +463,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>zmienna przechowująca współrzędną Y punktu </p>
 
 </div>
 </div>

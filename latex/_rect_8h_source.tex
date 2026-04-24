@@ -6,31 +6,43 @@
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_point2_d_8h}{Point2D.h}}"{}}}
 \DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_rect_a3b0f7860b315fe032e53f1aa8b54388d}{Rect}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_a367714e71d566668addb140c7981b5bc}{width}},\ \doxymbox{\hyperlink{class_rect_ad79d7bf12771a81627a672452437011d}{height}};}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_rect_a5dcb65d735bc97b8574bf125d14176bc}{isFill}};}
-\DoxyCodeLine{00009\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}};}
-\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_rect_ac132e8b0d3c7da9229b62b515a007a80}{start}};}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \doxymbox{\hyperlink{class_rect_a3b0f7860b315fe032e53f1aa8b54388d}{Rect}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ s,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_rect_ac132e8b0d3c7da9229b62b515a007a80}{start}}(s),\ \doxymbox{\hyperlink{class_rect_a367714e71d566668addb140c7981b5bc}{width}}(w),\ \doxymbox{\hyperlink{class_rect_ad79d7bf12771a81627a672452437011d}{height}}(h),\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}}(c),\ \doxymbox{\hyperlink{class_rect_a5dcb65d735bc97b8574bf125d14176bc}{isFill}}(fill)\ \{\}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Getters}}
-\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_rect_aac6f0f70a77d96cc55955b701ad59d6e}{getStart}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>start;\ \};}
-\DoxyCodeLine{00017\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_rect_a458421d30db2637b555d9dd6fe79b8f4}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_a0a907a5c36add13e57b543cabefa4d92}{getWidth}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>width;\ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_ad553d3ab3a51007a893166bf16bdefa6}{getHeight}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>height;\ \}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_rect_a3b0f7860b315fe032e53f1aa8b54388d}{Rect}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_a367714e71d566668addb140c7981b5bc}{width}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_ad79d7bf12771a81627a672452437011d}{height}};}
 \DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Setters}}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_ad5ba98862f3e0d37fac472df2e1723d7}{setStart}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ s)\ \{\ this-\/>start\ =\ s;\ \};}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a45064ea3a33b984f406b4a826ca5a2e2}{setWidth}}(\textcolor{keywordtype}{int}\ w)\ \{\ this-\/>width\ =\ w;\ \}}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_ab998147cc742079eb2ab653bf001ac27}{setHeight}}(\textcolor{keywordtype}{int}\ h)\ \{\ this-\/>height\ =\ h;\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_rect_a5dcb65d735bc97b8574bf125d14176bc}{isFill}};}
 \DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a26f3526e8ed18b646e8948ee4ddbc7e1}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_aa96eb866b18ad0d7bb0e3d6a29f23ee9}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a75238a3be3ca486a0c319210204b3b12}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a93178475a17555739d86cf98ef00a608}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00029\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_rect_ac132e8b0d3c7da9229b62b515a007a80}{start}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{class_rect_a3b0f7860b315fe032e53f1aa8b54388d}{Rect}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ s,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_rect_ac132e8b0d3c7da9229b62b515a007a80}{start}}(s),\ \doxymbox{\hyperlink{class_rect_a367714e71d566668addb140c7981b5bc}{width}}(w),\ \doxymbox{\hyperlink{class_rect_ad79d7bf12771a81627a672452437011d}{height}}(h),\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}}(c),\ \doxymbox{\hyperlink{class_rect_a5dcb65d735bc97b8574bf125d14176bc}{isFill}}(fill)\ \{\}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_rect_aac6f0f70a77d96cc55955b701ad59d6e}{getStart}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>start;\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_rect_a458421d30db2637b555d9dd6fe79b8f4}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_a0a907a5c36add13e57b543cabefa4d92}{getWidth}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>width;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_rect_ad553d3ab3a51007a893166bf16bdefa6}{getHeight}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>height;\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_ad5ba98862f3e0d37fac472df2e1723d7}{setStart}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ s)\ \{\ this-\/>start\ =\ s;\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a45064ea3a33b984f406b4a826ca5a2e2}{setWidth}}(\textcolor{keywordtype}{int}\ w)\ \{\ this-\/>width\ =\ w;\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_ab998147cc742079eb2ab653bf001ac27}{setHeight}}(\textcolor{keywordtype}{int}\ h)\ \{\ this-\/>height\ =\ h;\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a26f3526e8ed18b646e8948ee4ddbc7e1}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_aa96eb866b18ad0d7bb0e3d6a29f23ee9}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a75238a3be3ca486a0c319210204b3b12}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rect_a93178475a17555739d86cf98ef00a608}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00104\ \};}
 
 \end{DoxyCode}

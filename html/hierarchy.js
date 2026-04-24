@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "BitmapHandler", "class_bitmap_handler.html", null ],
     [ "Engine", "class_engine.html", null ],
+    [ "GameEntity", "struct_game_entity.html", null ],
     [ "GameObject", "class_game_object.html", [
       [ "DrawableObject", "class_drawable_object.html", [
         [ "BitmapObject", "class_bitmap_object.html", [

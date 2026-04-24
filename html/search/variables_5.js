@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['map_0',['map',['../class_sprite_object.html#a35d3c7c19dd49ce16f2d411ec88684c9',1,'SpriteObject']]],
-  ['mode_1',['mode',['../class_sprite_object.html#a004a40767121ec150286567973b2429c',1,'SpriteObject']]]
+  ['gameover_0',['gameOver',['../class_engine.html#a319fe078ae96d17930d77a66d0124ad2',1,'Engine']]],
+  ['globalspeed_1',['globalSpeed',['../class_engine.html#a908e5f53765382ade67d4419139564b2',1,'Engine']]]
 ];

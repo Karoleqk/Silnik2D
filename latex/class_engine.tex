@@ -2,53 +2,81 @@
 \hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
 
 
+Główna klasa silnika.  
+
+
+
+
 {\ttfamily \+\#include $<$Engine.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}} (unsigned int w=800, unsigned int h=600)
-\item 
-\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \doxymbox{\hyperlink{class_engine_ae0c734092f488fa1f406a533274935ae}{get\+Renderer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Tworzy główny obiekt silnika. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a36e4ec9971c75e79b7f5875a719c9394}{run}} (int fps=60)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiająca silnik. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}{handle\+Events}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda nasłuchująca kliknięcia myszy oraz klawiatury. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}{update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda aktualizująca całą logikę silnika. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a7960743aefd62e846e7f3cd92c18bc73}{render}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda renderująca obraz na ekran. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_engine_a9a930c4be49de8aa2948e0f16dec86e9}{reset\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Metoda resetująca grę \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_engine_a88d4ed7dc9f02cf466f42389de46fa51}{spawn\+Entity}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Metoda pojawiająca obiekt gry na ekranie. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}{draw\+Shape}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda dzięki której możemy za pomocą myszki narysować obiekty typu linia/\+kwadrat/\+okrąg. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_abb6d73fa833daf3ad4def45d2793cfad}{reset\+Start\+End}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda resetująca zapisane pozycje naciśnięcia myszki. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a855451901bacd4d9d01b7a36690f7429}{set\+Pixel}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} pos, sf::\+\+Color color)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca nowy obiekt typu \doxylink{class_point2_d}{Point2D} i dodająca go do bufora renderowania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a19bc486757abc00690d0cc0f0a1feb60}{draw\+Line}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} start, \doxymbox{\hyperlink{class_point2_d}{Point2D}} end, sf::\+\+Color color)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca nowy obiekt typu \doxylink{class_line_segment}{Line\+Segment} i dodająca go do bufora renderowania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_af224ca5805b4d3fffa94280f5464f37b}{draw\+Rect}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} start, int width, int height, sf::\+\+Color color, bool fill=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca nowy obiekt typu \doxylink{class_rect}{Rect} i dodająca go do bufora renderowania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef}{draw\+Circle}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} middle, int R, sf::\+\+Color color, bool fill=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca nowy obiekt typu \doxylink{class_circle}{Circle} i dodająca go do bufora renderowania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}{draw\+Elipse}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} middle, int Rx, int Ry, sf::\+\+Color color, bool fill=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca nowy obiekt typu \doxylink{class_elipse}{Elipse} i dodająca go do bufora renderowania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a1f699898feb373abacbe84f4a421ba16}{draw\+Polygon}} (std::\+vector$<$ \doxymbox{\hyperlink{class_point2_d}{Point2D}} $>$ points, sf::\+\+Color color)
 \item 
 void \doxymbox{\hyperlink{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}{set\+Player}} (\doxymbox{\hyperlink{class_player}{Player}} \&p)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca obiekt \doxylink{class_player}{Player} (gracz). \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_a5f71c81d0457f5e10274a78272ba3061}{set\+Background}} (\doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}} \&b)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca obiekt \doxylink{class_sprite_object}{Sprite\+Object} (tło). \end{DoxyCompactList}\item 
 std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}{get\+Map}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca wektor utworzonej w silniku mapy. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_engine_ad147063e223c222fe4e136493314633f}{set\+Map}} (std::\+vector$<$ std::\+vector$<$ int $>$ $>$ m)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca wektor mapy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \doxymbox{\hyperlink{class_engine_aba7e018d171f058bc9375883063fbd9a}{angle}} = 1.\+0f
+\item 
+float \doxymbox{\hyperlink{class_engine_a908e5f53765382ade67d4419139564b2}{global\+Speed}} = 3.\+5f
+\item 
+float \doxymbox{\hyperlink{class_engine_abd5799619eca2c5b9f7105d5442d651b}{distance\+Traveled}} = 0.\+0f
+\item 
+int \doxymbox{\hyperlink{class_engine_afd844173e6100bced3a9abb133677d68}{coins\+Collected}} = 0
+\begin{DoxyCompactList}\small\item\em zmienna przechowująca ilość zebranych monet \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_engine_a208f06384a128ab9130ee49a51609f92}{map\+OffsetX}} = 0
+\item 
+int \doxymbox{\hyperlink{class_engine_ab774cff40d8dff8228073ccf3ad4f181}{score}} = 0
+\begin{DoxyCompactList}\small\item\em zmienna przechowująca uzyskany wynik \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_engine_a319fe078ae96d17930d77a66d0124ad2}{game\+Over}} = false
+\begin{DoxyCompactList}\small\item\em zmienna boolowska definiująca koniec gry \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ \doxymbox{\hyperlink{class_engine_a6e2c97b8360e25bd1253928fce4f651c}{entities}}
+\begin{DoxyCompactList}\small\item\em wektor typu \doxylink{struct_game_entity}{Game\+Entity} przechowujący obiekty gry (monety, przeciwnicy) \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \doxymbox{\hyperlink{class_engine_aed2b0daa03904be90a03b0361f747fc7}{coin\+Bmp}}
+\begin{DoxyCompactList}\small\item\em Bitmapa dla monet oraz przeciwników. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \doxymbox{\hyperlink{class_engine_a23ecd1fa54c834e1bf060313adf747bb}{slime\+Bmp}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Główna klasa silnika. 
 
 \label{doc-constructors}
 \Hypertarget{class_engine_doc-constructors}
@@ -61,6 +89,17 @@ Engine::\+\+Engine (\begin{DoxyParamCaption}\item[{unsigned int}]{w}{ = {\ttfami
 
 
 
+Tworzy główny obiekt silnika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & -\/ szerokość okna (domyślnie 800) \\
+\hline
+{\em h} & -\/ wysokość okna (domyślnie 600) \\
+\hline
+\end{DoxyParams}
+
+
 \label{doc-func-members}
 \Hypertarget{class_engine_doc-func-members}
 \doxysubsection{Member Function Documentation}
@@ -70,18 +109,61 @@ Engine::\+\+Engine (\begin{DoxyParamCaption}\item[{unsigned int}]{w}{ = {\ttfami
 {\footnotesize\ttfamily \label{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef} 
 void Engine::\+draw\+Circle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{middle}{, }\item[{int}]{R}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca nowy obiekt typu \doxylink{class_circle}{Circle} i dodająca go do bufora renderowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em middle} & -\/ środek okręgu \\
+\hline
+{\em R} & -\/ promień okręgu \\
+\hline
+{\em color} & -\/ kolor okręgu \\
+\hline
+{\em fill} & -\/ zmienna boolowska definiująca czy obiekt ma być wypełniony kolorem \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}\index{Engine@{Engine}!drawElipse@{drawElipse}}
 \index{drawElipse@{drawElipse}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{drawElipse()}{drawElipse()}}
 {\footnotesize\ttfamily \label{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66} 
 void Engine::\+draw\+Elipse (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{middle}{, }\item[{int}]{Rx}{, }\item[{int}]{Ry}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca nowy obiekt typu \doxylink{class_elipse}{Elipse} i dodająca go do bufora renderowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em middle} & -\/ środek elipsy \\
+\hline
+{\em Rx} & -\/ promień osi X \\
+\hline
+{\em Ry} & -\/ promień osi Y \\
+\hline
+{\em color} & -\/ kolor elipsy \\
+\hline
+{\em fill} & -\/ zmienna boolowska definiująca czy obiekt ma być wypełniony kolorem \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_a19bc486757abc00690d0cc0f0a1feb60}\index{Engine@{Engine}!drawLine@{drawLine}}
 \index{drawLine@{drawLine}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
 {\footnotesize\ttfamily \label{class_engine_a19bc486757abc00690d0cc0f0a1feb60} 
 void Engine::\+draw\+Line (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{start}{, }\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{end}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca nowy obiekt typu \doxylink{class_line_segment}{Line\+Segment} i dodająca go do bufora renderowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & -\/ pozycja startowa \\
+\hline
+{\em end} & -\/ pozycja końcowa @color -\/ kolor linii \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_a1f699898feb373abacbe84f4a421ba16}\index{Engine@{Engine}!drawPolygon@{drawPolygon}}
 \index{drawPolygon@{drawPolygon}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
@@ -94,11 +176,32 @@ void Engine::\+draw\+Polygon (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \d
 {\footnotesize\ttfamily \label{class_engine_af224ca5805b4d3fffa94280f5464f37b} 
 void Engine::\+draw\+Rect (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{start}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{sf::\+\+Color}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca nowy obiekt typu \doxylink{class_rect}{Rect} i dodająca go do bufora renderowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & -\/ pozycja startowa \\
+\hline
+{\em width} & -\/ szerokość \\
+\hline
+{\em height} & -\/ wysokość \\
+\hline
+{\em color} & -\/ kolor obiektu \\
+\hline
+{\em fill} & -\/ zmienna boolowska definiująca czy obiekt ma być wypełniony kolorem \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}\index{Engine@{Engine}!drawShape@{drawShape}}
 \index{drawShape@{drawShape}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{drawShape()}{drawShape()}}
 {\footnotesize\ttfamily \label{class_engine_a9b2df56febecac7ae82fa55551cdd7fe} 
 void Engine::\+draw\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metoda dzięki której możemy za pomocą myszki narysować obiekty typu linia/\+kwadrat/\+okrąg. 
 
 \Hypertarget{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}\index{Engine@{Engine}!getMap@{getMap}}
 \index{getMap@{getMap}!Engine@{Engine}}
@@ -106,17 +209,22 @@ void Engine::\+draw\+Shape (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{class_engine_ae9a8d8f6fff46aed67ef312589b3a844} 
 std::\+vector$<$ std::\+vector$<$ int $>$ $>$ Engine::\+get\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\Hypertarget{class_engine_ae0c734092f488fa1f406a533274935ae}\index{Engine@{Engine}!getRenderer@{getRenderer}}
-\index{getRenderer@{getRenderer}!Engine@{Engine}}
-\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
-{\footnotesize\ttfamily \label{class_engine_ae0c734092f488fa1f406a533274935ae} 
-\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} Engine::\+get\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+Metoda zwracająca wektor utworzonej w silniku mapy. 
+
+\begin{DoxyReturn}{Returns}
+wektor mapy 
+\end{DoxyReturn}
 \Hypertarget{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}\index{Engine@{Engine}!handleEvents@{handleEvents}}
 \index{handleEvents@{handleEvents}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
 {\footnotesize\ttfamily \label{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c} 
 void Engine::\+handle\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metoda nasłuchująca kliknięcia myszy oraz klawiatury. 
 
 \Hypertarget{class_engine_a7960743aefd62e846e7f3cd92c18bc73}\index{Engine@{Engine}!render@{render}}
 \index{render@{render}!Engine@{Engine}}
@@ -124,11 +232,29 @@ void Engine::\+handle\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 {\footnotesize\ttfamily \label{class_engine_a7960743aefd62e846e7f3cd92c18bc73} 
 void Engine::\+render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Metoda renderująca obraz na ekran. 
+
+\Hypertarget{class_engine_a9a930c4be49de8aa2948e0f16dec86e9}\index{Engine@{Engine}!resetGame@{resetGame}}
+\index{resetGame@{resetGame}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{resetGame()}{resetGame()}}
+{\footnotesize\ttfamily \label{class_engine_a9a930c4be49de8aa2948e0f16dec86e9} 
+void Engine::\+reset\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metoda resetująca grę 
+
 \Hypertarget{class_engine_abb6d73fa833daf3ad4def45d2793cfad}\index{Engine@{Engine}!resetStartEnd@{resetStartEnd}}
 \index{resetStartEnd@{resetStartEnd}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{resetStartEnd()}{resetStartEnd()}}
 {\footnotesize\ttfamily \label{class_engine_abb6d73fa833daf3ad4def45d2793cfad} 
 void Engine::\+reset\+Start\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metoda resetująca zapisane pozycje naciśnięcia myszki. 
 
 \Hypertarget{class_engine_a36e4ec9971c75e79b7f5875a719c9394}\index{Engine@{Engine}!run@{run}}
 \index{run@{run}!Engine@{Engine}}
@@ -136,35 +262,105 @@ void Engine::\+reset\+Start\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 {\footnotesize\ttfamily \label{class_engine_a36e4ec9971c75e79b7f5875a719c9394} 
 void Engine::\+run (\begin{DoxyParamCaption}\item[{int}]{fps}{ = {\ttfamily 60}}\end{DoxyParamCaption})}
 
+
+
+Metoda uruchamiająca silnik. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fps} & -\/ liczba klatek na sekundę \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_a5f71c81d0457f5e10274a78272ba3061}\index{Engine@{Engine}!setBackground@{setBackground}}
 \index{setBackground@{setBackground}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}}
 {\footnotesize\ttfamily \label{class_engine_a5f71c81d0457f5e10274a78272ba3061} 
 void Engine::\+set\+Background (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_sprite_object}{Sprite\+Object}} \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca obiekt \doxylink{class_sprite_object}{Sprite\+Object} (tło). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & -\/ referencja do utworzonego obiektu \doxylink{class_sprite_object}{Sprite\+Object} \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_ad147063e223c222fe4e136493314633f}\index{Engine@{Engine}!setMap@{setMap}}
 \index{setMap@{setMap}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
 {\footnotesize\ttfamily \label{class_engine_ad147063e223c222fe4e136493314633f} 
 void Engine::\+set\+Map (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+vector$<$ int $>$ $>$}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca wektor mapy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & -\/ wektor mapy, który chcemy ustawić w naszym silniku \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_a855451901bacd4d9d01b7a36690f7429}\index{Engine@{Engine}!setPixel@{setPixel}}
 \index{setPixel@{setPixel}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{setPixel()}{setPixel()}}
 {\footnotesize\ttfamily \label{class_engine_a855451901bacd4d9d01b7a36690f7429} 
 void Engine::\+set\+Pixel (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{pos}{, }\item[{sf::\+\+Color}]{color}{}\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca nowy obiekt typu \doxylink{class_point2_d}{Point2D} i dodająca go do bufora renderowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ pozycja punktu \\
+\hline
+{\em color} & -\/ kolor punktu \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}\index{Engine@{Engine}!setPlayer@{setPlayer}}
 \index{setPlayer@{setPlayer}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{setPlayer()}{setPlayer()}}
 {\footnotesize\ttfamily \label{class_engine_ac7e3f89cf1066ac2581b80e883082dc9} 
 void Engine::\+set\+Player (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_player}{Player}} \&}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca obiekt \doxylink{class_player}{Player} (gracz). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & -\/ referencja do utworzonego obiektu \doxylink{class_player}{Player} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine_a88d4ed7dc9f02cf466f42389de46fa51}\index{Engine@{Engine}!spawnEntity@{spawnEntity}}
+\index{spawnEntity@{spawnEntity}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{spawnEntity()}{spawnEntity()}}
+{\footnotesize\ttfamily \label{class_engine_a88d4ed7dc9f02cf466f42389de46fa51} 
+void Engine::\+spawn\+Entity (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Metoda pojawiająca obiekt gry na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ typ obiektu (moneta /\+ przeciwnik) \\
+\hline
+{\em x} & -\/ pozycja na osi X \\
+\hline
+{\em y} & -\/ pozycja na osi Y \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}\index{Engine@{Engine}!update@{update}}
 \index{update@{update}!Engine@{Engine}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily \label{class_engine_ad2ff110d5a86c1cd60b541d65915ac48} 
 void Engine::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metoda aktualizująca całą logikę silnika. 
 
 
 
@@ -176,6 +372,80 @@ void Engine::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 \doxysubsubsection{\texorpdfstring{angle}{angle}}
 {\footnotesize\ttfamily \label{class_engine_aba7e018d171f058bc9375883063fbd9a} 
 float Engine::\+angle = 1.\+0f}
+
+\Hypertarget{class_engine_aed2b0daa03904be90a03b0361f747fc7}\index{Engine@{Engine}!coinBmp@{coinBmp}}
+\index{coinBmp@{coinBmp}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{coinBmp}{coinBmp}}
+{\footnotesize\ttfamily \label{class_engine_aed2b0daa03904be90a03b0361f747fc7} 
+\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} Engine::\+coin\+Bmp}
+
+
+
+Bitmapa dla monet oraz przeciwników. 
+
+\Hypertarget{class_engine_afd844173e6100bced3a9abb133677d68}\index{Engine@{Engine}!coinsCollected@{coinsCollected}}
+\index{coinsCollected@{coinsCollected}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{coinsCollected}{coinsCollected}}
+{\footnotesize\ttfamily \label{class_engine_afd844173e6100bced3a9abb133677d68} 
+int Engine::\+coins\+Collected = 0}
+
+
+
+zmienna przechowująca ilość zebranych monet 
+
+\Hypertarget{class_engine_abd5799619eca2c5b9f7105d5442d651b}\index{Engine@{Engine}!distanceTraveled@{distanceTraveled}}
+\index{distanceTraveled@{distanceTraveled}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{distanceTraveled}{distanceTraveled}}
+{\footnotesize\ttfamily \label{class_engine_abd5799619eca2c5b9f7105d5442d651b} 
+float Engine::\+distance\+Traveled = 0.\+0f}
+
+\Hypertarget{class_engine_a6e2c97b8360e25bd1253928fce4f651c}\index{Engine@{Engine}!entities@{entities}}
+\index{entities@{entities}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{entities}{entities}}
+{\footnotesize\ttfamily \label{class_engine_a6e2c97b8360e25bd1253928fce4f651c} 
+std::\+vector$<$\doxymbox{\hyperlink{struct_game_entity}{Game\+Entity}}$>$ Engine::\+entities}
+
+
+
+wektor typu \doxylink{struct_game_entity}{Game\+Entity} przechowujący obiekty gry (monety, przeciwnicy) 
+
+\Hypertarget{class_engine_a319fe078ae96d17930d77a66d0124ad2}\index{Engine@{Engine}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily \label{class_engine_a319fe078ae96d17930d77a66d0124ad2} 
+bool Engine::\+game\+Over = false}
+
+
+
+zmienna boolowska definiująca koniec gry 
+
+\Hypertarget{class_engine_a908e5f53765382ade67d4419139564b2}\index{Engine@{Engine}!globalSpeed@{globalSpeed}}
+\index{globalSpeed@{globalSpeed}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{globalSpeed}{globalSpeed}}
+{\footnotesize\ttfamily \label{class_engine_a908e5f53765382ade67d4419139564b2} 
+float Engine::\+global\+Speed = 3.\+5f}
+
+\Hypertarget{class_engine_a208f06384a128ab9130ee49a51609f92}\index{Engine@{Engine}!mapOffsetX@{mapOffsetX}}
+\index{mapOffsetX@{mapOffsetX}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{mapOffsetX}{mapOffsetX}}
+{\footnotesize\ttfamily \label{class_engine_a208f06384a128ab9130ee49a51609f92} 
+int Engine::\+map\+OffsetX = 0}
+
+\Hypertarget{class_engine_ab774cff40d8dff8228073ccf3ad4f181}\index{Engine@{Engine}!score@{score}}
+\index{score@{score}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{class_engine_ab774cff40d8dff8228073ccf3ad4f181} 
+int Engine::\+score = 0}
+
+
+
+zmienna przechowująca uzyskany wynik 
+
+\Hypertarget{class_engine_a23ecd1fa54c834e1bf060313adf747bb}\index{Engine@{Engine}!slimeBmp@{slimeBmp}}
+\index{slimeBmp@{slimeBmp}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{slimeBmp}{slimeBmp}}
+{\footnotesize\ttfamily \label{class_engine_a23ecd1fa54c834e1bf060313adf747bb} 
+\doxymbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} Engine::\+slime\+Bmp}
 
 
 

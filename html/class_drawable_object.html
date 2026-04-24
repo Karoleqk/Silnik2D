@@ -92,6 +92,9 @@ $(function(){initNavTree('class_drawable_object.html','','class_drawable_object-
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa abstrakcyjna wykorzystywana do rysowania obiektów.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_drawable_object_8h_source.html">DrawableObject.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DrawableObject:</div>
@@ -101,14 +104,14 @@ Inheritance diagram for DrawableObject:</div>
   <map id="DrawableObject_map" name="DrawableObject_map">
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="197,0,300,24"/>
 <area href="class_bitmap_object.html" alt="BitmapObject" shape="rect" coords="0,112,103,136"/>
-<area href="class_shape_object.html" alt="ShapeObject" shape="rect" coords="395,112,498,136"/>
+<area href="class_shape_object.html" title="Klasa wykorzystywana do tworzenia prymitywów." alt="ShapeObject" shape="rect" coords="395,112,498,136"/>
 <area href="class_sprite_object.html" alt="SpriteObject" shape="rect" coords="0,168,103,192"/>
-<area href="class_circle.html" alt="Circle" shape="rect" coords="113,168,216,192"/>
-<area href="class_elipse.html" alt="Elipse" shape="rect" coords="226,168,329,192"/>
-<area href="class_line_segment.html" alt="LineSegment" shape="rect" coords="339,168,442,192"/>
+<area href="class_circle.html" title="Klasa reprezentująca okrąg." alt="Circle" shape="rect" coords="113,168,216,192"/>
+<area href="class_elipse.html" title="Klasa reprezentująca elipsę" alt="Elipse" shape="rect" coords="226,168,329,192"/>
+<area href="class_line_segment.html" title="Klasa reprezentująca linię" alt="LineSegment" shape="rect" coords="339,168,442,192"/>
 <area href="class_player.html" alt="Player" shape="rect" coords="452,168,555,192"/>
-<area href="class_point2_d.html" alt="Point2D" shape="rect" coords="565,168,668,192"/>
-<area href="class_rect.html" alt="Rect" shape="rect" coords="678,168,781,192"/>
+<area href="class_point2_d.html" title="Klasa reprezentująca pojedynczy piksel." alt="Point2D" shape="rect" coords="565,168,668,192"/>
+<area href="class_rect.html" title="Klasa reprezentująca kwadrat/prostokąt." alt="Rect" shape="rect" coords="678,168,781,192"/>
 <area href="class_animated_object.html" alt="AnimatedObject" shape="rect" coords="0,224,103,248"/>
 <area href="class_player.html" alt="Player" shape="rect" coords="0,280,103,304"/>
   </map>
@@ -117,10 +120,13 @@ Inheritance diagram for DrawableObject:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ac3f5a81fa711aa2cbb8d0f6413b696" id="r_a9ac3f5a81fa711aa2cbb8d0f6413b696"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9ac3f5a81fa711aa2cbb8d0f6413b696">draw</a> (<a class="el" href="class_primitive_renderer.html">PrimitiveRenderer</a> &amp;renderer, sf::Color color)=0</td></tr>
+<tr class="memdesc:a9ac3f5a81fa711aa2cbb8d0f6413b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda potrzebna do rysowania obiektów.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_object.html">GameObject</a></td></tr>
 <tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Klasa abstrakcyjna wykorzystywana do rysowania obiektów. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a9ac3f5a81fa711aa2cbb8d0f6413b696" name="a9ac3f5a81fa711aa2cbb8d0f6413b696"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ac3f5a81fa711aa2cbb8d0f6413b696">&#9670;&#160;</a></span>draw()</h2>
 
@@ -147,6 +153,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Metoda potrzebna do rysowania obiektów. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>- referencja na obiekt renderowania </td></tr>
+    <tr><td class="paramname">color</td><td>- kolor, którym rysujemy nasz obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_bitmap_object.html#a4e65602adabd2731f2b2a46030fe18cb">BitmapObject</a>, <a class="el" href="class_circle.html#af8906b3bc8d9a85ac4892faae4623b36">Circle</a>, <a class="el" href="class_elipse.html#abf9d9382d9479df4059b7a964c7d2206">Elipse</a>, <a class="el" href="class_line_segment.html#a751fca83f7c17a8bb1d0b097010b7161">LineSegment</a>, <a class="el" href="class_player.html#a22146de1d72acaf7c0b53acf1cca5bad">Player</a>, <a class="el" href="class_point2_d.html#a9264d0f4486f7d8c53c02aec79eeeb0e">Point2D</a>, <a class="el" href="class_rect.html#a26f3526e8ed18b646e8948ee4ddbc7e1">Rect</a>, and <a class="el" href="class_sprite_object.html#ae70909c335cc2e2a433e3712d36f38b1">SpriteObject</a>.</p>
 

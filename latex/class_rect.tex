@@ -2,6 +2,11 @@
 \hypertarget{class_rect}{}\label{class_rect}\index{Rect@{Rect}}
 
 
+Klasa reprezentująca kwadrat/\+prostokąt.  
+
+
+
+
 {\ttfamily \+\#include $<$Rect.\+h$>$}
 
 Inheritance diagram for Rect:\+\begin{figure}[H]
@@ -14,29 +19,29 @@ Inheritance diagram for Rect:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_rect_a3b0f7860b315fe032e53f1aa8b54388d}{Rect}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} s, int w, int h, sf::\+\+Color c=sf::\+\+Color::\+\+Cyan, bool fill=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Tworzy obiekt kwadratu/\+prostokątu. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_rect_aac6f0f70a77d96cc55955b701ad59d6e}{get\+Start}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca pozycję startową \end{DoxyCompactList}\item 
 sf::\+\+Color \doxymbox{\hyperlink{class_rect_a458421d30db2637b555d9dd6fe79b8f4}{get\+Color}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca kolor obiektu. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_rect_a0a907a5c36add13e57b543cabefa4d92}{get\+Width}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca szerokość \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_rect_ad553d3ab3a51007a893166bf16bdefa6}{get\+Height}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca wysokość \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_rect_ad5ba98862f3e0d37fac472df2e1723d7}{set\+Start}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} s)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nową pozycję startową \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_rect_a45064ea3a33b984f406b4a826ca5a2e2}{set\+Width}} (int w)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nową szerokość \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_rect_ab998147cc742079eb2ab653bf001ac27}{set\+Height}} (int h)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca nową wysokość \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_rect_a26f3526e8ed18b646e8948ee4ddbc7e1}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}}) override
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda potrzebna do rysowania obiektów. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_rect_aa96eb866b18ad0d7bb0e3d6a29f23ee9}{translate}} (float dx, float dy) override
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda translacji. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_rect_a75238a3be3ca486a0c319210204b3b12}{rotate}} (float angle=0.\+0f, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{ 0, 0 \}) override
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda rotacji. \end{DoxyCompactList}\item 
 virtual void \doxymbox{\hyperlink{class_rect_a93178475a17555739d86cf98ef00a608}{scale}} (float k=1, \doxymbox{\hyperlink{class_point2_d}{Point2D}} point=\{ 0, 0 \}) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda skalowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_game_object}{Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,16 +51,19 @@ virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea
 \begin{DoxyCompactItemize}
 \item 
 int \doxymbox{\hyperlink{class_rect_a367714e71d566668addb140c7981b5bc}{width}}
-\item 
+\begin{DoxyCompactList}\small\item\em Szerokość obiektu. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{class_rect_ad79d7bf12771a81627a672452437011d}{height}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wysokość obiektu. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_rect_a5dcb65d735bc97b8574bf125d14176bc}{is\+Fill}}
-\item 
+\begin{DoxyCompactList}\small\item\em Zmienna przechowująca informację czy obiekt ma być wypełniony kolorem. \end{DoxyCompactList}\item 
 sf::\+\+Color \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}}
-\item 
+\begin{DoxyCompactList}\small\item\em kolor obiektu \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_rect_ac132e8b0d3c7da9229b62b515a007a80}{start}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Punkt startowy obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca kwadrat/\+prostokąt. 
 
 \label{doc-constructors}
 \Hypertarget{class_rect_doc-constructors}
@@ -66,6 +74,23 @@ sf::\+\+Color \doxymbox{\hyperlink{class_rect_a9854e65c760a93e39aa758cc7a948095}
 {\footnotesize\ttfamily \label{class_rect_a3b0f7860b315fe032e53f1aa8b54388d} 
 Rect::\+\+Rect (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{s}{, }\item[{int}]{w}{, }\item[{int}]{h}{, }\item[{sf::\+\+Color}]{c}{ = {\ttfamily sf:\+:\+Color:\+:\+Cyan}, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Tworzy obiekt kwadratu/\+prostokątu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ pozycja startowa \\
+\hline
+{\em w} & -\/ szerokość \\
+\hline
+{\em h} & -\/ wysokość \\
+\hline
+{\em c} & -\/ kolor obiektu (domyślnie Cyan) \\
+\hline
+{\em fill} & -\/ definiuje czy obiekt ma być wypełniony kolorem (domyślnie false) \\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-func-members}
@@ -79,6 +104,17 @@ void Rect::\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_pri
 
 
 
+Metoda potrzebna do rysowania obiektów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & -\/ referencja na obiekt renderowania \\
+\hline
+{\em \doxylink{class_rect_a9854e65c760a93e39aa758cc7a948095}{color}} & -\/ kolor, którym rysujemy nasz obiekt \\
+\hline
+\end{DoxyParams}
+
+
 Implements \doxymbox{\hyperlink{class_drawable_object_a9ac3f5a81fa711aa2cbb8d0f6413b696}{Drawable\+Object}}.
 
 \Hypertarget{class_rect_a458421d30db2637b555d9dd6fe79b8f4}\index{Rect@{Rect}!getColor@{getColor}}
@@ -87,24 +123,52 @@ Implements \doxymbox{\hyperlink{class_drawable_object_a9ac3f5a81fa711aa2cbb8d0f6
 {\footnotesize\ttfamily \label{class_rect_a458421d30db2637b555d9dd6fe79b8f4} 
 sf::\+\+Color Rect::\+get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda zwracająca kolor obiektu. 
+
+\begin{DoxyReturn}{Returns}
+Kolor obiektu 
+\end{DoxyReturn}
 \Hypertarget{class_rect_ad553d3ab3a51007a893166bf16bdefa6}\index{Rect@{Rect}!getHeight@{getHeight}}
 \index{getHeight@{getHeight}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
 {\footnotesize\ttfamily \label{class_rect_ad553d3ab3a51007a893166bf16bdefa6} 
 int Rect::\+get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda zwracająca wysokość 
+
+\begin{DoxyReturn}{Returns}
+Wysokośc obiektu 
+\end{DoxyReturn}
 \Hypertarget{class_rect_aac6f0f70a77d96cc55955b701ad59d6e}\index{Rect@{Rect}!getStart@{getStart}}
 \index{getStart@{getStart}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{getStart()}{getStart()}}
 {\footnotesize\ttfamily \label{class_rect_aac6f0f70a77d96cc55955b701ad59d6e} 
 \doxymbox{\hyperlink{class_point2_d}{Point2D}} Rect::\+get\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda zwracająca pozycję startową 
+
+\begin{DoxyReturn}{Returns}
+Pozycja startowa typu \doxylink{class_point2_d}{Point2D} 
+\end{DoxyReturn}
 \Hypertarget{class_rect_a0a907a5c36add13e57b543cabefa4d92}\index{Rect@{Rect}!getWidth@{getWidth}}
 \index{getWidth@{getWidth}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
 {\footnotesize\ttfamily \label{class_rect_a0a907a5c36add13e57b543cabefa4d92} 
 int Rect::\+get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda zwracająca szerokość 
+
+\begin{DoxyReturn}{Returns}
+Szerokość obiektu 
+\end{DoxyReturn}
 \Hypertarget{class_rect_a75238a3be3ca486a0c319210204b3b12}\index{Rect@{Rect}!rotate@{rotate}}
 \index{rotate@{rotate}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
@@ -113,7 +177,20 @@ void Rect::\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle}{ = {\ttfamily
 
 
 
-Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+Metoda rotacji. 
+
+Obraca obiekt względem podanego punktu oraz o podany kąt
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & -\/ kąt obrotu \\
+\hline
+{\em point} & -\/ punkt względem którego obracamy obiekt \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_add37fb78c0aabf53a9a8d550b09d0541}{Transformable\+Object}}.
 
 \Hypertarget{class_rect_a93178475a17555739d86cf98ef00a608}\index{Rect@{Rect}!scale@{scale}}
 \index{scale@{scale}!Rect@{Rect}}
@@ -123,7 +200,20 @@ void Rect::\+scale (\begin{DoxyParamCaption}\item[{float}]{k}{ = {\ttfamily 1}, 
 
 
 
-Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+Metoda skalowanie. 
+
+Skaluje obiekt o podaną wartość k względem podanego punktu
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ współczynnik skalowania \\
+\hline
+{\em point} & -\/ punkt względem którego skalujemy \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_aef366f0c99b5789d1fa187008ce99652}{Transformable\+Object}}.
 
 \Hypertarget{class_rect_ab998147cc742079eb2ab653bf001ac27}\index{Rect@{Rect}!setHeight@{setHeight}}
 \index{setHeight@{setHeight}!Rect@{Rect}}
@@ -131,18 +221,45 @@ Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Objec
 {\footnotesize\ttfamily \label{class_rect_ab998147cc742079eb2ab653bf001ac27} 
 void Rect::\+set\+Height (\begin{DoxyParamCaption}\item[{int}]{h}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca nową wysokość 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ nowa wysokość \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_rect_ad5ba98862f3e0d37fac472df2e1723d7}\index{Rect@{Rect}!setStart@{setStart}}
 \index{setStart@{setStart}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{setStart()}{setStart()}}
 {\footnotesize\ttfamily \label{class_rect_ad5ba98862f3e0d37fac472df2e1723d7} 
 void Rect::\+set\+Start (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_point2_d}{Point2D}}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca nową pozycję startową 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ Nowa pozycja startowa \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_rect_a45064ea3a33b984f406b4a826ca5a2e2}\index{Rect@{Rect}!setWidth@{setWidth}}
 \index{setWidth@{setWidth}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
 {\footnotesize\ttfamily \label{class_rect_a45064ea3a33b984f406b4a826ca5a2e2} 
 void Rect::\+set\+Width (\begin{DoxyParamCaption}\item[{int}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Metoda ustawiająca nową szerokość 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & -\/ Nowa szerokość \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_rect_aa96eb866b18ad0d7bb0e3d6a29f23ee9}\index{Rect@{Rect}!translate@{translate}}
 \index{translate@{translate}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{translate()}{translate()}}
@@ -151,7 +268,20 @@ void Rect::\+translate (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{flo
 
 
 
-Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Object}}.
+Metoda translacji. 
+
+Przesuwa obiekt o zadane wartości x oraz y
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ przesunięcie osi X \\
+\hline
+{\em dy} & -\/ przesunięcie osi Y \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_transformable_object_afe79e7266af3a1b444acb9de26ae8e1d}{Transformable\+Object}}.
 
 
 
@@ -164,11 +294,19 @@ Implements \doxymbox{\hyperlink{class_transformable_object}{Transformable\+Objec
 {\footnotesize\ttfamily \label{class_rect_a9854e65c760a93e39aa758cc7a948095} 
 sf::\+\+Color Rect::\+color}
 
+
+
+kolor obiektu 
+
 \Hypertarget{class_rect_ad79d7bf12771a81627a672452437011d}\index{Rect@{Rect}!height@{height}}
 \index{height@{height}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{height}{height}}
 {\footnotesize\ttfamily \label{class_rect_ad79d7bf12771a81627a672452437011d} 
 int Rect::\+height}
+
+
+
+Wysokość obiektu. 
 
 \Hypertarget{class_rect_a5dcb65d735bc97b8574bf125d14176bc}\index{Rect@{Rect}!isFill@{isFill}}
 \index{isFill@{isFill}!Rect@{Rect}}
@@ -176,17 +314,29 @@ int Rect::\+height}
 {\footnotesize\ttfamily \label{class_rect_a5dcb65d735bc97b8574bf125d14176bc} 
 bool Rect::\+is\+Fill}
 
+
+
+Zmienna przechowująca informację czy obiekt ma być wypełniony kolorem. 
+
 \Hypertarget{class_rect_ac132e8b0d3c7da9229b62b515a007a80}\index{Rect@{Rect}!start@{start}}
 \index{start@{start}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{start}{start}}
 {\footnotesize\ttfamily \label{class_rect_ac132e8b0d3c7da9229b62b515a007a80} 
 \doxymbox{\hyperlink{class_point2_d}{Point2D}} Rect::\+start}
 
+
+
+Punkt startowy obiektu. 
+
 \Hypertarget{class_rect_a367714e71d566668addb140c7981b5bc}\index{Rect@{Rect}!width@{width}}
 \index{width@{width}!Rect@{Rect}}
 \doxysubsubsection{\texorpdfstring{width}{width}}
 {\footnotesize\ttfamily \label{class_rect_a367714e71d566668addb140c7981b5bc} 
 int Rect::\+width}
+
+
+
+Szerokość obiektu. 
 
 
 

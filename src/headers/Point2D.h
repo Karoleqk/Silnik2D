@@ -4,19 +4,57 @@
 #include "ShapeObject.h"
 class PrimitiveRenderer;
 
+/**
+* @brief Klasa reprezentująca pojedynczy piksel
+**/
 class Point2D : public ShapeObject {
 public:
+	/**
+	* @brief zmienna przechowująca współrzędną X punktu
+	**/
 	int x;
+
+	/**
+	* @brief zmienna przechowująca współrzędną Y punktu
+	**/
 	int y;
 
+	/**
+	* @brief Tworzy obiekt reprezentujący pojedynczy piksel na ekranie
+	* 
+	* @param x - współrzędna X
+	* @param y - współrzędna Y
+	**/
 	Point2D(int x = 0, int y = 0) : x(x), y(y) {};
 
-	// Getters
+	/**
+	* @brief Metoda zwracająca pozycję X punktu
+	* 
+	* @return Współrzędna X
+	**/
 	int getX();
+
+
+	/**
+	* @brief Metoda zwracająca pozycję Y punktu
+	* 
+	* @return Współrzędna Y
+	**/
 	int getY();
 
-	// Setters
+
+	/**
+	* @brief Metoda ustawiająca nową pozycję na osi X
+	* 
+	* @param x - nowa współrzędna X
+	**/
 	void setX(int x);
+
+	/**
+	* @brief Metoda ustawiająca nową pozycję na osi Y
+	* 
+	* @param y - nowa współrzędna Y
+	**/
 	void setY(int y);
 
 	// Metody abstrakcyjne

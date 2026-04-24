@@ -6,7 +6,10 @@ var searchData=
   ['circle_2ecpp_3',['Circle.cpp',['../_circle_8cpp.html',1,'']]],
   ['circle_2eh_4',['Circle.h',['../_circle_8h.html',1,'']]],
   ['clear_5',['clear',['../class_primitive_renderer.html#a56832c35d10f7b1f28c3efd158382751',1,'PrimitiveRenderer']]],
-  ['color_6',['color',['../class_rect.html#a9854e65c760a93e39aa758cc7a948095',1,'Rect']]],
-  ['copyfrom_7',['copyFrom',['../class_bitmap_handler.html#a7e449e31efd36bda091dcb9a7d8fcacc',1,'BitmapHandler']]],
-  ['create_8',['create',['../class_bitmap_handler.html#a901316a3eb8d5d0dfca041ccf275de40',1,'BitmapHandler']]]
+  ['coinbmp_6',['coinBmp',['../class_engine.html#aed2b0daa03904be90a03b0361f747fc7',1,'Engine']]],
+  ['coinscollected_7',['coinsCollected',['../class_engine.html#afd844173e6100bced3a9abb133677d68',1,'Engine']]],
+  ['color_8',['color',['../class_rect.html#a9854e65c760a93e39aa758cc7a948095',1,'Rect']]],
+  ['copyfrom_9',['copyFrom',['../class_bitmap_handler.html#a7e449e31efd36bda091dcb9a7d8fcacc',1,'BitmapHandler']]],
+  ['create_10',['create',['../class_bitmap_handler.html#a901316a3eb8d5d0dfca041ccf275de40',1,'BitmapHandler']]],
+  ['currentframe_11',['currentFrame',['../struct_game_entity.html#a788cdb504cfaf416c88fdd8bc635ff4f',1,'GameEntity']]]
 ];

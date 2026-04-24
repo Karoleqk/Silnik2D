@@ -15,62 +15,97 @@
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4}{tools}}\ \{\doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4ac5a42c5dd8d858e0df62644b209088c7}{PIXEL}},\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4ab023460c84f774a219d46ccf4665994c}{LINE}},\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4a8c3b537d3960e767a7d714c89078e508}{RECT}},\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4aa79c827759ea48f0735386c4b1188911}{CIRCLE}},\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4a0e7f025d168b03e17333895b894bae7d}{FLOOD\_FILL}},\ \doxymbox{\hyperlink{_engine_8h_a39ef11a3767a5a3db062bed24edcd2c4aa4d11a3b2b290f0834c950896ed64528}{BOUNDARY\_FILL}}\};}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}}\ \{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width;}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height;}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ currentTool;}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ currentClick;}
-\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ end;}
-\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player}}\ player;}
-\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\ background;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_game_entity}{GameEntity}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\ \doxymbox{\hyperlink{struct_game_entity_ad46690498481c1c9129cf775e8c59f4f}{sprite}};}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{struct_game_entity_a6156b14e52f29f8519dfd086b49e0224}{position}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_game_entity_a048c56d4cdcfd899a44e7023aadd229c}{type}};\ \textcolor{comment}{//\ 0\ =\ moneta,\ 1\ =\ slime}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_game_entity_a2ed2b4ebd0628bea86924c7bdb789d6b}{active}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_game_entity_a6d6f2a3642a21ce09f790e3ba6c4bb55}{frameTimer}}\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_game_entity_a788cdb504cfaf416c88fdd8bc635ff4f}{currentFrame}}\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_game_entity_afec2ad9fb2384bd1cd36d029a9f5fe34}{maxFrames}}\ =\ 1;}
+\DoxyCodeLine{00022\ \};}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ sf::RenderWindow\ window;}
-\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\ primitiveRenderer;}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ std::vector<LineSegment>\ lines;}
-\DoxyCodeLine{00028\ \ \ \ \ std::vector<Point2D>\ points;}
-\DoxyCodeLine{00029\ \ \ \ \ std::vector<Rect>\ rectangles;}
-\DoxyCodeLine{00030\ \ \ \ \ std::vector<Circle>\ circles;}
-\DoxyCodeLine{00031\ \ \ \ \ std::vector<Elipse>\ elipses;}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ std::vector<std::vector<int>>\ map;}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDrawing;}
-\DoxyCodeLine{00036\ \ \ \ \ sf::Vector2i\ mouseClickPos;}
-\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_engine_aba7e018d171f058bc9375883063fbd9a}{angle}}\ =\ 1.0f;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ currentTool;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ currentClick;}
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ end;}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{class_player}{Player}}\ player;}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\ background;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ sf::RenderWindow\ window;}
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\ primitiveRenderer;}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ w\ =\ 800,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ h\ =\ 600);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\ \doxymbox{\hyperlink{class_engine_ae0c734092f488fa1f406a533274935ae}{getRenderer}}();}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a36e4ec9971c75e79b7f5875a719c9394}{run}}(\textcolor{keywordtype}{int}\ fps\ =\ 60);}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}{handleEvents}}();}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}{update}}();}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a7960743aefd62e846e7f3cd92c18bc73}{render}}();}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ funkcja\ do\ ustawiania\ dwoch\ pozycji}}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}{drawShape}}();}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_abb6d73fa833daf3ad4def45d2793cfad}{resetStartEnd}}();}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ funkcje\ udostępnione\ do\ rysowania}}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a855451901bacd4d9d01b7a36690f7429}{setPixel}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos,\ sf::Color\ color);}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a19bc486757abc00690d0cc0f0a1feb60}{drawLine}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ end,\ sf::Color\ color);}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_af224ca5805b4d3fffa94280f5464f37b}{drawRect}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef}{drawCircle}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle,\ \textcolor{keywordtype}{int}\ R,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}{drawElipse}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle,\ \textcolor{keywordtype}{int}\ Rx,\ \textcolor{keywordtype}{int}\ Ry,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a1f699898feb373abacbe84f4a421ba16}{drawPolygon}}(std::vector<Point2D>\ points,\ sf::Color\ color);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Funkcje\ do\ obslugi\ zewnetrznej}}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}{setPlayer}}(\doxymbox{\hyperlink{class_player}{Player}}\&\ p)\ \{\ this-\/>player\ =\ p;\ \}}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a5f71c81d0457f5e10274a78272ba3061}{setBackground}}(\doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\&\ b)\ \{\ this-\/>background\ =\ b;\ \}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ getter}}
-\DoxyCodeLine{00066\ \ \ \ \ std::vector<std::vector<int>>\ \doxymbox{\hyperlink{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}{getMap}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>map;\ \}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ setter}}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad147063e223c222fe4e136493314633f}{setMap}}(std::vector<std::vector<int>>\ m)\ \{\ this-\/>map\ =\ m;\ \}}
-\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00040\ \ \ \ \ std::vector<LineSegment>\ lines;}
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<Point2D>\ points;}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<Rect>\ rectangles;}
+\DoxyCodeLine{00043\ \ \ \ \ std::vector<Circle>\ circles;}
+\DoxyCodeLine{00044\ \ \ \ \ std::vector<Elipse>\ elipses;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<std::vector<int>>\ map;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDrawing;}
+\DoxyCodeLine{00049\ \ \ \ \ sf::Vector2i\ mouseClickPos;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ sf::SoundBuffer\ coinBuffer;}
+\DoxyCodeLine{00052\ \ \ \ \ std::optional<sf::Sound>\ coinSound;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ sf::SoundBuffer\ hurtBuffer;}
+\DoxyCodeLine{00055\ \ \ \ \ std::optional<sf::Sound>\ hurtSound;}
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_engine_aba7e018d171f058bc9375883063fbd9a}{angle}}\ =\ 1.0f;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_engine_a908e5f53765382ade67d4419139564b2}{globalSpeed}}\ =\ 3.5f;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_engine_abd5799619eca2c5b9f7105d5442d651b}{distanceTraveled}}\ =\ 0.0f;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_engine_afd844173e6100bced3a9abb133677d68}{coinsCollected}}\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_engine_a208f06384a128ab9130ee49a51609f92}{mapOffsetX}}\ =\ 0;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_engine_ab774cff40d8dff8228073ccf3ad4f181}{score}}\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_engine_a319fe078ae96d17930d77a66d0124ad2}{gameOver}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ std::vector<GameEntity>\ \doxymbox{\hyperlink{class_engine_a6e2c97b8360e25bd1253928fce4f651c}{entities}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{class_bitmap_handler}{BitmapHandler}}\ \doxymbox{\hyperlink{class_engine_aed2b0daa03904be90a03b0361f747fc7}{coinBmp}},\ \doxymbox{\hyperlink{class_engine_a23ecd1fa54c834e1bf060313adf747bb}{slimeBmp}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \ \ \ \ \doxymbox{\hyperlink{class_engine_a73806e57b45ee0be3f5d37c8d4321154}{Engine}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ w\ =\ 800,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ h\ =\ 600);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a36e4ec9971c75e79b7f5875a719c9394}{run}}(\textcolor{keywordtype}{int}\ fps\ =\ 60);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad1e8214e8ca9f436d27a7246dd908d9c}{handleEvents}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad2ff110d5a86c1cd60b541d65915ac48}{update}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a7960743aefd62e846e7f3cd92c18bc73}{render}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a9a930c4be49de8aa2948e0f16dec86e9}{resetGame}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a88d4ed7dc9f02cf466f42389de46fa51}{spawnEntity}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a9b2df56febecac7ae82fa55551cdd7fe}{drawShape}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_abb6d73fa833daf3ad4def45d2793cfad}{resetStartEnd}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a855451901bacd4d9d01b7a36690f7429}{setPixel}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos,\ sf::Color\ color);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a19bc486757abc00690d0cc0f0a1feb60}{drawLine}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ end,\ sf::Color\ color);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_af224ca5805b4d3fffa94280f5464f37b}{drawRect}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ start,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ae54ce1418fd8e3fc33e244bb5f8a1aef}{drawCircle}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle,\ \textcolor{keywordtype}{int}\ R,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad3b780a95c23a3aa5b1bf71f2dde3f66}{drawElipse}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle,\ \textcolor{keywordtype}{int}\ Rx,\ \textcolor{keywordtype}{int}\ Ry,\ sf::Color\ color,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a1f699898feb373abacbe84f4a421ba16}{drawPolygon}}(std::vector<Point2D>\ points,\ sf::Color\ color);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ac7e3f89cf1066ac2581b80e883082dc9}{setPlayer}}(\doxymbox{\hyperlink{class_player}{Player}}\&\ p)\ \{\ this-\/>player\ =\ p;\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_a5f71c81d0457f5e10274a78272ba3061}{setBackground}}(\doxymbox{\hyperlink{class_sprite_object}{SpriteObject}}\&\ b)\ \{\ this-\/>background\ =\ b;\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00210\ \ \ \ \ std::vector<std::vector<int>>\ \doxymbox{\hyperlink{class_engine_ae9a8d8f6fff46aed67ef312589b3a844}{getMap}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>map;\ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_engine_ad147063e223c222fe4e136493314633f}{setMap}}(std::vector<std::vector<int>>\ m)\ \{\ this-\/>map\ =\ m;\ \}}
+\DoxyCodeLine{00218\ \};}
 
 \end{DoxyCode}

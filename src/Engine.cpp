@@ -442,11 +442,6 @@ void Engine::resetStartEnd() {
     start.x = start.y = end.x = end.y = currentClick = 0;
 }
 
-// Gettery
-PrimitiveRenderer Engine::getRenderer() {
-    return this->primitiveRenderer;
-}
-
 // Funkcje do rysowania udostępniane
 // tutaj dodawać kolejne funkcje rysowania jak drawLine(), drawRect() itp.
 

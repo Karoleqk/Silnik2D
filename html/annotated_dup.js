@@ -7,6 +7,7 @@ var annotated_dup =
     [ "DrawableObject", "class_drawable_object.html", "class_drawable_object" ],
     [ "Elipse", "class_elipse.html", "class_elipse" ],
     [ "Engine", "class_engine.html", "class_engine" ],
+    [ "GameEntity", "struct_game_entity.html", "struct_game_entity" ],
     [ "GameObject", "class_game_object.html", "class_game_object" ],
     [ "LineSegment", "class_line_segment.html", "class_line_segment" ],
     [ "Player", "class_player.html", "class_player" ],
@@ -15,6 +16,6 @@ var annotated_dup =
     [ "Rect", "class_rect.html", "class_rect" ],
     [ "ShapeObject", "class_shape_object.html", null ],
     [ "SpriteObject", "class_sprite_object.html", "class_sprite_object" ],
-    [ "TransformableObject", "class_transformable_object.html", null ],
+    [ "TransformableObject", "class_transformable_object.html", "class_transformable_object" ],
     [ "UpdatableObject", "class_updatable_object.html", "class_updatable_object" ]
 ];

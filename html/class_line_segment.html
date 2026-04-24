@@ -92,6 +92,9 @@ $(function(){initNavTree('class_line_segment.html','','class_line_segment-member
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa reprezentująca linię  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_line_segment_8h_source.html">LineSegment.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LineSegment:</div>
@@ -99,9 +102,9 @@ Inheritance diagram for LineSegment:</div>
  <div class="center">
   <img src="class_line_segment.png" usemap="#LineSegment_map" alt=""/>
   <map id="LineSegment_map" name="LineSegment_map">
-<area href="class_shape_object.html" alt="ShapeObject" shape="rect" coords="70,112,200,136"/>
-<area href="class_drawable_object.html" alt="DrawableObject" shape="rect" coords="0,56,130,80"/>
-<area href="class_transformable_object.html" alt="TransformableObject" shape="rect" coords="140,56,270,80"/>
+<area href="class_shape_object.html" title="Klasa wykorzystywana do tworzenia prymitywów." alt="ShapeObject" shape="rect" coords="70,112,200,136"/>
+<area href="class_drawable_object.html" title="Klasa abstrakcyjna wykorzystywana do rysowania obiektów." alt="DrawableObject" shape="rect" coords="0,56,130,80"/>
+<area href="class_transformable_object.html" title="Klasa abstrakcyjna definiująca metody do przekształceń geometrycznych." alt="TransformableObject" shape="rect" coords="140,56,270,80"/>
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="0,0,130,24"/>
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="140,0,270,24"/>
   </map>
@@ -110,19 +113,31 @@ Inheritance diagram for LineSegment:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a21189de3b2075ecd3760827b3f09d932" id="r_a21189de3b2075ecd3760827b3f09d932"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a21189de3b2075ecd3760827b3f09d932">LineSegment</a> (<a class="el" href="class_point2_d.html">Point2D</a> s, <a class="el" href="class_point2_d.html">Point2D</a> e, sf::Color c=sf::Color::Cyan)</td></tr>
+<tr class="memdesc:a21189de3b2075ecd3760827b3f09d932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy obiekt reprezentujący linię na ekranie.  <br /></td></tr>
 <tr class="memitem:ad8c9aa13a787650e09b130206cbd27b0" id="r_ad8c9aa13a787650e09b130206cbd27b0"><td class="memItemLeft"><a class="el" href="class_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad8c9aa13a787650e09b130206cbd27b0">getStart</a> ()</td></tr>
+<tr class="memdesc:ad8c9aa13a787650e09b130206cbd27b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca pozycję startową linii.  <br /></td></tr>
 <tr class="memitem:a7baf1c455d1b4ef21ce1182ae3cb150d" id="r_a7baf1c455d1b4ef21ce1182ae3cb150d"><td class="memItemLeft"><a class="el" href="class_point2_d.html">Point2D</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7baf1c455d1b4ef21ce1182ae3cb150d">getEnd</a> ()</td></tr>
+<tr class="memdesc:a7baf1c455d1b4ef21ce1182ae3cb150d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca pozycję końcową linii.  <br /></td></tr>
 <tr class="memitem:a326190418e3e01eccd8f6f8fb0dd74b3" id="r_a326190418e3e01eccd8f6f8fb0dd74b3"><td class="memItemLeft">sf::Color&#160;</td><td class="memItemRight"><a class="el" href="#a326190418e3e01eccd8f6f8fb0dd74b3">getColor</a> ()</td></tr>
+<tr class="memdesc:a326190418e3e01eccd8f6f8fb0dd74b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca kolor linii.  <br /></td></tr>
 <tr class="memitem:adbd9543476b0ea5441c75ad4bcda5d05" id="r_adbd9543476b0ea5441c75ad4bcda5d05"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbd9543476b0ea5441c75ad4bcda5d05">setStart</a> (<a class="el" href="class_point2_d.html">Point2D</a> s)</td></tr>
+<tr class="memdesc:adbd9543476b0ea5441c75ad4bcda5d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ustawiająca nową pozycję startową linii.  <br /></td></tr>
 <tr class="memitem:aa9168c80ed8c4ed8c12b99a8dd80681f" id="r_aa9168c80ed8c4ed8c12b99a8dd80681f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa9168c80ed8c4ed8c12b99a8dd80681f">setEnd</a> (<a class="el" href="class_point2_d.html">Point2D</a> e)</td></tr>
+<tr class="memdesc:aa9168c80ed8c4ed8c12b99a8dd80681f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ustawiająca nową pozycję końcową linii.  <br /></td></tr>
 <tr class="memitem:a751fca83f7c17a8bb1d0b097010b7161" id="r_a751fca83f7c17a8bb1d0b097010b7161"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a751fca83f7c17a8bb1d0b097010b7161">draw</a> (<a class="el" href="class_primitive_renderer.html">PrimitiveRenderer</a> &amp;renderer, sf::Color color) override</td></tr>
+<tr class="memdesc:a751fca83f7c17a8bb1d0b097010b7161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda potrzebna do rysowania obiektów.  <br /></td></tr>
 <tr class="memitem:ae9262be0eef49d4bccc8701009c82c81" id="r_ae9262be0eef49d4bccc8701009c82c81"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae9262be0eef49d4bccc8701009c82c81">translate</a> (float dx, float dy) override</td></tr>
+<tr class="memdesc:ae9262be0eef49d4bccc8701009c82c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda translacji.  <br /></td></tr>
 <tr class="memitem:ad3be47da4fc7c46035cf24e474bae371" id="r_ad3be47da4fc7c46035cf24e474bae371"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad3be47da4fc7c46035cf24e474bae371">rotate</a> (float angle=0.0f, <a class="el" href="class_point2_d.html">Point2D</a> point={0, 0}) override</td></tr>
+<tr class="memdesc:ad3be47da4fc7c46035cf24e474bae371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda rotacji.  <br /></td></tr>
 <tr class="memitem:a24cc94605f3af666d644022d4c6641ab" id="r_a24cc94605f3af666d644022d4c6641ab"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a24cc94605f3af666d644022d4c6641ab">scale</a> (float k=1, <a class="el" href="class_point2_d.html">Point2D</a> point={ 0, 0 }) override</td></tr>
+<tr class="memdesc:a24cc94605f3af666d644022d4c6641ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda skalowanie.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_object.html">GameObject</a></td></tr>
 <tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Klasa reprezentująca linię </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a21189de3b2075ecd3760827b3f09d932" name="a21189de3b2075ecd3760827b3f09d932"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21189de3b2075ecd3760827b3f09d932">&#9670;&#160;</a></span>LineSegment()</h2>
 
@@ -155,6 +170,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Tworzy obiekt reprezentujący linię na ekranie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>- pozycja startowa </td></tr>
+    <tr><td class="paramname">e</td><td>- pozycja końcowa </td></tr>
+    <tr><td class="paramname">c</td><td>- kolor linii (domyślnie Cyan) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -185,6 +210,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Metoda potrzebna do rysowania obiektów. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>- referencja na obiekt renderowania </td></tr>
+    <tr><td class="paramname">color</td><td>- kolor, którym rysujemy nasz obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_drawable_object.html#a9ac3f5a81fa711aa2cbb8d0f6413b696">DrawableObject</a>.</p>
 
 </div>
@@ -212,6 +246,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Metoda zwracająca kolor linii. </p>
+<dl class="section return"><dt>Returns</dt><dd>Kolor linii </dd></dl>
+
 </div>
 </div>
 <a id="a7baf1c455d1b4ef21ce1182ae3cb150d" name="a7baf1c455d1b4ef21ce1182ae3cb150d"></a>
@@ -229,6 +266,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Metoda zwracająca pozycję końcową linii. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pozycja końcowa linii typu <a class="el" href="class_point2_d.html" title="Klasa reprezentująca pojedynczy piksel.">Point2D</a> </dd></dl>
+
 </div>
 </div>
 <a id="ad8c9aa13a787650e09b130206cbd27b0" name="ad8c9aa13a787650e09b130206cbd27b0"></a>
@@ -245,6 +285,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda zwracająca pozycję startową linii. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pozycja startowa linii typu <a class="el" href="class_point2_d.html" title="Klasa reprezentująca pojedynczy piksel.">Point2D</a> </dd></dl>
 
 </div>
 </div>
@@ -275,7 +318,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda rotacji. </p>
+<p>Obraca obiekt względem podanego punktu oraz o podany kąt</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>- kąt obrotu </td></tr>
+    <tr><td class="paramname">point</td><td>- punkt względem którego obracamy obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#add37fb78c0aabf53a9a8d550b09d0541">TransformableObject</a>.</p>
 
 </div>
 </div>
@@ -306,7 +359,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda skalowanie. </p>
+<p>Skaluje obiekt o podaną wartość k względem podanego punktu</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>- współczynnik skalowania </td></tr>
+    <tr><td class="paramname">point</td><td>- punkt względem którego skalujemy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#aef366f0c99b5789d1fa187008ce99652">TransformableObject</a>.</p>
 
 </div>
 </div>
@@ -325,6 +388,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Metoda ustawiająca nową pozycję końcową linii. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>- nowy punkt końcowy typu <a class="el" href="class_point2_d.html" title="Klasa reprezentująca pojedynczy piksel.">Point2D</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adbd9543476b0ea5441c75ad4bcda5d05" name="adbd9543476b0ea5441c75ad4bcda5d05"></a>
@@ -341,6 +412,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Metoda ustawiająca nową pozycję startową linii. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>- nowy punkt startowy typu <a class="el" href="class_point2_d.html" title="Klasa reprezentująca pojedynczy piksel.">Point2D</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -371,7 +450,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_transformable_object.html">TransformableObject</a>.</p>
+<p>Metoda translacji. </p>
+<p>Przesuwa obiekt o zadane wartości x oraz y</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dx</td><td>- przesunięcie osi X </td></tr>
+    <tr><td class="paramname">dy</td><td>- przesunięcie osi Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_transformable_object.html#afe79e7266af3a1b444acb9de26ae8e1d">TransformableObject</a>.</p>
 
 </div>
 </div>

@@ -6,32 +6,38 @@
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_point2_d_8h}{Point2D.h}}"{}}}
 \DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}{Elipse}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\ \{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00007\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle;}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ radiusX,\ radiusY;}
-\DoxyCodeLine{00009\ \ \ \ \ sf::Color\ color;}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFill;}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}{Elipse}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ m,\ \textcolor{keywordtype}{int}\ rX,\ \textcolor{keywordtype}{int}\ rY,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ middle(m),\ radiusX(rX),\ radiusY(rY),\ color(c),\ isFill(fill)\ \{\ \}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ getters}}
-\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_elipse_ae342881fbe3b6a477ddd325f241e520d}{getPosition}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>middle;\ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_elipse_a26c708bc706ebf7326b7e83cd4b119a7}{getRadiusX}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radiusX;\ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_elipse_a5d3365949dad0e30e2134622b90730ae}{getRadiusY}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radiusY;\ \}}
-\DoxyCodeLine{00020\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_elipse_ad99124f591dfabff03308328ae3d1609}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ setters}}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a95ce0bf50f4debaf6e54aa6f296f4a86}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos)\ \{\ this-\/>middle\ =\ pos;\ \}}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a6a8b31652d02fbb8ac0dd2ec253a4056}{setRadiusX}}(\textcolor{keywordtype}{int}\ rX)\ \{\ this-\/>radiusX\ =\ rX;\ \}}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_adeec781ee8a2393e1867b47330d6cfaf}{setRadiusY}}(\textcolor{keywordtype}{int}\ rY)\ \{\ this-\/>radiusY\ =\ rY;\ \}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_abf9d9382d9479df4059b7a964c7d2206}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_acef9a1cfb29f5139d42691118b9417ba}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a5badf6ad72aace0386396794ece4d21c}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_adbf05947fded371e9e24604000190399}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}{Elipse}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ radiusX,\ radiusY;}
+\DoxyCodeLine{00012\ \ \ \ \ sf::Color\ color;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFill;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{class_elipse_a94f8a16babc2835b6ff16d37b3634f1c}{Elipse}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ m,\ \textcolor{keywordtype}{int}\ rX,\ \textcolor{keywordtype}{int}\ rY,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ middle(m),\ radiusX(rX),\ radiusY(rY),\ color(c),\ isFill(fill)\ \{\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_elipse_ae342881fbe3b6a477ddd325f241e520d}{getPosition}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>middle;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_elipse_a26c708bc706ebf7326b7e83cd4b119a7}{getRadiusX}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radiusX;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_elipse_a5d3365949dad0e30e2134622b90730ae}{getRadiusY}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radiusY;\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_elipse_ad99124f591dfabff03308328ae3d1609}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a95ce0bf50f4debaf6e54aa6f296f4a86}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos)\ \{\ this-\/>middle\ =\ pos;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a6a8b31652d02fbb8ac0dd2ec253a4056}{setRadiusX}}(\textcolor{keywordtype}{int}\ rX)\ \{\ this-\/>radiusX\ =\ rX;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_adeec781ee8a2393e1867b47330d6cfaf}{setRadiusY}}(\textcolor{keywordtype}{int}\ rY)\ \{\ this-\/>radiusY\ =\ rY;\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_abf9d9382d9479df4059b7a964c7d2206}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_acef9a1cfb29f5139d42691118b9417ba}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_a5badf6ad72aace0386396794ece4d21c}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_elipse_adbf05947fded371e9e24604000190399}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ \};}
 
 \end{DoxyCode}

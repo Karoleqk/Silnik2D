@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['sheet_0',['sheet',['../class_bitmap_object.html#a8db08927cab596906cf35f68a386de53',1,'BitmapObject']]],
-  ['start_1',['start',['../class_rect.html#ac132e8b0d3c7da9229b62b515a007a80',1,'Rect']]],
-  ['state_2',['state',['../class_animated_object.html#ac6f0ee4b1b4be748cb3d2adf89ec5d70',1,'AnimatedObject']]]
+  ['map_0',['map',['../class_sprite_object.html#a35d3c7c19dd49ce16f2d411ec88684c9',1,'SpriteObject']]],
+  ['mapoffsetx_1',['mapOffsetX',['../class_engine.html#a208f06384a128ab9130ee49a51609f92',1,'Engine::mapOffsetX'],['../class_player.html#a218cb51d41229dd01e339c0cbb188469',1,'Player::mapOffsetX'],['../class_sprite_object.html#a873fa9a1d7332abe49123d2286c10b75',1,'SpriteObject::mapOffsetX']]],
+  ['maxframes_2',['maxFrames',['../struct_game_entity.html#afec2ad9fb2384bd1cd36d029a9f5fe34',1,'GameEntity']]],
+  ['mode_3',['mode',['../class_sprite_object.html#a004a40767121ec150286567973b2429c',1,'SpriteObject']]]
 ];

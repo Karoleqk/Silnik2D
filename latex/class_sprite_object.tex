@@ -14,7 +14,7 @@ Inheritance diagram for Sprite\+Object:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{class_sprite_object_ae70909c335cc2e2a433e3712d36f38b1}{draw}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer, sf::\+\+Color color=sf::\+\+Color::\+\+Transparent) override
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda potrzebna do rysowania obiektów. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_sprite_object_ae2fc6e81a3255688ff178fbce2157688}{draw\+Map}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer)
 \item 
 void \doxymbox{\hyperlink{class_sprite_object_a744990fa52df2a98aef55f409d287acb}{draw\+Player}} (\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&renderer)
@@ -24,6 +24,10 @@ void \doxymbox{\hyperlink{class_sprite_object_a352409b523af827c4aaa785fb19e9fed}
 void \doxymbox{\hyperlink{class_sprite_object_a111ece133acefc7985aba24e3578ce91}{set\+Position}} (\doxymbox{\hyperlink{class_point2_d}{Point2D}} pos)
 \item 
 void \doxymbox{\hyperlink{class_sprite_object_a1ca477c915a8a2863ea02df8868e2811}{set\+Map}} (std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9}{map}})
+\item 
+void \doxymbox{\hyperlink{class_sprite_object_a5d48c4d641085742cb68e1eb67c80b16}{set\+Frame}} (int x, int y)
+\item 
+void \doxymbox{\hyperlink{class_sprite_object_ab9b8ec9059774f2a517bfd2e2889fdee}{set\+Frame\+Size}} (int w, int h)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
 \begin{DoxyCompactItemize}
@@ -41,6 +45,8 @@ virtual \doxymbox{\hyperlink{class_game_object_a67ae2fa6e7916c799700cd659975d8ea
 \doxymbox{\hyperlink{class_point2_d}{Point2D}} \doxymbox{\hyperlink{class_sprite_object_ad45914f608a1664343186c2854753baf}{position}}
 \item 
 \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375}{draw\+Mode}} \doxymbox{\hyperlink{class_sprite_object_a004a40767121ec150286567973b2429c}{mode}} = \doxymbox{\hyperlink{_sprite_object_8h_aaa2e21362eb2635bd3a0e9124cedd375a3388f7110f6f25a54e215eb75d5d7516}{SINGLE}}
+\item 
+int \doxymbox{\hyperlink{class_sprite_object_a873fa9a1d7332abe49123d2286c10b75}{map\+OffsetX}} = 0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -75,6 +81,17 @@ void Sprite\+Object::\+draw (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink
 
 
 
+Metoda potrzebna do rysowania obiektów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & -\/ referencja na obiekt renderowania \\
+\hline
+{\em color} & -\/ kolor, którym rysujemy nasz obiekt \\
+\hline
+\end{DoxyParams}
+
+
 Reimplemented from \doxymbox{\hyperlink{class_bitmap_object_a4e65602adabd2731f2b2a46030fe18cb}{Bitmap\+Object}}.
 
 \Hypertarget{class_sprite_object_a352409b523af827c4aaa785fb19e9fed}\index{SpriteObject@{SpriteObject}!drawFrame@{drawFrame}}
@@ -94,6 +111,18 @@ void Sprite\+Object::\+draw\+Map (\begin{DoxyParamCaption}\item[{\doxymbox{\hype
 \doxysubsubsection{\texorpdfstring{drawPlayer()}{drawPlayer()}}
 {\footnotesize\ttfamily \label{class_sprite_object_a744990fa52df2a98aef55f409d287acb} 
 void Sprite\+Object::\+draw\+Player (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \&}]{renderer}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_sprite_object_a5d48c4d641085742cb68e1eb67c80b16}\index{SpriteObject@{SpriteObject}!setFrame@{setFrame}}
+\index{setFrame@{setFrame}!SpriteObject@{SpriteObject}}
+\doxysubsubsection{\texorpdfstring{setFrame()}{setFrame()}}
+{\footnotesize\ttfamily \label{class_sprite_object_a5d48c4d641085742cb68e1eb67c80b16} 
+void Sprite\+Object::\+set\+Frame (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_sprite_object_ab9b8ec9059774f2a517bfd2e2889fdee}\index{SpriteObject@{SpriteObject}!setFrameSize@{setFrameSize}}
+\index{setFrameSize@{setFrameSize}!SpriteObject@{SpriteObject}}
+\doxysubsubsection{\texorpdfstring{setFrameSize()}{setFrameSize()}}
+{\footnotesize\ttfamily \label{class_sprite_object_ab9b8ec9059774f2a517bfd2e2889fdee} 
+void Sprite\+Object::\+set\+Frame\+Size (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \Hypertarget{class_sprite_object_a1ca477c915a8a2863ea02df8868e2811}\index{SpriteObject@{SpriteObject}!setMap@{setMap}}
 \index{setMap@{setMap}!SpriteObject@{SpriteObject}}
@@ -141,6 +170,12 @@ int Sprite\+Object::\+frameY = 0\hspace{0.3cm}{\ttfamily [protected]}}
 \doxysubsubsection{\texorpdfstring{map}{map}}
 {\footnotesize\ttfamily \label{class_sprite_object_a35d3c7c19dd49ce16f2d411ec88684c9} 
 std::\+vector$<$std::\+vector$<$int$>$ $>$ Sprite\+Object::\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_sprite_object_a873fa9a1d7332abe49123d2286c10b75}\index{SpriteObject@{SpriteObject}!mapOffsetX@{mapOffsetX}}
+\index{mapOffsetX@{mapOffsetX}!SpriteObject@{SpriteObject}}
+\doxysubsubsection{\texorpdfstring{mapOffsetX}{mapOffsetX}}
+{\footnotesize\ttfamily \label{class_sprite_object_a873fa9a1d7332abe49123d2286c10b75} 
+int Sprite\+Object::\+map\+OffsetX = 0}
 
 \Hypertarget{class_sprite_object_a004a40767121ec150286567973b2429c}\index{SpriteObject@{SpriteObject}!mode@{mode}}
 \index{mode@{mode}!SpriteObject@{SpriteObject}}

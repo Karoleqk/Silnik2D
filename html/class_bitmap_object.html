@@ -99,7 +99,7 @@ Inheritance diagram for BitmapObject:</div>
  <div class="center">
   <img src="class_bitmap_object.png" usemap="#BitmapObject_map" alt=""/>
   <map id="BitmapObject_map" name="BitmapObject_map">
-<area href="class_drawable_object.html" alt="DrawableObject" shape="rect" coords="0,56,103,80"/>
+<area href="class_drawable_object.html" title="Klasa abstrakcyjna wykorzystywana do rysowania obiektów." alt="DrawableObject" shape="rect" coords="0,56,103,80"/>
 <area href="class_game_object.html" alt="GameObject" shape="rect" coords="0,0,103,24"/>
 <area href="class_sprite_object.html" alt="SpriteObject" shape="rect" coords="0,168,103,192"/>
 <area href="class_animated_object.html" alt="AnimatedObject" shape="rect" coords="0,224,103,248"/>
@@ -110,6 +110,7 @@ Inheritance diagram for BitmapObject:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e65602adabd2731f2b2a46030fe18cb" id="r_a4e65602adabd2731f2b2a46030fe18cb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4e65602adabd2731f2b2a46030fe18cb">draw</a> (<a class="el" href="class_primitive_renderer.html">PrimitiveRenderer</a> &amp;renderer, sf::Color color=sf::Color::Transparent) override</td></tr>
+<tr class="memdesc:a4e65602adabd2731f2b2a46030fe18cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda potrzebna do rysowania obiektów.  <br /></td></tr>
 <tr class="memitem:aac5123127181f645a3de58b16af3839d" id="r_aac5123127181f645a3de58b16af3839d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac5123127181f645a3de58b16af3839d">setSheet</a> (<a class="el" href="class_bitmap_handler.html">BitmapHandler</a> &amp;b)</td></tr>
 <tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_game_object.html">GameObject</a></td></tr>
 <tr class="memitem:a67ae2fa6e7916c799700cd659975d8ea inherit pub_methods_class_game_object" id="r_a67ae2fa6e7916c799700cd659975d8ea"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_game_object.html#a67ae2fa6e7916c799700cd659975d8ea">~GameObject</a> ()=default</td></tr>
@@ -145,6 +146,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Metoda potrzebna do rysowania obiektów. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>- referencja na obiekt renderowania </td></tr>
+    <tr><td class="paramname">color</td><td>- kolor, którym rysujemy nasz obiekt </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_drawable_object.html#a9ac3f5a81fa711aa2cbb8d0f6413b696">DrawableObject</a>.</p>
 

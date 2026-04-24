@@ -8,30 +8,35 @@
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}};}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_circle_ac10fb3a2f3534b49ee49ba3f66bbae92}{Circle}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00009\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle;}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ radius;}
-\DoxyCodeLine{00011\ \ \ \ \ sf::Color\ color;}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFill;}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00015\ \ \ \ \ \doxymbox{\hyperlink{class_circle_ac10fb3a2f3534b49ee49ba3f66bbae92}{Circle}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ mid,\ \textcolor{keywordtype}{int}\ r,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ middle(mid),\ radius(r),\ color(c),\ isFill(fill)\ \{\ \}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_circle_ac10fb3a2f3534b49ee49ba3f66bbae92}{Circle}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_shape_object}{ShapeObject}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ middle;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ radius;}
+\DoxyCodeLine{00015\ \ \ \ \ sf::Color\ color;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFill;}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ getters}}
-\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_circle_a1028fffbe74363b4cc10292e1f4c74c8}{getPosition}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>middle;\ \}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_circle_adfc2e5e026f5d80215563cc42260a237}{getRadius}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radius;\ \}}
-\DoxyCodeLine{00021\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_circle_a800fc160a8810586becc6106aa0b570c}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ setters}}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_aba71da1f51e6c70951876250e8ef8ac8}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos)\ \{\ this-\/>middle\ =\ pos;\ \}}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_a8262bdfb9c5f06758ab4d95e33d843ac}{setRadius}}(\textcolor{keywordtype}{int}\ r)\ \{\ this-\/>radius\ =\ r;\ \}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_af8906b3bc8d9a85ac4892faae4623b36}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_ae6e1c726c2adba8831cbae34974d1c40}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_afa50ac24ef878c1b106a47e3696fc2ca}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_ae74a3e8460dfac0dd0533c89e8e5f2cb}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_circle_ac10fb3a2f3534b49ee49ba3f66bbae92}{Circle}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ mid,\ \textcolor{keywordtype}{int}\ r,\ sf::Color\ c\ =\ sf::Color::Cyan,\ \textcolor{keywordtype}{bool}\ fill\ =\ \textcolor{keyword}{false})\ :}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ middle(mid),\ radius(r),\ color(c),\ isFill(fill)\ \{\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ \doxymbox{\hyperlink{class_circle_a1028fffbe74363b4cc10292e1f4c74c8}{getPosition}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>middle;\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_circle_adfc2e5e026f5d80215563cc42260a237}{getRadius}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>radius;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ sf::Color\ \doxymbox{\hyperlink{class_circle_a800fc160a8810586becc6106aa0b570c}{getColor}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>color;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_aba71da1f51e6c70951876250e8ef8ac8}{setPosition}}(\doxymbox{\hyperlink{class_point2_d}{Point2D}}\ pos)\ \{\ this-\/>middle\ =\ pos;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_a8262bdfb9c5f06758ab4d95e33d843ac}{setRadius}}(\textcolor{keywordtype}{int}\ r)\ \{\ this-\/>radius\ =\ r;\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_af8906b3bc8d9a85ac4892faae4623b36}{draw}}(\doxymbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}\&\ renderer,\ sf::Color\ color)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_ae6e1c726c2adba8831cbae34974d1c40}{translate}}(\textcolor{keywordtype}{float}\ dx,\ \textcolor{keywordtype}{float}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_afa50ac24ef878c1b106a47e3696fc2ca}{rotate}}(\textcolor{keywordtype}{float}\ angle\ =\ 0.0f,\ \doxymbox{\hyperlink{class_point2_d}{Point2D}}\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_circle_ae74a3e8460dfac0dd0533c89e8e5f2cb}{scale}}(\textcolor{keywordtype}{float}\ k\ =\ 1,\ Point2D\ point\ =\ \{\ 0,\ 0\ \})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \};}
 
 \end{DoxyCode}
