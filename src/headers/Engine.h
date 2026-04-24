@@ -11,13 +11,43 @@
 
 enum tools {PIXEL, LINE, RECT, CIRCLE, FLOOD_FILL, BOUNDARY_FILL};
 
+/**
+* @brief Struktura reprezentująca obiekt występujący w grze (moneta / przeciwnik)
+**/
 struct GameEntity {
+	/**
+	* @brief Obiekt graficzny obiektu
+	**/
 	SpriteObject sprite;
+
+	/**
+	* @brief Pozycja obiektu
+	**/
 	Point2D position;
+
+	/**
+	* @brief Typ obiektu (0 - moneta, 1 - slime)
+	**/
 	int type; // 0 = moneta, 1 = slime
+
+	/**
+	* @brief Sprawdza czy obiekt jest aktywny w grze
+	**/
 	bool active = true;
+
+	/**
+	* @brief Licznik czasu animacji
+	**/
 	int frameTimer = 0;
+
+	/**
+	* @brief Aktualna klatka
+	**/
 	int currentFrame = 0;
+
+	/**
+	* @brief Maksymalna liczba klatek
+	**/
 	int maxFrames = 1;
 };
 
